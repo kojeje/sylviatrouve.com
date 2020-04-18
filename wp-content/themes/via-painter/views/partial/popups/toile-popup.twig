@@ -1,0 +1,68 @@
+<!-- The Modal -->
+    <div id="myModal" onclick = "function (event)" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content row">
+            <span class="close col-12">&times;</span>
+            <div class="col-12 col-md-7 col-lg-9">
+                <img src="{{ post.thumbnail.src }}" alt="photo de {{ post.title }}" class="img modal-img paint-img">
+                
+            </div>
+            <div class="side-popup col-12 col-md-4 col-lg-3 bk7 color8 p-30">
+                <h1 class="white t3 t-md-5 t-lg-7 p-30 bk3">
+                    {{post.title}}
+                </h1>
+                <h2 class="t2 t-md-4 t-lg-6 mt-10">
+                    <span class="white">Série: </span>
+                    <a href="{{ post.get_field('collection').link }}" class="color8">
+                        {{ post.get_field('collection').title|upper }}
+                    </a>
+                </h2>
+                <p class="color8 title-red p-20 m-a t-a-center t3 t-md-4 t-lg-6">
+                    {{ post.get_field('content') }}
+                    <a href="{{site.url}}/contact/#article-contact-form" class="link t2 t-md-3 t-lg-5 d-block white p-20">
+                        <i class="fal fa-envelope"></i> demande d'infos
+                    </a>
+                </p>
+                {% if post.get_field('date') %}
+                    <p class="p-20 m-a t-a-center t4 t-md-5 t-lg-6">
+                        {{post.get_field('date')|date('Y')}}
+                    </p>
+                {% endif %}
+                 
+                <ul class="white p-30">
+                    <li class="p-10">
+                        <i class="color8 fas fa-palette"></i> 
+                        {% if post.get_field('technique_de_peinture') %}
+                            {{post.get_field('technique_de_peinture')|join}}
+                        {% elseif post.get_field('technique_croquis')|join %}
+                            {{post.get_field('technique_croquis')|join}}
+                        {% endif %}
+                        {%  if post.get_field('type') == 'peinture' or post.get_field('type') == 'temperas' or post.get_field('type') == 'dessin/croquis' %}
+                            {% for support in post.get_field('support')  %}
+                                sur {{ support }}
+                            {% endfor %}
+                        {% endif %}
+                    </li>
+                     {#Si on a spécifié les dimensions#}
+                    {% if post.get_field('largeur') and post.get_field('hauteur') %}
+                    <li class="p-10">
+                        {#affichage des dimensions#}
+                        {#icone#}
+                        <i class="color8 fas fa-ruler-triangle"></i>
+                        {# Longueur X hauteur #}
+                        {{ post.get_field('largeur')|join }} X {{ post.get_field('hauteur') }} cm
+                    </li>
+                    
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="col-12 col-md-12 t-a-center m-a color4">
+                <div class="w-10 m-a">
+                    <img src="{{ theme.link }}/assets/img/logo-ST.jpg" class="w-100 m-a img p-30" alt="logo de {{ site.url }}">
+                </div>
+                <p class="t-a-center white t2 m-a p-10">tous droits réservés</p>
+                <p class="color8 m-a t-a-center p-10">sylviatrouve.com </p>
+            </div>
+            <span class="close2 col-12">&times;</span> 
+        </div>
+    </div>

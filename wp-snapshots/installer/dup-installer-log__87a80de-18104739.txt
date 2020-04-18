@@ -1,0 +1,466 @@
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-1 START @ 01:23:22
+* VERSION: 1.3.22
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ CURRENT SERVER                         |ORIGINAL SERVER
+PHP VERSION_________: 7.1.33                                |7.2.22
+OS__________________: Linux                                 |Linux
+CREATED_____________: 2019-11-18 10:47:39
+WP VERSION__________: 5.2.4
+DUP VERSION_________: 1.3.22
+DB__________________: 10.2.29
+DB TABLES___________: 20
+DB ROWS_____________: 4,909
+DB FILE SIZE________: 2.14MB
+********************************************************************************
+SERVER INFO
+PHP_________________: 7.2.22 | SAPI: fpm-fcgi
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+SERVER______________: Apache
+DOC ROOT____________: "/home/sylviatrcv/www"
+DOC ROOT 755________: true
+LOG FILE 644________: true
+REQUEST URL_________: "http://www.sylviatrouve.com/dup-installer/main.installer.php"
+********************************************************************************
+USER INPUTS
+ARCHIVE ENGINE______: "duparchive"
+SET DIR PERMS_______: 1
+DIR PERMS VALUE_____: 1363
+SET FILE PERMS______: 1
+FILE PERMS VALUE____: 1204
+SAFE MODE___________: "0"
+LOGGING_____________: "1"
+CONFIG MODE_________: "NEW"
+FILE TIME___________: "current"
+********************************************************************************
+
+
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME________________: "20191112_sylviatrouve_87a80de8848aac106103_20191118104739_archive.daf"
+SIZE________________: 1.57MB
+
+PRE-EXTRACT-CHECKS
+- PASS: Microsoft IIS 'web.config' not found - no backup needed.
+- PASS: WordFence '.user.ini' not found - no backup needed.
+>>> DupArchive Extraction Complete
+
+--------------------------------------
+DUPARCHIVE EXTRACTION STATUS
+--------------------------------------
+Archive extracted with no errors.
+
+--------------------------------------
+POST-EXTACT-CHECKS
+--------------------------------------
+PERMISSION UPDATES:
+    -DIRS:  '755'
+    -FILES: '644'
+[PHP ERR][WARN] MSG:touch(): Unable to create file /home/sylviatrcv/www/index.html because No such file or directory [CODE:2|FILE:/home/sylviatrcv/www/dup-installer/ctrls/ctrl.s1.php|LINE:404]
+
+STEP-1 COMPLETE @ 01:23:28 - RUNTIME: 6.2675 sec.
+[PHP ERR][WARN] MSG:mysqli_connect(): php_network_getaddresses: getaddrinfo failed: Name or service not known [CODE:2|FILE:/home/sylviatrcv/www/dup-installer/classes/class.db.php|LINE:43]
+[PHP ERR][WARN] MSG:mysqli_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known [CODE:2|FILE:/home/sylviatrcv/www/dup-installer/classes/class.db.php|LINE:43]
+DATABASE CONNECTION ERROR: php_network_getaddresses: getaddrinfo failed: Name or service not known[ERRNO:2002]
+[PHP ERR][WARN] MSG:mysqli_connect(): php_network_getaddresses: getaddrinfo failed: Name or service not known [CODE:2|FILE:/home/sylviatrcv/www/dup-installer/classes/class.db.php|LINE:43]
+[PHP ERR][WARN] MSG:mysqli_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known [CODE:2|FILE:/home/sylviatrcv/www/dup-installer/classes/class.db.php|LINE:43]
+DATABASE CONNECTION ERROR: php_network_getaddresses: getaddrinfo failed: Name or service not known[ERRNO:2002]
+[PHP ERR][WARN] MSG:mysqli_connect(): php_network_getaddresses: getaddrinfo failed: Name or service not known [CODE:2|FILE:/home/sylviatrcv/www/dup-installer/classes/class.db.php|LINE:43]
+[PHP ERR][WARN] MSG:mysqli_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known [CODE:2|FILE:/home/sylviatrcv/www/dup-installer/classes/class.db.php|LINE:43]
+DATABASE CONNECTION ERROR: php_network_getaddresses: getaddrinfo failed: Name or service not known[ERRNO:2002]
+
+
+
+********************************************************************************
+* DUPLICATOR-LITE INSTALL-LOG
+* STEP-2 START @ 01:33:14
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+VIEW MODE___________: "basic"
+DB ACTION___________: "empty"
+DB HOST_____________: "**OBSCURED**"
+DB NAME_____________: "**OBSCURED**"
+DB PASS_____________: "**OBSCURED**"
+DB PORT_____________: "**OBSCURED**"
+NON-BREAKING SPACES_: false
+MYSQL MODE__________: "DEFAULT"
+MYSQL MODE OPTS_____: ""
+CHARSET_____________: "utf8"
+COLLATE_____________: "utf8_general_ci"
+COLLATE FB__________: false
+VIEW CREATION_______: true
+STORED PROCEDURE____: true
+********************************************************************************
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.6.43 -- Build Server: 10.2.29
+FILE SIZE:	dup-database__87a80de-18104739.sql (987.87KB)
+TIMEOUT:	5000
+MAXPACK:	33554432
+SQLMODE:	NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[/home/sylviatrcv/www/dup-installer/dup-installer-data__87a80de-18104739.sql]
+COLLATE FB:	Off
+
+NOTICE: This servers version [5.6.43] is less than the build version [10.2.29].  
+If you find issues after testing your site please referr to this FAQ item.
+https://snapcreek.com/duplicator/docs/faqs-tech/#faq-installer-260-q
+[PHP ERR][WARN] MSG:count(): Parameter must be an array or an object that implements Countable [CODE:2|FILE:/home/sylviatrcv/www/dup-installer/ctrls/ctrl.s2.dbinstall.php|LINE:386]
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+DB VIEWS:	enabled
+DB PROCEDURES:	enabled
+ERRORS FOUND:	0
+DROPPED TABLES:	0
+RENAMED TABLES:	0
+QUERIES RAN:	5031
+
+wp_cf_form_entries: (0)
+wp_cf_form_entry_meta: (0)
+wp_cf_form_entry_values: (0)
+wp_cf_forms: (15)
+wp_cf_pro_messages: (0)
+wp_cf_queue_failures: (0)
+wp_cf_queue_jobs: (0)
+wp_commentmeta: (0)
+wp_comments: (1)
+wp_duplicator_packages: (0)
+wp_links: (0)
+wp_options: (132)
+wp_postmeta: (4305)
+wp_posts: (459)
+wp_term_relationships: (4)
+wp_term_taxonomy: (2)
+wp_termmeta: (0)
+wp_terms: (2)
+wp_usermeta: (71)
+wp_users: (2)
+Removed '15' cache/transient rows
+
+INSERT DATA RUNTIME: 1.3909 sec.
+STEP-2 COMPLETE @ 01:33:15 - RUNTIME: 1.4042 sec.
+
+====================================
+SET SEARCH AND REPLACE LIST
+====================================
+
+
+********************************************************************************
+DUPLICATOR PRO INSTALL-LOG
+STEP-3 START @ 01:33:38
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	"utf8"
+CHARSET CLIENT:	"utf8"
+********************************************************************************
+OPTIONS:
+blogname______________: "Sylvia Trouvé"
+postguid______________: false
+fullsearch____________: false
+path_old______________: "/home/viayakhq/public_html/"
+path_new______________: "/home/sylviatrcv/www/"
+siteurl_______________: "http://www.sylviatrouve.com"
+url_old_______________: "https://via.yj.fr"
+url_new_______________: "http://www.sylviatrouve.com"
+maxSerializeStrlen____: 4000000
+replaceMail___________: false
+dbhost________________: "sylviatrcvbdd.mysql.db"
+dbuser________________: "sylviatrcvbdd"
+dbname________________: "sylviatrcvbdd"
+dbcharset_____________: "utf8"
+dbcollate_____________: "utf8_general_ci"
+wp_username___________: ""
+wp_mail_______________: ""
+wp_nickname___________: ""
+wp_first_name_________: ""
+wp_last_name__________: ""
+ssl_admin_____________: false
+cache_wp______________: false
+cache_path____________: false
+exe_safe_mode_________: false
+config_mode___________: "NEW"
+********************************************************************************
+
+
+====================================
+RUN SEARCH AND REPLACE
+====================================
+
+EVALUATE TABLE: "wp_cf_form_entries"______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_cf_form_entry_meta"___________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_cf_form_entry_values"_________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_cf_forms"_____________________________________[ROWS:    15][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/home/sylviatrcv/www/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/home\/sylviatrcv\/www\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2Fhome%2Fsylviatrcv%2Fwww%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/home/sylviatrcv/www"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/home\/sylviatrcv\/www"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2Fhome%2Fsylviatrcv%2Fwww"
+	SEARCH  7:"//via.yj.fr" =====================================> "//www.sylviatrouve.com"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/www.sylviatrouve.com"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//www.sylviatrouve.com"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/www.sylviatrouve.com"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 13:"https://www.sylviatrouve.com" ====================> "http://www.sylviatrouve.com"
+	SEARCH 14:"https:\/\/www.sylviatrouve.com" ==================> "http:\/\/www.sylviatrouve.com"
+	SEARCH 15:"https%3A%2F%2Fwww.sylviatrouve.com" ==============> "http%3A%2F%2Fwww.sylviatrouve.com"
+
+EVALUATE TABLE: "wp_cf_pro_messages"______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_cf_queue_failures"____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_cf_queue_jobs"________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_commentmeta"__________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_comments"_____________________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/home/sylviatrcv/www/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/home\/sylviatrcv\/www\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2Fhome%2Fsylviatrcv%2Fwww%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/home/sylviatrcv/www"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/home\/sylviatrcv\/www"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2Fhome%2Fsylviatrcv%2Fwww"
+	SEARCH  7:"//via.yj.fr" =====================================> "//www.sylviatrouve.com"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/www.sylviatrouve.com"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//www.sylviatrouve.com"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/www.sylviatrouve.com"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 13:"https://www.sylviatrouve.com" ====================> "http://www.sylviatrouve.com"
+	SEARCH 14:"https:\/\/www.sylviatrouve.com" ==================> "http:\/\/www.sylviatrouve.com"
+	SEARCH 15:"https%3A%2F%2Fwww.sylviatrouve.com" ==============> "http%3A%2F%2Fwww.sylviatrouve.com"
+
+EVALUATE TABLE: "wp_duplicator_packages"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_links"________________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_options"______________________________________[ROWS:   132][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/home/sylviatrcv/www/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/home\/sylviatrcv\/www\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2Fhome%2Fsylviatrcv%2Fwww%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/home/sylviatrcv/www"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/home\/sylviatrcv\/www"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2Fhome%2Fsylviatrcv%2Fwww"
+	SEARCH  7:"//via.yj.fr" =====================================> "//www.sylviatrouve.com"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/www.sylviatrouve.com"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//www.sylviatrouve.com"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/www.sylviatrouve.com"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 13:"https://www.sylviatrouve.com" ====================> "http://www.sylviatrouve.com"
+	SEARCH 14:"https:\/\/www.sylviatrouve.com" ==================> "http:\/\/www.sylviatrouve.com"
+	SEARCH 15:"https%3A%2F%2Fwww.sylviatrouve.com" ==============> "http%3A%2F%2Fwww.sylviatrouve.com"
+
+EVALUATE TABLE: "wp_postmeta"_____________________________________[ROWS:  4305][PG:   2][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/home/sylviatrcv/www/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/home\/sylviatrcv\/www\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2Fhome%2Fsylviatrcv%2Fwww%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/home/sylviatrcv/www"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/home\/sylviatrcv\/www"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2Fhome%2Fsylviatrcv%2Fwww"
+	SEARCH  7:"//via.yj.fr" =====================================> "//www.sylviatrouve.com"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/www.sylviatrouve.com"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//www.sylviatrouve.com"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/www.sylviatrouve.com"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 13:"https://www.sylviatrouve.com" ====================> "http://www.sylviatrouve.com"
+	SEARCH 14:"https:\/\/www.sylviatrouve.com" ==================> "http:\/\/www.sylviatrouve.com"
+	SEARCH 15:"https%3A%2F%2Fwww.sylviatrouve.com" ==============> "http%3A%2F%2Fwww.sylviatrouve.com"
+
+EVALUATE TABLE: "wp_posts"________________________________________[ROWS:   459][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/home/sylviatrcv/www/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/home\/sylviatrcv\/www\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2Fhome%2Fsylviatrcv%2Fwww%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/home/sylviatrcv/www"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/home\/sylviatrcv\/www"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2Fhome%2Fsylviatrcv%2Fwww"
+	SEARCH  7:"//via.yj.fr" =====================================> "//www.sylviatrouve.com"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/www.sylviatrouve.com"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//www.sylviatrouve.com"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/www.sylviatrouve.com"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 13:"https://www.sylviatrouve.com" ====================> "http://www.sylviatrouve.com"
+	SEARCH 14:"https:\/\/www.sylviatrouve.com" ==================> "http:\/\/www.sylviatrouve.com"
+	SEARCH 15:"https%3A%2F%2Fwww.sylviatrouve.com" ==============> "http%3A%2F%2Fwww.sylviatrouve.com"
+
+EVALUATE TABLE: "wp_term_relationships"___________________________[ROWS:     4][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/home/sylviatrcv/www/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/home\/sylviatrcv\/www\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2Fhome%2Fsylviatrcv%2Fwww%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/home/sylviatrcv/www"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/home\/sylviatrcv\/www"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2Fhome%2Fsylviatrcv%2Fwww"
+	SEARCH  7:"//via.yj.fr" =====================================> "//www.sylviatrouve.com"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/www.sylviatrouve.com"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//www.sylviatrouve.com"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/www.sylviatrouve.com"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 13:"https://www.sylviatrouve.com" ====================> "http://www.sylviatrouve.com"
+	SEARCH 14:"https:\/\/www.sylviatrouve.com" ==================> "http:\/\/www.sylviatrouve.com"
+	SEARCH 15:"https%3A%2F%2Fwww.sylviatrouve.com" ==============> "http%3A%2F%2Fwww.sylviatrouve.com"
+
+EVALUATE TABLE: "wp_term_taxonomy"________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/home/sylviatrcv/www/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/home\/sylviatrcv\/www\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2Fhome%2Fsylviatrcv%2Fwww%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/home/sylviatrcv/www"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/home\/sylviatrcv\/www"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2Fhome%2Fsylviatrcv%2Fwww"
+	SEARCH  7:"//via.yj.fr" =====================================> "//www.sylviatrouve.com"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/www.sylviatrouve.com"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//www.sylviatrouve.com"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/www.sylviatrouve.com"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 13:"https://www.sylviatrouve.com" ====================> "http://www.sylviatrouve.com"
+	SEARCH 14:"https:\/\/www.sylviatrouve.com" ==================> "http:\/\/www.sylviatrouve.com"
+	SEARCH 15:"https%3A%2F%2Fwww.sylviatrouve.com" ==============> "http%3A%2F%2Fwww.sylviatrouve.com"
+
+EVALUATE TABLE: "wp_termmeta"_____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_terms"________________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/home/sylviatrcv/www/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/home\/sylviatrcv\/www\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2Fhome%2Fsylviatrcv%2Fwww%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/home/sylviatrcv/www"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/home\/sylviatrcv\/www"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2Fhome%2Fsylviatrcv%2Fwww"
+	SEARCH  7:"//via.yj.fr" =====================================> "//www.sylviatrouve.com"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/www.sylviatrouve.com"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//www.sylviatrouve.com"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/www.sylviatrouve.com"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 13:"https://www.sylviatrouve.com" ====================> "http://www.sylviatrouve.com"
+	SEARCH 14:"https:\/\/www.sylviatrouve.com" ==================> "http:\/\/www.sylviatrouve.com"
+	SEARCH 15:"https%3A%2F%2Fwww.sylviatrouve.com" ==============> "http%3A%2F%2Fwww.sylviatrouve.com"
+
+EVALUATE TABLE: "wp_usermeta"_____________________________________[ROWS:    71][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/home/sylviatrcv/www/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/home\/sylviatrcv\/www\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2Fhome%2Fsylviatrcv%2Fwww%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/home/sylviatrcv/www"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/home\/sylviatrcv\/www"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2Fhome%2Fsylviatrcv%2Fwww"
+	SEARCH  7:"//via.yj.fr" =====================================> "//www.sylviatrouve.com"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/www.sylviatrouve.com"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//www.sylviatrouve.com"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/www.sylviatrouve.com"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 13:"https://www.sylviatrouve.com" ====================> "http://www.sylviatrouve.com"
+	SEARCH 14:"https:\/\/www.sylviatrouve.com" ==================> "http:\/\/www.sylviatrouve.com"
+	SEARCH 15:"https%3A%2F%2Fwww.sylviatrouve.com" ==============> "http%3A%2F%2Fwww.sylviatrouve.com"
+
+EVALUATE TABLE: "wp_users"________________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/home/sylviatrcv/www/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/home\/sylviatrcv\/www\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2Fhome%2Fsylviatrcv%2Fwww%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/home/sylviatrcv/www"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/home\/sylviatrcv\/www"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2Fhome%2Fsylviatrcv%2Fwww"
+	SEARCH  7:"//via.yj.fr" =====================================> "//www.sylviatrouve.com"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/www.sylviatrouve.com"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//www.sylviatrouve.com"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/www.sylviatrouve.com"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Fwww.sylviatrouve.com"
+	SEARCH 13:"https://www.sylviatrouve.com" ====================> "http://www.sylviatrouve.com"
+	SEARCH 14:"https:\/\/www.sylviatrouve.com" ==================> "http:\/\/www.sylviatrouve.com"
+	SEARCH 15:"https%3A%2F%2Fwww.sylviatrouve.com" ==============> "http%3A%2F%2Fwww.sylviatrouve.com"
+--------------------------------------
+SCANNED:	Tables:20 	|	 Rows:4993 	|	 Cells:28716 
+UPDATED:	Tables:3 	|	 Rows:464 	|	 Cells:465 
+ERRORS:		0 
+RUNTIME:	0.367600 sec
+
+====================================
+REMOVE LICENSE KEY
+====================================
+
+====================================
+CREATE NEW ADMIN USER
+====================================
+
+====================================
+CONFIGURATION FILE UPDATES
+====================================
+	UPDATE DB_NAME ""sylviatrcvbdd""
+	UPDATE DB_USER ""sylviatrcvbdd""
+	UPDATE DB_PASSWORD "** OBSCURED **"
+	UPDATE DB_HOST ""sylviatrcvbdd.mysql.db""
+	REMOVE WPCACHEHOME
+	
+*** UPDATED WP CONFIG FILE ***
+
+====================================
+HTACCESS UPDATE MODE: "NEW"
+====================================
+- PASS: Successfully created a new .htaccess file.
+- PASS: Existing Apache 'htaccess.orig' was removed
+
+====================================
+GENERAL UPDATES & CLEANUP
+====================================
+
+====================================
+DEACTIVATE PLUGINS CHECK
+====================================
+Activated plugins (If they are activated) listed here will be deactivated: Array
+(
+    [0] => really-simple-ssl/rlrsssl-really-simple-ssl.php
+    [1] => simple-google-recaptcha/simple-google-recaptcha.php
+    [2] => js_composer/js_composer.php
+)
+
+
+====================================
+NOTICES TEST
+====================================
+No General Notices Found
+
+
+====================================
+CLEANUP TMP FILES
+====================================
+
+====================================
+FINAL REPORT NOTICES
+====================================
+
+STEP-3 COMPLETE @ 01:33:38 - RUNTIME: 0.4041 sec. 
+
+
+====================================
+FINAL REPORT NOTICES LIST
+====================================
+-----------------------
+[INFO] No general notices
+	SECTIONS: general
+
+-----------------------
+[INFO] No errors in database
+	SECTIONS: database
+
+-----------------------
+[INFO] No search and replace data errors
+	SECTIONS: search_replace
+
+-----------------------
+[INFO] No files extraction errors
+	SECTIONS: files
+
+====================================

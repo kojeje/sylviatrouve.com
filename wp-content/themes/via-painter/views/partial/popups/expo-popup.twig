@@ -1,0 +1,137 @@
+<!-- The Modal -->
+    <div id="myModal" onclick = "function (event)" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content row">
+            <span class="close col-12">&times;</span>
+            <a id="article-anch7"></a>  
+            <div class="col-12 col-md-7 col-lg-9 row "> 
+                <h1 class="row catalog t-8 col-md-6 m-a color3 col-12">
+                    <span class="t-a-center d-block w-100">Catalogue</span>
+                </h1> 
+                {# LES collections #}
+                {% if post.get_field('collections') %}
+                    
+                     <h2 class="col-12 row t-a-center white">
+                            <span class="mt-20 col-12 col-md-6 t-a-center">
+                                séries
+                            </span>
+                            <a href="#article-anch8" class="d-none d-md-block t-a-center anch mt-10 col-12 col-md-6">
+                                <div class="button button-h t-a-center mt30">
+                                    <p class="color8"><i class="fas fa-chevron-down m-a"></i></p>
+                                </div>
+                            </a>
+                            
+                        </h2>
+                    {% for serie in post.get_field('collections') %}
+                        
+                        <h3 class="article-h3 white col-12 col-md-6 t-a-center ">
+                            <a href="{{ serie.link }}" class="d-block p-50">
+                                {{ serie.post_title|upper }}
+                            </a>
+                        </h3>
+                        <div class="row">
+                            {% for toile in serie.get_field('toiles') %}
+                                <div class="col-10 col-md-3 toile">
+                                    <a href="{{ toile.link }}" target="_blank">
+                                        <img src="{{ toile.thumbnail.src }}" alt="photo de {{ post.title }}" class="img toile d-block w-100 m-a thumb mt10">
+                                        <p class="caption2 vertical-title t-a-center white t2">{{ toile.title|upper }}</p>
+                                    </a>
+                                </div>
+                                <div class="offset-md-1 d-none d-md-block"></div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                {% if post.get_field('toiles') %}
+                    <a id="article-anch8"></a>  
+                    <div class="col-12 row">
+                        <a class="anch" id="article-anch4"></a>
+                        <h2 class="col-12 col-md-3 m-a row t-a-center white">
+                            <span class="mt-20 col-12 t-a-center">
+                                toiles
+                            </span>
+                            <a href="#article-anch7" class="d-none d-md-block anch mt-10 col-12">
+                                <div class="button button-h t-a-center mt30">
+                                    <p class="color8"><i class="fas fa-chevron-up m-a"></i></p>
+                                </div>
+                            </a>
+                            
+                        </h2>
+                        <div class="col-8 row mt-10">
+                            {% for tableau in  post.get_field('toiles')%}
+                                <div class="col-10 col-md-5 toile">
+                                    <a href="{{ tableau.link }}" target="_blank">
+                                        <img src="{{ tableau.thumbnail.src }}" alt="photo de {{ post.title }}" class="img toile d-block w-100 m-a thumb mt10">
+                                        <p class="caption2 vertical-title t-a-center white t2">{{ tableau.title|upper }}</p>
+                                    </a>
+                                </div>
+                                <div class="offset-md-1 d-none d-md-block"></div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="side-popup col-12 col-md-4 col-lg-3 bk7 color8 p-30">
+                <p class="color8 t3 t-md-5 t-lg-7 p-20">
+                    {{ 'exposition'|upper }}
+                </p>
+                <h1 class="white t3 t-md-5 t-lg-7 p-30 bk3">
+                    {{post.title}}
+                </h1>
+                {% for lieu in post.get_field('lieu') %}
+                    <div class="row h-a">
+                        <div  class="toile col-12 row m-a">
+                            <div class="d-block d-lg-none col-12 row">
+                                <img src="{{ lieu.thumbnail.src }}" alt="photo de {{ post.title }}" class="wmax-50 m-a h-a">
+                                <p class="article-h2 name mt25 t-a-center col-12 col-md-8">{{ lieu.title }}</p>
+                                {# <p class=" mt25 t-a-center col-12 col-md-4">{{ lieu.type }}</p> #}
+                                
+                            </div>
+                            <div class="col-12 m-a">
+                                
+                                <div class="m-a d-lg-flex d-none row">
+                                    <p class="lieu col-12 t-a-center t-lg-7">
+                                        <strong>
+                                            du {{ post.get_field('debut')|date('j F Y') }} au {{ post.get_field('fin')|date('j F Y') }}</p>
+                                        </strong>
+                                    <img src="{{ lieu.thumbnail.src }}" alt="photo de {{ post.title }}" class="col-md-12 wmax-50 m-a h-a">
+                                    <p class="article-h2 name mt25 t-a-center col-12">
+                                        {{ lieu.title }}
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div  class="toile col-12 row m-a">
+                            <div class="d-block d-lg-none col-12 row">
+                                <p class=" mt25 t-a-center col-12 col-md-4">{{ lieu.type }}</p>
+                                <p class="ad t-a-center col-12">
+                                    <i class="fal fa-phone"></i>
+                                    +33 {{ lieu.tel }}
+                                </p>
+                                <p class="ad t-a-center col-12">
+                                {{ lieu.ad1 }}
+                                </p>
+                                <p class="ad t-a-center col-12">
+                                    {{ lieu.cp }} {{ lieu.commune }}
+                                </p>
+                                <p class="ad t-a-center col-12 col-md-6">{{ lieu.cp }} {{ lieu.commune }}</p>
+                            </div>
+                            <div class="col-12 m-a">
+                            </div>
+                        </div>
+                    </div>
+                    
+                {% endfor %}
+            </div>
+             <div class="col-12 col-md-12 t-a-center m-a color4">
+                <div class="w-10 m-a">
+                    <img src="{{ theme.link }}/assets/img/logo-ST.jpg" class="w-100 m-a img p-30" alt="logo de {{ site.url }}">
+                </div>
+                <p class="t-a-center white t2 m-a p-10">tous droits réservés</p>
+                <p class="color8 m-a t-a-center p-10">sylviatrouve.com </p>
+            </div>
+             <span class="close2 col-12">&times;</span>
+        </div>
+    </div>
+{# {% endif %} #}

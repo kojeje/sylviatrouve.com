@@ -1,0 +1,83 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <article class="container">
+        <a href="" id="article-anch"></a>
+        <section class="row">
+
+            <div class="coo-place t-a-center col-12 col-md-5 row">
+                <div class="row">
+                    {# Titre du lieu #}
+                    <h1 class="article-h1 title-red white col-12 t-a-center d-block t4 t-5 t-6">{{ post.title }}
+                        <br>
+                        {# type de lieu #}
+                        <i class="color3">{{ post.get_field('type') }}</i>
+                    </h1>
+
+                    {# si le lieu est une destination de voyage#}
+                    {% if post.get_field('type') != 'destination de voyage'%}
+                        {# si thumbnail#}
+                        {%  if post.thumbnail.src != null %}
+                            {# afficher thumbnail #}
+                            <div class="paragraph col-md-6 col-12 t2 row">
+                                <p class="col-12"><img src="{{ post.thumbnail.src }}" alt="photo de {{ post.title }}" class="img d-block w-100 "></p>
+                            </div>
+                            {# adapter les dimensions du bloc suivant #}
+                            <div class="col-md-6 col-12">
+                        {# sinon #}
+                        {% else %}
+                            {# bloc suivant en pleine largeur #}
+                            <div class="col-12">
+                        {% endif %}
+                        {# Si bloc ad1 #}
+                        {% if post.get_field('ad1') %}
+                            {# afficher ad1 #}
+                            <p>{{ post.get_field('ad1') }}</p>
+                        {% endif %}
+                        {# si les blocs ad1 et ad2 sont renseignés#}
+                        {% if post.get_field('ad1') and post.get_field('ad2') %}
+                            <p> {{ post.get_field('ad2') }}</p>
+                        {% endif %}
+                        {# Si commune est renseignée #}
+                        {% if post.get_field('commune') %}
+                            {# afficher commune #}
+                            <p>
+                                {{ post.get_field('cp') }} -  {{ post.get_field('commune') }}
+                            </p>
+
+                        {% endif %}
+
+                        {% if post.get_field('tel') %}
+                            <p>
+                                <i class="fal fa-phone"></i>
+                                +33 {{ post.get_field('tel')}}
+                            </p>
+                        {% endif %}
+                        {% if post.get_field('url') %}
+                            <a class="red" href="{{ post.get_field('url')}}">
+                                site web
+                            </a>
+                        {% endif %}
+                        <div class="offset-1"></div>
+                    </div>
+                    {% else %}
+                        {%  if post.thumbnail.src != null %}
+                            <div class="paragraph col-12 t2 row">
+                                <p class="col-12"><img src="{{ post.thumbnail.src }}" alt="photo de {{ post.title }}" class="img d-block w-100 "></p>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+
+                </div>
+             </div>
+            </div>
+
+            <aside class="row col-10 col-md-6">
+                {{ post.get_field('map') }}
+            </aside>
+        </section>
+
+
+
+    </article>
+
+{% endblock %}

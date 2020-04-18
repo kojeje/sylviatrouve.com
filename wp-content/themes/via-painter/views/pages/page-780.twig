@@ -1,0 +1,27 @@
+{% extends 'base.twig' %}
+{% block content %}
+    {# --------------------------   section 1 : welcome --------------------------------------------#}
+    
+    <article id="post-id" class="container-fluid row url4">
+        <a id="article-anch" class="anch col-md-12 d-none d-md-block"></a> 
+        <section class="section col-12 col-md-10 row">
+            <h1 class="title-red t-a-center col-md-1 col-12 vertical-h1 m-a white">
+                <span class="white t4 ">
+                    {{post.title }}
+                </span>
+            </h1>
+            <div class="col-8 t3  toile mt-20">
+                <a href="{{ post.thumbnail.src }}">
+                    <img src="{{ post.thumbnail.src }}" alt="photo de {{ site.url }}" class="w-50 m-a img mb40">
+                </a>
+                <p class="col-12 col-md-10 m-a">
+                    {{post.get_field('content')}}
+                </p>
+                <p class="col-12 col-md-10 m-a">
+                    {{'[caldera_form id="CF5dfe86d9ce003"]'|shortcodes}}
+                </p>
+            </div>
+        </section>
+
+    </article>
+{% endblock %}

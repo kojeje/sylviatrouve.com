@@ -1,0 +1,28 @@
+{# Si contacts #}
+{% if contacts %}
+    {#ancre#}
+    <div class="offset-md-1 d-none d-md-block"></div>
+    {#titre page#}
+    <h2 class=" col-10 color7">
+        {{'contact'|upper }}
+    </h2>
+    {# <div class="offset-md-1 d-none d-md-block"></div> #}
+    <div class="row">
+        {# BOUCLE contacts #}
+       
+            {# ENTETE DES FORMULAIRES #}
+            {#logo#}
+            <div class="col-12 col-md-4 w-100 mt-10">
+                <img class=" logo img" src="{{ theme.link }}/assets/img/logo-ST.png" alt="logo">
+            </div>
+            
+            <div class="col-12 col-md-6 mt30">
+                {{ '[caldera_form id="CF5db5acb269cb1"]'|shortcodes }}
+            </div>
+           
+            
+        
+         
+    </div>
+    
+{% endif %}

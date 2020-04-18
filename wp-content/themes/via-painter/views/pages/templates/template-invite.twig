@@ -1,0 +1,112 @@
+    {% extends 'base.twig' %}
+{% block content %}
+    <a id="article-anch"></a>
+    <article class="container row m-a mt20">
+        {% for post in posts %}
+            <section class="section col-10 row">
+
+                <h1 class="article-h1  col-12 t-a-center">
+                    {% if post.get_field('nom_dartiste_seul') == true
+                        and post.get_field('nom_dartiste')%}
+                         {{ post.get_field('nom_dartiste')|upper }}
+                    {% else %}
+                        {{ post.get_field('nom')|upper }} {{ post.get_field('prenom')|upper }}
+                        {% if post.get_field('nom_dartiste') %}
+                    <strong class="vertical-strong-red"> dit {{ post.get_field('nom_dartiste') }}</strong>
+                        {% endif %}
+
+                    {% endif %}
+                </h1>
+                {% if post.get_field('site_web') %}
+                    <p class="col-12 t-a-center color6">
+                        <a href="{{ post.get_field('site_web') }}" title="site de l'artiste">{{ post.get_field('site_web') }}</a>
+                    </p>
+                {% endif %}
+                <h4 class="col-12 t-a-right">
+                    {% for spe in post.get_field('specialite') %}
+
+                        {{ spe }}
+                        {% if loop.index != loop.last %}
+                            ,
+                        {% endif %}
+                    {% endfor %}
+                </h4>
+                    <p class="col-md-10 col-12">
+                        <img src="{{ post.thumbnail.src }}" class="float-thumb" alt="photo de {{ post.title }}">
+                        {{ post.get_field('bio') }}
+                    </p>
+
+                <div class="offset-md-1 d-none d-md-block"></div>
+                {% if post.get_field('invite_img_1') %}
+                    <h2 class="title-red t-a-center col-md-12 m-a white"> Oeuvres choisies</h2>
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                    <div class="col-10 col-md-4 toile">
+                        <a class="a-hover-110" href="{{ post.get_field('invite_img_1').link }}" >
+                            <img src="{{ post.get_field('invite_img_1') }}" alt=" oeuvre de {{ post.get_field('prénom') }} {{ post.get_field('nom') }}" class="img toile d-block w-100 m-a thumb mt10">
+                        </a>
+                    </div>
+                {% endif %}
+                {% if post.get_field('invite_img_2') %}
+                    <div class="col-10 col-md-4 toile">
+                        <a class="a-hover-110" href="{{ post.get_field('invite_img_2').link }}">
+                            <img src="{{ post.get_field('invite_img_2') }}" alt=" oeuvre de {{ post.get_field('prénom') }} {{ post.get_field('nom') }}" class="img toile d-block w-100 m-a thumb mt10">
+                        </a>
+                    </div>
+                {% endif %}
+                {% if post.get_field('invite_img_3') %}
+                    <div class="col-10 col-md-4 toile">
+                        <a class="a-hover-110" href="{{ post.get_field('invite_img_3').link }}">
+                            <img src="{{ post.get_field('invite_img_3') }}" alt=" oeuvre de {{ post.get_field('prénom') }} {{ post.get_field('nom') }}" class="img toile d-block w-100 m-a thumb mt10">
+                        </a>
+                    </div>
+                {% endif %}
+                {% if post.get_field('invite_img_4') %}
+                    <div class="col-10 col-md-4 toile">
+                        <a class="a-hover-110" class="a-hover-110" href="{{ post.get_field('invite_img_4').link }}">
+                            <img src="{{ post.get_field('invite_img_4') }}" alt=" oeuvre de {{ post.get_field('prénom') }} {{ post.get_field('nom') }}" class="img toile d-block w-100 m-a thumb mt10">
+                        </a>
+                    </div>
+
+                    <div class="offset-md-2 d-none d-md-block"></div>
+                {% endif %}
+                {% if post.get_field('video-booleen') == true %}
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                    <h2 class="title-red t-a-center  vertical-h1 m-a white"> video</h2>
+                    <div class="offset-md-2 d-none d-md-block"></div>
+                    <div class="col-10 col-md-5 toile">
+                        {{ post.get_field('lien_dintegration') }}
+                    </div>
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                {% endif %}
+                {% if post.get_field('soundcloud') == true %}
+                    <div class="offset-md-2 d-none d-md-block"></div>
+                    <div class="col-10 col-md-5 toile">
+                        {{ post.get_field('lien_dintegration_soundcloud') }}
+                    </div>
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                    <h2 class="title-red t-a-center  vertical-h1 m-a white">
+                        Ecouter
+                    </h2>
+                {% endif %}
+            </section>
+            <aside class="col-md-2 d-none d-md-block mt-10">
+                <h1 class="vertical-h1 t5 vertical-title">
+                    {#{% if post.get_field('nom_dartiste_seul') == true#}
+                        {#and post.get_field('nom_dartiste')%}#}
+                         {#{{ post.get_field('nom_dartiste')|upper }}#}
+                    {#{% else %}#}
+
+                        {#{% if post.get_field('nom_dartiste') %}#}
+                            {#{{ post.get_field('nom_dartiste') }}#}
+                        {#{% else %}#}
+                            {#{{ post.get_field('nom')|upper }} {{ post.get_field('prenom')|upper }}#}
+                        {#{% endif %}#}
+
+                    {#{% endif %}#}
+                    <strong class="vertical-strong-red">www.sylviatrouve.com</strong>
+                </h1>
+            </aside>
+        {% endfor %}
+    </article>
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{# Si contacts #}
+{% if contacts %}
+    {#ancre#}
+    <div class="offset-md-1 d-none d-md-block"></div>
+    {#titre page#}
+    <h2 class=" col-10 color7">
+        {{'contact'|upper }}
+    </h2>
+    {# <div class="offset-md-1 d-none d-md-block"></div> #}
+   
+        {# BOUCLE contacts #}
+        {% for contact in contacts if contact.id ==269 %}
+            {# ENTETE DES FORMULAIRES #}
+            {#logo#}
+            <div class="col-12 col-md-4 w-100 mt-10">
+                <img class=" logo img" src="{{ theme.link }}/assets/img/logo-ST.png" alt="logo">
+            </div>
+            <div class="offset-md-1 d-none d-md-block"></div>
+            {#coordonnees#}
+            <div class="col-12 col-md-7 mt30">
+
+                <div class="vertical-span white t3">
+                    <div class=" bk3 vertical-strong-red mt-10 hmax70vh t4">
+
+                        {% for lieu in contact.get_field('lieu') %}
+                            {% if lieu.get_field('ad1')%}
+                                <p class="white t3">
+                                    {{ lieu.get_field('ad1') }}
+                                </p>
+                            {% endif %}
+
+                            {% if lieu.get_field('ad2') %}
+                                <p class="white t3">
+                                    {{ lieu.get_field('ad2') }}
+                                </p>
+                            {% endif %}
+                            {% if lieu.get_field('cp') and lieu.get_field('commune')%}
+                                <p class="color8 t4">
+                                    {{ lieu.get_field('cp') }} <span class="white">{{ lieu.get_field('commune') }}</span>
+                                </p>
+                            {% endif %}
+                            {% if lieu.get_field('tel') %}
+                                <p class="white t4">
+                                    <i class="color8 fas fa-tty mr10 t5"></i> {{ lieu.get_field('tel') }}
+                                </p>
+                            {% endif %}
+                        {% endfor %}
+                        <a class="d-block  col-12 link link-logo white d-block w-50" target="_blank" href="https://www.facebook.com/Sylvia-Trouv%C3%A9-360856991006240/">
+                             <i class="t8 t-a-center white d-block fab fa-facebook-f"></i>
+                        </a>
+                        {# lien vers ancre suivante #}
+                        <a href="#article-contact-form" class="t12">
+                            <div class="button button-h t-a-center">
+                                <p class="col-12 mt30 white"><i class="fas fa-chevron-down"></i></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {# map #}
+            <div class="col-12 mt30">
+                {% for lieu in contact.get_field('lieu') %}
+                    {% if lieu.get_field('map') %}
+                        <p class="hmax40vh w-80 m-a">{{ lieu.get_field('map') }}</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <a id="article-contact-form" class="w-100 hmin20vh anch "></a>
+            
+            <div class="col-12 col-md-6 mt30">
+                {{ '[caldera_form id="CF5db5acb269cb1"]'|shortcodes }}
+            </div>
+            <div class="col-12 col-md-6 mt30 row">
+                <h2>S'inscrire au "trait"</h2>
+                {{ '[mailpoet_form id="1"]'|shortcodes }}
+                <a href="#article-contact-form" class="d-none d-md-block anch mt-10 col-12">
+                    <div class="button button-h t-a-center mt30">
+                        <p class="color3"><i class="fas fa-chevron-up"></i></p>
+                    </div>
+                </a>
+            </div>
+            
+        {% endfor %}
+         
+  
+    
+{% endif %}

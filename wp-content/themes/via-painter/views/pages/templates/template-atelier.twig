@@ -1,0 +1,238 @@
+{% extends 'base2.twig' %}
+
+{% block tmp_slide %}
+
+    <!-- SLIDER -->
+    {# Si thumbnail existe#}
+    {% if post.thumbnail.src %}
+        <div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-ride="carousel">
+                <div class="l-2 caption2 caption5 carousel-caption hmax60vh wmax-20 mce-active d-none d-md-block t4">
+                {# Nom #}
+                <p class="t-md-6 m-a t-a-center white ">
+                    {{ post.title }}
+                </p>
+                <p class="t-md-6 m-a t-a-center color8 ">
+                    {% for lieu in post.get_field('lieu') %}
+                        {{ lieu.get_field('commune') }}
+                    {% endfor %}
+                </p>
+                <p class="white ">
+
+                    <span class="color10 t3">{{ post.get_field('debut')|date('j F Y')}}
+                    {% if post.get_field('debut')|date('U') != post.get_field('fin')|date('U') %} 
+                        - {{ post.get_field('fin')|date('j F Y')}}</span>
+                    {% endif %}
+                </p>
+                {#technique#}
+                <p class=" white m-a t-a-center">
+                    {{ post.get_field('technique') }}
+                </p>
+                 {# vers ancres suivantes #}
+                <a href="#article-anch" class="col-12">
+                    <div class="button button-h t-a-center ">
+                        <p class="white"><i class="t12 fas fa-chevron-down"></i></p>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-inner">
+                <!-- IMAGES 1265 X 550 -->
+                {# img 1#}
+                {% if post.thumbnail.src %}
+                    
+                    <div class="carousel-item active ">
+                        <img class="hmax70vh wmax-100 m-a d-block " src="{{ post.thumbnail.src }}" alt="Fifth slide">
+                    </div>
+                {% endif %}
+                
+            </div>
+            <!-- BOUTONS -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <a id="article-anch" class="anch d-none d-md-block"></a>
+    <article class="url4 parallax container-fluid row m-a ">
+        <div class="offset-md-1 d-none d-md-block"></div>
+        <div class="paint col-12 col-md-8 toile ">
+            <h2 class="article-h2 w-100">{{ ('L\'atelier du trait')|upper }}</h2>
+
+            <img src="{{ post.thumbnail.src }}" alt="photo de {{ post.title }}" class="float-thumb paint-img wmax-40 hmax30vh mr40">
+            <p class="col-12 toile">
+                {{ post.get_field('content') }}
+                {% if post.get_field('auteur') %}
+                    <i class="title-red white hmax30vh t2 ml-40 mt-10 caption2"> {{ post.get_field('auteur') }} </i>
+                {% endif %}
+            </p>
+            <a href="#article-anch2" class="w-100 anch m-a d-none d-md-block col-12 col-md-6 t-a-center">
+                <div class="button button2 button3">
+                    <p class="t-a-center"><i class="fas fa-chevron-down"></i></p>
+                </div>
+            </a>
+        </div>
+        <div class="paint col-12 col-md-1 toile2">
+            <h2 class="title-red t-a-center vertical-h1 m-a white">
+                {{ post.get_field('technique')|join }}
+            </h2>
+        </div>
+
+        <a id="article-anch2" class="anch d-none d-md-block"></a>
+        <div class="offset-md-1 d-none d-md-block"></div>
+        <div class="col-12 col-md-4 ">
+            <h3 class="col-12 t-a-center article-h2 white p20 bk3 t4">tarifs et dates</h3>
+            <ul class="col-12 mt-20 t-3 atelier-info">
+                <li>dès {{ post.get_field('debut')|date('F Y')|capitalize }}</li>
+                <li>atelier {{ post.get_field('periodicite') }}*</li>
+                {% if post.get_field('periodicite') == 'mensuel' %}
+                <li >Tous les {{ post.get_field('si_mensuel')|join }} {{ post.get_field('jour_de_la_semaine')|join }}s du mois</li>
+                {% else %}
+                <li >Tous les {{ post.get_field('jour_de_la_semaine')|join }}s</li>
+                {% endif %}
+                <li>Forfait {{ post.get_field('nombre_de_seances_forfait') }} séances: {{ post.get_field('nombre_de_seances_forfait') * post.get_field('tarif') }} €</li>
+                <li>
+                    tarif à la séance: {{ (post.get_field('tarif') * 1.66)|round }} €
+                </li>
+
+            </ul>
+            <p class="t-a-right t1">
+                <i>* hors vacances scolaires</i>
+            </p>
+            <a href="#article-anch3" class="w-100 anch m-a d-none d-md-block col-12 col-md-6 t-a-center">
+                <div class="button button2 button3">
+                    <p class="t-a-center"><i class="fas fa-chevron-down"></i></p>
+                </div>
+            </a>
+
+
+
+        </div>
+        <div class="offset-md-1 d-none d-md-block"></div>
+        {% for lieu in post.get_field('lieu') %}
+            <div class="paint col-12 col-md-6 mt-10">
+                <div class="section row">
+                    <div class="url4 map  col-12 parallax3">
+                        <div class="adress mt20 d-lg-flex d-none row">
+
+                            <img src="{{ lieu.thumbnail.src }}" alt="photo de {{ post.title }}" class="col-12 col-md-3  m-a h-a">
+                            <p class="article-h2 name mt25 t-a-center t2 col-6">
+                                {{ lieu.title }}
+                                <span class="d-block article-h2-span mt25 t-a-center col-12">
+                                    {{ lieu.type }}
+                                </span>
+                            </p>
+                            <p class="ad t-a-center col-12">
+                                <i class="fal fa-phone"></i>
+                                +33 {{ lieu.tel }}
+                            </p>
+                            <p class="ad t-a-center col-12">
+                                {{ lieu.ad1 }}
+                            </p>
+                            <p class="ad t-a-center col-12">
+                                {{ lieu.cp }} {{ lieu.commune }}
+                            </p>
+                        </div>
+                        <div class="w-100">{{ lieu.get_field('map') }}</div>
+                        <p class="ad t-a-center w-80 m-a t-a-center ">
+                            <a href="{{ lieu.url }}">{{ lieu.url|raw  }}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <a id="article-anch3" class="anch d-none d-md-block"></a>
+        <div class="offset-md-1 d-none d-block"></div>
+        <div class="col-12 col-md-10 url6 parallax-bis bk4 white row">
+            <div class="col-12 col-md-10 mt-10">
+
+                {{ '[caldera_form id="CF5db5acb269cb1"]'|shortcodes }}
+            </div>
+            <div class="paint col-12 col-md-1 toile2 mt10">
+                <h2 class="title-red t-a-center  vertical-h1 m-a white">
+                    {{ ('inscription')|upper }}
+
+                </h2>
+                
+            </div>
+
+            <div class="offset-md-1 d-none d-md-block"></div>
+        </div>
+        <div class="offset-md-1 d-none d-block"></div>
+        <a id="article-anch4" class="anch d-none d-md-block"></a>
+
+        {% if post.get_field('journee') %}
+            {% for journee in post.get_field('journee') %}
+
+                <div class="paint col-12 col-md-1 toile2">
+                    <h2 class="title-red t-a-center vertical-h1 m-a white">
+                        {{ journee.title }}
+                    </h2>
+                </div>
+                <div class="offset-md-1 d-none d-md-block"></div>
+
+                <div class="row paint col-10 toile2">
+
+
+                    <p class="col-12 col-md-4 mt60">{{ journee.get_field('content') }}></p>
+
+                    <h2 class="col-md-4 col-12 color t-a-center w-80 m-a white bk-color3">
+                        {{ 'happening'|upper }}
+                        <br>
+                        le {{ journee.get_field('date') }}
+                    </h2>
+                    <div class="col-12 col-md-8 ">
+                        {% for invite in journee.get_field('invite') %}
+                            <h3 class="col-12 t-a-center article-h2 white p20 bk3 t4">Les invités</h3>
+                            <div class="offset-md-1 d-none d-md-block"></div>
+                            <a href="{{ invite.link }}" class="col-12 col-md-10 row mt10">
+                                <div class="toile row">
+                                    <div class="col-12">
+                                        <img src="{{ invite.thumbnail.src }}" alt="photo de {{ post.title }}" class="img d-block w-50 float-thumb">
+                                        {{ invite.get_field('bio') }}
+                                    </div>
+                                    <div class="caption3 vertical-span white t3">
+                                        {% if invite.get_field('nom_dartiste_seul') == true %}
+                                            {% if invite.get_field('specialite')|join == "musicien" %}
+                                                {{ invite.get_field('nom_dartiste') }}
+                                                <span class="vertical-title vertical-h1 vertical-span white t1">
+
+                                                        {{ invite.get_field('nom_dartiste') }} / {{ invite.get_field('specialite') }}
+                                                    </span>
+                                            {% else %}
+                                                <span class="vertical-title vertical-h1 vertical-span white t1">
+                                                        <br>
+                                                        Concert
+                                                    </span>
+
+                                            {% endif %}
+
+                                        {% else %}
+                                            {{ invite.get_field('prenom') }} {{ invite.get_field('nom') }}
+                                            <span class="vertical-title vertical-h1 vertical-span white t1">
+                                                                        <br>
+                                                {% for spe in invite.get_field('specialite') %}
+                                                    {{ spe }}
+                                                    <br>
+                                                {% endfor %}
+                                                <br>
+                                                                    </span>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="offset-md-1 d-none d-block"></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </article>
+
+
+{% endblock %}

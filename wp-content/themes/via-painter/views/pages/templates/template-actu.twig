@@ -1,0 +1,222 @@
+{% extends 'base.twig' %}
+
+{% block tmp_slide %}
+
+    <!-- SLIDER -->
+    {# Si Slider existe#}
+    {%  if slider %}
+    {% if post.get_field('slider')== true %}
+        <div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-ride="carousel">
+            <div class="carousel-caption wmax-60 m-a mce-active d-none d-md-block ">
+                {#BOUTONS SCROLL#}
+                <a href="#article-anch" class="anch">
+                    <div class="button button-h">
+                        <p class="white t-8 ">
+                            {{'repérage'|upper }}
+                            <br>
+                            {% for lieu in post.get_field('lieu') %}
+                                {{ lieu.get_field('commune') }}
+                            {% endfor %}
+                            <br>
+                            <span class="color10 t5">{{ post.get_field('debut')|date('J F Y')}} - {{ post.get_field('fin')|date('J F Y') }}</span>
+                        </p>
+                        <p class="white"><i class="fas fa-chevron-down"></i></p>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-inner">
+                <!-- IMAGES 1265 X 550 -->
+                {# img 1#}
+                {% if post.get_field('img') %}
+                    {# img 5#}
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{{ post.get_field('img') }}" alt="Fifth slide">
+                    </div>
+                {% endif %}
+                {# img 2#}
+                {% if post.get_field('img_2') %}
+
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ post.get_field('img_2') }}" alt="Fifth slide">
+                    </div>
+                {% endif %}
+                {# img 3#}
+                {% if post.get_field('img_3') %}
+
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ post.get_field('img_3') }}" alt="Fifth slide">
+                    </div>
+                {% endif %}
+                {# img 4#}
+                {% if post.get_field('img_4') %}
+
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ post.get_field('img_4') }}" alt="Fifth slide">
+                    </div>
+                {% endif %}
+                {% if post.get_field('img_5') %}
+                    {# img 5#}
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ post.get_field('img_5') }}" alt="Fifth slide">
+                    </div>
+                {% endif %}
+                {% if post.get_field('img_6') %}
+                    {# img 6#}
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ post.get_field('img_6') }}" alt="Fifth slide">
+                    </div>
+                {% endif %}
+                {% if post.get_field('img_7') %}
+                    {# img 7#}
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ post.get_field('img_7') }}" alt="Fifth slide">
+                    </div>
+                {% endif %}
+                {% if post.get_field('img_8') %}
+                    {# img 8#}
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ post.get_field('img_8') }}" alt="Fifth slide">
+                    </div>
+                {% endif %}
+                {% if post.get_field('img_9') %}
+                    {# img 9#}
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ post.get_field('img_9') }}" alt="Fifth slide">
+                    </div>
+                {% endif %}
+                {% if post.get_field('img_10') %}
+                    {# img 10#}
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ post.get_field('img_10') }}" alt="Fifth slide">
+                    </div>
+                {% endif %}
+
+
+            </div>
+
+            <!-- BOUTONS -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+
+    {% endif %}
+    {% endif %}
+{% endblock %}
+{% block content %}
+    {# corps de la page #}
+    <article class="url4 parallax container-fluid row m-a">
+        {# ancre interne #}
+        <a id="article-anch" class="col-12"></a>
+        {# bloc titre/image/texte #}
+        <section class="paint col-12 col-md-5 toile ">
+            {# Titre #}
+            <h1 class="title-red white">{{ post.title }}</h2>
+            {#  thumb #}
+            <img src="{{ post.thumbnail.src }}" alt="photo de {{ post.title }}" class="d-block float-thumb paint-img w-70">
+            {# texte #}
+            {{ post.get_field('edito')|slice(0,500) }}
+            {#  lien vers ancre suivante #}
+            <a href="
+                {% if post.get_field('video-booleen') == '1' %}
+                    #article-video
+                {% elseif post.get_field('soundcloud') == '1' %}
+                    #article-sound
+                {% else %}
+                    #article-anch2
+                {% endif %} 
+                " 
+                class="w-100 anch m-a d-none d-md-block col-12 col-md-6 t-a-center">
+                    <div class="button button2 button3 button-h">
+                        <p class="t-a-center"><i class="fas fa-chevron-down"></i></p>
+                    </div>
+                </div>
+            </a>
+        </section>
+        <div class="offset-md-1 d-none d-md-block"></div>
+        {# Carte #}
+        <section class="paint col-12 col-md-3 toile ">
+            {% for lieu in post.get_field('lieu') %}
+                <div class="shadow mt-10">{{ lieu.get_field('map') }}</div>
+            {% endfor %}
+        </section>
+        {# titre vertical #}
+        <div class="paint col-12 col-md-2 toile2">
+            <h1 class="title-red t-a-center  vertical-h1 m-a white">
+                <span class="white t4 ">
+                    {{'actu'|upper }}
+                </span>
+            </h2>
+        </div>
+         {# ------------------------       BLOC youtube         --------------------------#} 
+        {% if post.get_field('video-booleen') == '1' %}
+            <section class="col-12 row mt90">
+                <a href="" id="article-video" class="col-12 anch anch3"></a>
+                <div class="offset-md-1 d-none d-md-block"></div>
+                <div class="col-md-6 col-10 brd-c3 mt40">
+                    <div class="col-md-6 col-10 brd-c3 mt40">
+                        {{post.get_field('lien_dintegration')}}
+                    </div>
+                </div>
+                <h1 class="t-a-center title-red color8 col-md-5 col-10 m-a">
+                    {{ 'video'|capitalize }}
+                    {% if post.get_field('soundcloud') == '1' %}
+                        <a href="#article-sound" class="anch">
+                            <div class="button button-h t-a-center mt30">
+                                <span class="white"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                        </a> 
+                    {% else %}
+                        <a href="#article-anch2" class="anch">
+                            <div class="button button-h t-a-center mt30">
+                                <span class="white"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                        </a> 
+                    {% endif %}
+                </h1>
+            </section>
+
+        {%  endif %}
+        {# ------------------------       BLOC souncloud         --------------------------#} 
+        {% if post.get_field('soundcloud') == '1' %}
+            <section class="col-12 row mt90">
+                <a href="" id="article-sound" class="col-12 anch anch3"></a>
+                <h1 class="t-a-center title-red color8 col-md-5 col-10 m-a">
+                    {{ 'audio'|capitalize }}
+                    <a href="#article-contact" class="anch">
+                        <div class="button button-h t-a-center mt30">
+                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </a> 
+                </h1>
+                <div class="offset-md-1 d-none d-md-block"></div>
+                <div class="col-md-6 col-10 brd-c3 mt70">
+                    {{post.get_field('lien_dintegration_soundcloud')}}
+                </div>
+            </section>
+            
+        {%  endif %} 
+    
+        {% include 'views/partial/sections/boucles-bas-de-page.twig' %}
+         {# ------------------------       BLOC CONTACTS         --------------------------#}
+        {# Si contacts #}
+        {% if contacts %}
+            <section class="row col-12">
+                <a id="article-contact" class="anch col-md-12 d-none d-md-block"></a>
+                <h2 class="title-red col-md-1 col-12 vertical-h1 white">
+                    {{'contact'|upper }}
+                </h2>
+                <div class="col-md-9 row d-md-flex ">
+                    {% include 'views/partial/sections/contact-via.twig' %}
+                </div>
+                {% include 'views/partial/domain-column.twig' %}
+            </section>
+        {% endif %}
+    </article>
+{% endblock %}

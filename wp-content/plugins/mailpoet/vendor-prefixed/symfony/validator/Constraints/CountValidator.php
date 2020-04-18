@@ -1,0 +1,47 @@
+<?php
+
+/*
+ * This file is part of the Symfony package.
+ *
+ * (c) Fabien Potencier <fabien@symfony.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+namespace MailPoetVendor\Symfony\Component\Validator\Constraints;
+
+if (!defined('ABSPATH')) exit;
+
+
+use MailPoetVendor\Symfony\Component\Validator\Constraint;
+use MailPoetVendor\Symfony\Component\Validator\ConstraintValidator;
+use MailPoetVendor\Symfony\Component\Validator\Exception\UnexpectedTypeException;
+/**
+ * @author Bernhard Schussek <bschussek@gmail.com>
+ */
+class CountValidator extends \MailPoetVendor\Symfony\Component\Validator\ConstraintValidator
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function validate($value, \MailPoetVendor\Symfony\Component\Validator\Constraint $constraint)
+    {
+        if (!$constraint instanceof \MailPoetVendor\Symfony\Component\Validator\Constraints\Count) {
+            throw new \MailPoetVendor\Symfony\Component\Validator\Exception\UnexpectedTypeException($constraint, \MailPoetVendor\Symfony\Component\Validator\Constraints\Count::class);
+        }
+        if (null === $value) {
+            return;
+        }
+        if (!\is_array($value) && !$value instanceof \Countable) {
+            throw new \MailPoetVendor\Symfony\Component\Validator\Exception\UnexpectedTypeException($value, 'array or \\Countable');
+        }
+        $count = \count($value);
+        if (null !== $constraint->max && $count > $constraint->max) {
+            $this->context->buildViolation($constraint->min == $constraint->max ? $constraint->exactMessage : $constraint->maxMessage)->setParameter('{{ count }}', $count)->setParameter('{{ limit }}', $constraint->max)->setInvalidValue($value)->setPlural((int) $constraint->max)->setCode(\MailPoetVendor\Symfony\Component\Validator\Constraints\Count::TOO_MANY_ERROR)->addViolation();
+            return;
+        }
+        if (null !== $constraint->min && $count < $constraint->min) {
+            $this->context->buildViolation($constraint->min == $constraint->max ? $constraint->exactMessage : $constraint->minMessage)->setParameter('{{ count }}', $count)->setParameter('{{ limit }}', $constraint->min)->setInvalidValue($value)->setPlural((int) $constraint->min)->setCode(\MailPoetVendor\Symfony\Component\Validator\Constraints\Count::TOO_FEW_ERROR)->addViolation();
+        }
+    }
+}

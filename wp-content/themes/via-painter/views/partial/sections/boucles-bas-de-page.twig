@@ -1,0 +1,219 @@
+ {# ------------------------       Boucles        --------------------------#} 
+        <section class="col-12 row">
+            {# ancre interne #}
+            <a id="article-anch2" class="anch d-none d-md-block"></a>
+            {# titre #}
+            <h1 class="article-h1 col-12">Suivez le fil ...</h1>
+            {# si expo associée #}
+            {% if post.get_field('expos') %}
+                {# Boucle expos #}
+                {% for expo in post.get_field('expos') %}
+                    <div class="paint col-12 col-md-6  toile row">
+                        {# SUB VERTICAL #}
+                        <div class="paint col-12 col-md-1 mr10">
+                            <h2 class="title-red t-a-center vertical-h1 m-a white">
+                                {{ 'expo'|capitalize }}
+                            </h2>
+                        </div>
+                        {# bloc expo #}
+                        <a href="{{ expo.link }}" class="row col-12 col-md-8 m-a ">
+                            {# titre de l'expo #}
+                            <h2 class="t-a-center m-a col-11">
+                                {{ expo.title|capitalize }}
+                                <br>
+                                {# Lieu de l'expo #}
+                                {% for lieu in expo.get_field('lieu') %}
+                                    {{ lieu.get_field('commune') }}
+                                {% endfor %}
+                                {# thumb #}
+                                <div class="col-10 col-md-4 m-a">
+                                    <img class="img w-100" src="{{ expo.thumbnail.src }}" alt="photo de {{ expo.title }}">
+                                </div>
+                            {% if expo.get_field('debut')|date('U')  != expo.get_field('fin')|date('U') %}
+                                <span class=" col-12 t4">du {{ expo.get_field('debut')|date('j F Y')}} au {{ expo.get_field('fin')|date('j F Y') }}</span>
+                            {% endif %}
+                            </h2>
+                        </a>
+                    </div>
+                    {# <div class="offset-md-1 d-none d-md-block"></div> #}
+                {% endfor %}
+            {% endif %}
+            {# si série associée #} 
+            {% if post.get_field('collections_associes') %}
+                <div class="paint col-12 col-md-1 mr10 w-a mt-20">
+                    <h2 class="title-red t-a-center vertical-h1 m-a white">
+                        {{ 'collections'|capitalize }}
+                    </h2>
+                </div>
+                {# Boucle série #}
+                {% for collection in post.get_field('collections_associes') %}
+                
+                    
+                    {# bloc série #}
+                    <div class="paint mt-20 col-12 {% if loop.index == 1 and loop.last %}col-md-10 m-a{% else %}col-md-4{% endif %} toile row">
+                        <a href="{{ collection.link }}" class="row col-12">
+                            {# Nom de la série #}
+                            <h2 class="title-red t-a-center m-a t6 t-md-6 white col-12">
+                                {{ collection.title|capitalize }}
+                            </h2>
+                            {# thumb #}
+                            <div class="col-12 col-md-5">
+                                <img class="img w-100" src="{{ collection.thumbnail.src }}" alt="photo de {{ collection.title }}">
+                            </div>
+                            {# année de la série #}
+                            {% if collection.get_field('annee') %}
+                                <p class="col-12 col-md-5 vertical-h1 mt30">
+                                    {{ collection.get_field('annee') }}
+                                </p>
+                            {% endif %}
+                        </a>
+                    </div>
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                {% endfor %}
+                <hr class="col-10 m-a">
+            {% endif %}
+            {# si toile associée #} 
+            {% if post.get_field('toile') %}
+
+                <div class="paint col-12 col-md-1 mr10 w-a mt-20">
+                    <h2 class="title-red t-a-center vertical-h1 m-a white">
+                        {{ 'oeuvres'|capitalize }}
+                    </h2>
+                </div>
+                {# Boucle toile #}
+                {% for toile in post.get_field('toile') %}
+                    {# titre #}
+                    
+                   
+                    {#  Bloc toile  #}
+                    <div class="paint col-12 col-md-4 toile mt-20 row">
+                        <a href="{{ toile.link }}" class="row col-12">
+                            {# titre #}
+                            <h2 class="t-a-center m-a t6 mb10 t-md-6 col-12">
+                                {{ toile.title|capitalize }}
+                            </h2>
+                            {# thumb #}
+                            <div class="col-12 col-md-7">
+                                <img class="img w-100" src="{{ toile.thumbnail.src }}" alt="photo de {{ toile.title }}">
+                            </div>
+                            {# date #}
+                            <p class="col-12 col-md-3 vertical-h1">
+                                {{ toile.get_field('date')|date('Y') }}
+                            </p>
+                        </a>
+                    </div>
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                {% endfor %}
+            {% endif %}
+            {# si stage associé #}
+            {% if post.get_field('stages') %}
+                {# boucle stage #}
+                {% for stage in post.get_field('stages') %}
+                    {% if "now"|date('U') <= stage.get_field('debut')|date('U') %}
+                        {# Titre #}
+                        
+                            <div class="paint col-12 col-md-1 mr10">
+                                <h2 class="title-red t-a-center t6 t-md-6 vertical-h1 m-a white">
+                                    {{ 'stage'|capitalize }}
+                                </h2>
+                            </div>
+                    
+                    
+                         {# bloc stage #}
+                        <div class="paint col-12 col-md-4 toile ">
+                            <a href="{{ stage.link }}">
+                                
+                                <h2 class="title-red t-a-center m-a white">
+                                    {# titre #}
+                                    {{ stage.title|capitalize }}
+                                    <br>
+                                    {# commune #}
+                                    {% for lieu in stage.get_field('lieu') %}
+                                        {{ lieu.get_field('commune') }}
+                                    {% endfor %}
+                                </h2>
+                                {# dates début et fin #}
+                                <h3>
+                                    {% if stage.get_field('debut') != stage.get_field('fin') %} 
+                                        du 
+                                    {% else %}
+                                        le 
+                                    {% endif %}
+                                        {{ stage.get_field('debut')|date('j F Y') }}
+                                    {% if stage.get_field('debut') != stage.get_field('fin') %}
+                                        au {{ stage.get_field('fin')|date('j F Y') }} {% endif %} </h3>
+                                <div class="col-12">
+                                    {# thumb #}
+                                    <img class="img-circle w-30 mr20 float-thumb" src="{{ stage.thumbnail.src }}" alt="photo de {{ stage.title }}">
+                                    
+                                    
+                                    {# texte #}
+                                    {{ stage.get_field('texte_1')|slice(0,200) }}
+                                </div>
+                            </a>
+                        </div>
+                        <div class="offset-md-1 d-none d-md-block"></div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            {# Si atelier associé #}
+            {% if post.get_field('ateliers') %}
+                {# boucle atelier #}
+                {% for atelier in post.get_field('ateliers') %}
+                        <div class="paint col-12 col-md-1 mr10">
+                            <h2 class="title-red t-a-center  vertical-h1 m-a white">
+                                {{ 'atelier'|capitalize }}
+                            </h2>
+                        </div>
+                    <div class="paint col-12 col-md-4 toile ">
+                        <a href="{{ atelier.link }}">
+                            <h2 class="title-red t-a-center m-a white">
+                                {{ atelier.title|capitalize }}
+                                <br>
+                                {% for lieu in atelier.get_field('lieu') %}
+                                    {{ lieu.get_field('commune') }}
+                                {% endfor %}
+                            </h2>
+                            <h3>{{ atelier.get_field('debut')|date('Y') }} - {{ atelier.get_field('fin')|date('Y') }}</h3>
+                            <div class="col-12">
+                                <img class="img-circle w-50 float-thumb" src="{{ atelier.thumbnail.src }}" alt="photo de {{ atelier.title }}">
+                                {{ atelier.get_field('content')|slice(0,200) }}
+                            </div>
+                        </a>
+                    </div>
+                    
+                {% endfor %}
+            {% endif %}
+            {% if post.get_field('journee') %}
+                {% for journee in post.get_field('journee') %}
+                    {% for lieu in journee.get_field('lieu_precis') %}
+                        <div class="paint col-12 col-md-1 toile2 mr10">
+                            <h2 class="title-red t-a-center  vertical-h1 m-a white">
+                                {{ 'journee'|capitalize }}
+                            </h2>
+                        </div>
+                    {% endfor %}
+                    <div class="paint col-12 col-md-4 toile ">
+                        <a href="{{ journee.link }}" class="row">
+                            <h2 class="title-red t-a-center m-a white ">
+                                {{ journee.title|capitalize }}
+                                <br>
+                                {% for lieu in journee.get_field('lieu_precis') %}
+                                    {{ lieu.get_field('commune') }}
+                                {% endfor %}
+                            </h2>
+                            <div class="col-12">
+                                <img class="img-circle w-50 float-thumb" src="{{ journee.thumbnail.src }}" alt="photo de {{ journee.title }}">
+                                {{ journee.get_field('content')|slice(0,200) }}
+                            </div>
+                        </a>
+                    </div>
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                {% endfor %}
+            {% endif %}
+            <a href="#article-contact" class="col-10 m-a anch">
+                <div class="button button-h t-a-center mt90">
+                    <span class="color m-a"><i class="fas fa-chevron-down"></i></span>
+                </div>
+            </a> 
+        </section>

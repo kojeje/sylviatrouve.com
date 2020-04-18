@@ -1,0 +1,353 @@
+{% extends 'base.twig' %}
+{% block tmp_slide %}
+
+    <!-- SLIDER -->
+    {# Si Slider existe#}
+    {% if post.get_field('slider')== true %}
+        <div id="carouselExampleIndicators" class="url4 hmax80vh carousel slide d-none d-md-block" data-ride="carousel">
+        {# Accroche slider #}
+        <div class="l-2 caption2 caption5 mce-active carousel-caption hmax60vh wmax-20 mce-active d-none d-md-block t4">
+            {# Nom #}
+            <p class=" m-a h-20vh t-a-center white ">
+                {{ 'sylvia trouvé '|capitalize }}
+            </p>
+            {#sub#}
+            <p class=" color8 m-a h-20vh t-a-center">
+                {{ post.get_field('sub') }}
+            </p>
+            {# vers ancres suivantes #}
+            <a href="#article-anch" class="col-12 anch">
+                <div class="button button-h t-a-center ">
+                    <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                </div>
+            </a>
+        </div>
+        {# Carousel #}
+        <div class="carousel-inner">
+            <!-- IMAGES 1265 X 550 -->
+            {# img 1#}
+            {% if post.get_field('img') %}
+
+
+                {# img d'amorce#}
+                <div class="carousel-item slider-adapt-parent active m-a">
+                    <img class="d-block m-a  slider-adapt" src="{{ post.get_field('img') }}" alt="Fifth slide">
+                </div>
+            {% endif %}
+            {# boucle toiles#}
+
+            {% if post.get_field('toiles_home') %}
+                {% for toile in post.get_field('toiles_home') %}
+                    {# item de défilement #}
+                    <div class="carousel-item slider-adapt-parent toile m-a">
+                        {# lien vers la page d'archive #}
+                        <a href="{{ toile.link }}" class="m-a">
+                            {#image#}
+                            <img class="d-block m-a hmax80vh slider-adapt" src="{{ toile.thumbnail.src }}" alt="{{ toile.title }} slide">
+                            {#titre de l'oeuvre (hover)#}
+                            <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-20 mce-active d-none d-md-block t4">
+                                <p class=" m-a h-20vh t-a-center white ">{{ toile.title|capitalize }}</p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+
+            {% endif %}
+
+
+
+        </div>
+        {% if post.get_field('toiles_home') %}
+            <!-- BOUTONS -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+            </div>
+        {% endif %}
+
+    {% endif %}
+{% endblock %}
+{% block content %}
+    {# --------------------------   section 1 : BIO --------------------------------------------#}
+    <a id="article-anch" class="anch col-12 d-none d-md-block"></a>
+    <article id="post-id" class="container-fluid url1 parallax-bis m-a row">
+        {# Titre de la page #}
+        <h1 class="title-red t-a-center col-md-1 col-12  vertical-h1 white">
+                <span class="white t4 t-md-5 ">
+                    {{post.title }}
+                </span>
+        </h1>
+        <section class="col-10 row">
+        {# encart général titre et texte #}
+            <div class="col-12 col-md-5 row">
+                {# titre #}
+                <h2 class="title-red t-a-center col-12 hmax40vh t4 m-a color8 mt30">
+                <span class="d-block t4 t-md-6">
+                    {{ post.get_field('sub') }}
+                </span>
+                    
+                    {# lien vers section suivante #}
+                    <a href="#article-anch2" class="col-12 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </a>
+                </h2>
+                
+
+            </div>
+            {# encart général image #}
+            <div class="section col-12 col-md-6 row">
+                
+                <div class="m-a t3 toile">
+                    
+                    <a href="https://www.sylviatrouve.com/wp-content/uploads/2019/12/dossier_de_presse_via.pdf" class="d-block t-4 t-md-4 color3 w-100 m-a mt30 ">
+                        <img src="{{ post.thumbnail.src }}" alt="photo de {{ site.url }}" class="wmax-100 hmax80vh m-a  mb30 img">
+                        <div class="caption3 color8 title-red">{{ 'dossier de presse'|upper }}</div>
+                    </a>
+                </div>
+                
+            </div>
+            <p class="col-12 toile">
+                {#Si citation et auteur à citer#}
+                {# ouvrir guillemet #}
+                {% if post.get_field('auteur') %}
+                    <i>"
+                {% endif %}
+                {{ post.get_field('texte') }}
+                {#Si citation et auteur à citer#}
+                {# fermer guillemet #}
+                {% if post.get_field('auteur') %}
+                    </i>"
+                {% endif %}
+                {#Si citation et auteur à citer#}
+                {# afficher auteur (au survol) #}
+                {% if post.get_field('auteur') %}
+                    <i class="title-red white hmax30vh t2 mt-10 caption2"> {{ post.get_field('auteur') }} </i>
+                {% endif %}
+            </p>
+        </section
+        {# rappel nom de domaine en vertical#}
+        
+        {% for ere in periodes %}
+            
+            <section class="row col-12">
+                <a id="article-anch{{ loop.index + 1 }}" class="anch col-12 d-none d-md-block"></a>
+                {#titre période vertical#}
+                <h1 class="title-red  col-md-1 col-12  vertical-h1 white">
+                    <span class="white t4 ">
+                        {{ere.title|capitalize }}
+                    </span>
+                </h1>
+                {# si loop.index impair #}
+                {% if loop.index%2 != 0 %}
+                    {# bloc image + date au survol #}
+                    <div class="col-12 col-md-5 t3 toile mt-10">
+                        {#image#}
+                        <img src="{{ ere.get_field('image') }}" alt="photo de {{ site.url }}" class="wmax-100 hmax60vh shadow  m-a img">
+                        {# date au survol #}
+                        <div class="d-flex justify-content-around mt30">
+                            <div class="vertical-span white t3 toile">
+                                <h3 class="caption2 p20 bk3 vertical-strong-red article-h3 t3 color8 t-a-center">
+                                    {#date de début#}
+                                    <span class="color8 mr10">{{ ere.get_field('debut') }}</span>
+                                    {# si date de fin #}
+                                    {% if ere.get_field('fin') %}
+                                        {# affichage de la date de fin de période #}
+                                        <span class="color8">{{ ere.get_field('fin') }}</span>
+                                    {# si période en cours (pas de date de fin et mention "à nos jours" cochée"#}
+                                    {% elseif ere.get_field('mention') == true and ere.get_field('fin') == null %}
+                                        à nos jours
+                                    {% endif %}
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-12 col-md-5 ">
+                        {# sous-titre période#}
+                        <h2 class="title-red t-a-center hmax50vh w-100 t4 color8">
+                            {{ ere.get_field('sub_1') }}
+                            {# lien vers section suivante #}
+                            {# Si période à suivre #}
+                            
+                            {% if loop.index != loop.last %}
+                                {# lien vers période suivante #}
+                                <a href="#article-anch{{ loop.index+2 }}" class="anch">
+                                    <div class="button button-h t-a-center mt30">
+                                        <span class="white">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            {# si dernière période #}
+                            {% elseif loop.index == loop.last %}
+                                {# Si une video est proposée #}
+                                {% if post.get_field('video-booleen') == '1' %}
+                                 
+                                    <div class="button button-h t-a-center mt30">
+                                        <a href="#article-video" class="anch">
+                                            <span class="white">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </a>
+                                    </div>
+                                {% elseif post.get_field('soundcloud') == '1'  %}
+                                   <a href="#article-sound" class="anch">
+                                        <div class="button button-h t-a-center mt30">
+                                            <span class="white">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </div>
+                                    </a> 
+                                {% else %}
+                                    <a href="#article-contact" class="anch">
+                                        <div class="button button-h t-a-center mt30">
+                                            <span class="white">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </div>
+                                    </a> 
+                                {% endif %}
+                            {% endif %}
+                        </h2>
+
+                        <p class="toile">
+                            {{ ere.get_field('texte_1') }}
+                        </p>
+
+                    </div>
+                {% elseif loop.index%2 == 0 %}
+                    <div class="row col-12 col-md-5 row">
+
+                        <h2 class="title-red t-a-center col-12 w-100 hmax0vh t4 color8">
+
+                            {{ ere.get_field('sub_1') }}
+                            
+                            {% if loop != loop.last %}
+                                <a href="#article-anch{{ loop.index+2 }}" class="col-12 anch">
+                                    <div class="button button-h t-a-center mt30">
+                                        <span class="white">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            {% else %}
+                                {% if post.get_field('video-booleen') == '1' %}
+                                <a href="#article-video" class="anch">
+                                    <div class="button button-h t-a-center mt30">
+                                        <span class="white">
+                                        <i class="fas fa-chevron-down"><i>
+                                        </span>
+                                    </div>
+                                </a>
+                                {% elseif post.get_field('soundcloud') == '1' %}
+                                   <a href="#article-sound" class="anch">
+                                        <div class="button button-h t-a-center mt30">
+                                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                                        </div>
+                                    </a> 
+                                {% else %}
+                                    <a href="#article-contact" class="anch">
+                                        <div class="button button-h t-a-center mt30">
+                                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                                        </div>
+                                    </a> 
+                                {% endif %}
+                            {% endif %}
+                        </h2>
+                        <p class="col-12 toile">
+                            {{ ere.get_field('texte_1') }}
+                        </p>
+
+                    </div>
+                    <div class="col-12 col-md-5 t3 toile mt-10">
+
+                        <img src="{{ ere.get_field('image') }}" alt="photo de {{ site.url }}" class="wmax-100 m-a hmax60vh img">
+                        <div class="d-flex justify-content-center mt30">
+                            <div class="vertical-span white t3 toile">
+                                <h3 class="color8 caption2 p20 bk3 vertical-strong-red article-h3 t3 t-a-center">
+                                    <span class="mr10">{{ ere.get_field('debut') }}</span>
+                                    {% if ere.get_field('fin') %}
+                                        <span>{{ ere.get_field('fin') }}</span>
+                                    {% elseif ere.get_field('mention') == true and ere.get_field('fin') == null %}
+                                        à nos jours
+                                    {% endif%}
+                                </h3>
+                            </div>
+                        </div>
+
+                    </div>
+                {% endif %}
+            </section>
+        {% endfor %}
+        {# ------------------------       BLOC youtube         --------------------------#} 
+        {% if post.get_field('video-booleen') == '1' %}
+            <section class="col-12 row mt90">
+                <a href="" id="article-video" class="col-12 anch anch3"></a>
+                <div class="offset-md-1 d-none d-md-block"></div>
+                <div class="col-md-6 col-10 brd-c3 mt40">
+                    <div class="col-md-6 col-10 brd-c3 mt40">
+                    {{post.get_field('lien_dintegration')}}
+                </div>
+                </div>
+                <h1 class="t-a-center title-red color8 col-md-5 col-10 m-a">
+                    {{ 'video'|capitalize }}
+                    {% if post.get_field('soundcloud') == '1' %}
+                        <a href="#article-sound" class="anch">
+                            <div class="button button-h t-a-center mt30">
+                                <span class="white"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                        </a> 
+                    {% else %}
+                        <a href="#article-contact" class="anch">
+                            <div class="button button-h t-a-center mt30">
+                                <span class="white"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                        </a> 
+                    {% endif %}
+                </h1>
+            </section>
+
+        {%  endif %}
+        {# ------------------------       BLOC souncloud         --------------------------#} 
+        {% if post.get_field('soundcloud') == '1' %}
+            <section class="col-12 row mt90">
+                <a href="" id="article-sound" class="col-12 anch anch3"></a>
+                <h1 class="t-a-center title-red color8 col-md-5 col-10 m-a">
+                    {{ 'audio'|capitalize }}
+                    <a href="#article-contact" class="anch">
+                        <div class="button button-h t-a-center mt30">
+                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </a> 
+                </h1>
+                <div class="offset-md-1 d-none d-md-block"></div>
+                <div class="col-md-6 col-10 brd-c3 mt70">
+                    {{post.get_field('lien_dintegration_soundcloud')}}
+                </div>
+            </section>
+            
+       {%  endif %} 
+         {# ------------------------       BLOC CONTACTS         --------------------------#}
+        {# Si contacts #}
+        {% if contacts %}
+            <section class="row col-12">
+                <a id="article-contact" class="anch col-md-12 d-none d-md-block"></a>
+                <h2 class="title-red col-md-1 col-12 vertical-h1 white">
+                    {{'contact'|upper }}
+                </h2>
+                <div class="col-md-9 row d-md-flex ">
+                    {% include 'views/partial/sections/contact-via.twig' %}
+                </div>
+                {% include 'views/partial/domain-column.twig' %}
+            </section>
+        {% endif %}
+        
+    </article>
+{% endblock %}

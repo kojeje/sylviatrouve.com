@@ -1,0 +1,1295 @@
+<!doctype html>
+<html xmlns:og="http://ogp.me/ns#" lang="fr">
+    <head>
+            <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+      <!-- FB opengraph -->
+      <meta property="fb:app_id"          content="1234567890" /> 
+      <meta property="og:type"            content="post" /> 
+      <meta property="og:url"             content="https://www.sylviatrouve.com/" /> 
+      <meta property="og:title"           content="accueil" /> 
+      <meta property="og:image"           content="https://www.sylviatrouve.com/wp-content/uploads/2019/11/logo-ST.jpg" /> 
+      
+    <!-- titre -->
+      <title>Sylvia Trouvé | Artiste peintre</title>
+    
+    <!-- Google Fonts-->
+      <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap&subset=latin-ext" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Gayathri:100,400,700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Overlock:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <!--Font-awesome -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous">
+    <!--Bootstrap-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <!-- feuille de style -->
+      <link rel="stylesheet" href="https://www.sylviatrouve.com/wp-content/themes/via-painter/assets/css/style.css">
+    </head>
+    <body class="body font1 w-100" id="myDIV">
+            <!-- SLIDER -->
+                <div id="carouselExampleIndicators" class="url4 hmax80vh carousel slide d-none d-md-block" data-ride="carousel">
+                        <div class="l-2 caption2 bk3 caption5 mce-active carousel-caption hmax60vh wmax-20 mce-active d-none d-md-block t4">
+                                        <p class=" m-a h-20vh t-a-center white ">
+                        SYLVIA TROUVÉ 
+                    </p>
+                                        <p class=" color8 m-a h-20vh t-a-center">
+                        Artiste peintre
+                    </p>
+                                         <a href="#article-anch" class="col-12 anch">
+                        <div class="button button-h t-a-center ">
+                            <p class="white"><i class="fas fa-chevron-down"></i></p>
+                        </div>
+                    </a>
+            </div>
+                        <div class="carousel-inner">
+                <!-- IMAGES 1265 X 550 -->
+                                                                        <div class="carousel-item toile slider-adapt-parent active m-a">
+                        <img class="d-block m-a  slider-adapt" src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/R3-100x100.jpg" alt="Fifth slide">
+                    </div>
+                                                                                                                    <div class="carousel-item slider-adapt-parent toile m-a">
+                                                        <a href="https://www.sylviatrouve.com/toiles/reverdie-1/" class="m-a">
+                                                                <img class="d-block m-a hmax80vh slider-adapt" src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/R1-130x89.jpg" alt="La Reverdie 1-N°1 slide">
+                                                                <div class="m-a caption2 caption-hover carousel-caption wmax-20 mce-active d-none d-md-block t-4">
+                                        <p class=" m-a h-20vh t-a-center white ">
+                                            La reverdie 1-n°1
+                                        </p>
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="carousel-item slider-adapt-parent toile m-a">
+                                                        <a href="https://www.sylviatrouve.com/toiles/la-reverdie-2-n5/" class="m-a">
+                                                                <img class="d-block m-a hmax80vh slider-adapt" src="https://www.sylviatrouve.com/wp-content/uploads/2020/01/5-reverdie-130x97-1.jpg" alt="La Reverdie 2-N°5 slide">
+                                                                <div class="m-a caption2 caption-hover carousel-caption wmax-20 mce-active d-none d-md-block t-4">
+                                        <p class=" m-a h-20vh t-a-center white ">
+                                            La reverdie 2-n°5
+                                        </p>
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="carousel-item slider-adapt-parent toile m-a">
+                                                        <a href="https://www.sylviatrouve.com/toiles/reverdie-3/" class="m-a">
+                                                                <img class="d-block m-a hmax80vh slider-adapt" src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/R3-100x100.jpg" alt="La Reverdie 1-N°3 slide">
+                                                                <div class="m-a caption2 caption-hover carousel-caption wmax-20 mce-active d-none d-md-block t-4">
+                                        <p class=" m-a h-20vh t-a-center white ">
+                                            La reverdie 1-n°3
+                                        </p>
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="carousel-item slider-adapt-parent toile m-a">
+                                                        <a href="https://www.sylviatrouve.com/toiles/la-reverdie-2-n-3/" class="m-a">
+                                                                <img class="d-block m-a hmax80vh slider-adapt" src="https://www.sylviatrouve.com/wp-content/uploads/2019/11/3-reverdie-73x60.jpg" alt="La Reverdie 2-N°3 slide">
+                                                                <div class="m-a caption2 caption-hover carousel-caption wmax-20 mce-active d-none d-md-block t-4">
+                                        <p class=" m-a h-20vh t-a-center white ">
+                                            La reverdie 2-n°3
+                                        </p>
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="carousel-item slider-adapt-parent toile m-a">
+                                                        <a href="https://www.sylviatrouve.com/toiles/reverdie-4/" class="m-a">
+                                                                <img class="d-block m-a hmax80vh slider-adapt" src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/R4-65x81.jpg" alt="La Reverdie 1-N°4 slide">
+                                                                <div class="m-a caption2 caption-hover carousel-caption wmax-20 mce-active d-none d-md-block t-4">
+                                        <p class=" m-a h-20vh t-a-center white ">
+                                            La reverdie 1-n°4
+                                        </p>
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="carousel-item slider-adapt-parent toile m-a">
+                                                        <a href="https://www.sylviatrouve.com/toiles/reverdie-5/" class="m-a">
+                                                                <img class="d-block m-a hmax80vh slider-adapt" src="https://www.sylviatrouve.com/wp-content/uploads/2020/01/R5-100x81-.jpg" alt="La Reverdie 1-N°5 slide">
+                                                                <div class="m-a caption2 caption-hover carousel-caption wmax-20 mce-active d-none d-md-block t-4">
+                                        <p class=" m-a h-20vh t-a-center white ">
+                                            La reverdie 1-n°5
+                                        </p>
+                                </div>
+                            </a>
+                        </div>
+                                                                    <div class="carousel-item slider-adapt-parent toile m-a">
+                                                        <a href="https://www.sylviatrouve.com/toiles/la-reverdie-ii-4/" class="m-a">
+                                                                <img class="d-block m-a hmax80vh slider-adapt" src="https://www.sylviatrouve.com/wp-content/uploads/2020/01/4-reverdie-130x97-1.jpg" alt="La Reverdie 2-N°4 slide">
+                                                                <div class="m-a caption2 caption-hover carousel-caption wmax-20 mce-active d-none d-md-block t-4">
+                                        <p class=" m-a h-20vh t-a-center white ">
+                                            La reverdie 2-n°4
+                                        </p>
+                                </div>
+                            </a>
+                        </div>
+                                    
+
+
+            </div>
+                <!-- BOUTONS -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+    
+            <header class="header container-fluid">
+    <div class="row">
+
+        <div class="col-5 col-md-2">
+            <img class="wmax-100 logo img" src="https://www.sylviatrouve.com/wp-content/themes/via-painter/assets/img/logo-ST.png" alt="logo">
+        </div>
+        <div class="d-block d-md-none offset-5 offset-md-9"></div>
+        <div class="d-none d-md-block col-md-10 mt20">
+    
+    <div class="menu header-menu">
+        <!-- Dropdown menu links -->
+        <ul class="t-a-center d-flex justify-content-center t1 t-md-3 w-100 m-a">
+
+            <li class="wmax-12 m-a link d-block t-a-center item-menu link t-a-center ">
+                <a href="https://www.sylviatrouve.com/#article-anch">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li class="wmax-12 t-a-center item-menu m-a link t-a-center ">
+                <a class="item-menu d-block" href="https://www.sylviatrouve.com/bio/#article-anch">
+                    BIO
+                </a>
+            </li>
+            <li class="wmax-12 t-a-center item-menu m-a link t-a-center ">
+                <a class="d-block" href="https://www.sylviatrouve.com/les-oeuvres/">
+                    OEUVRES
+                </a>
+            </li>
+            <li class="wmax-12 t-a-center item-menu m-a link t-a-center ">
+                <a class="d-block" href="https://www.sylviatrouve.com/lactu">
+                    L'ACTU
+                </a>
+            </li>
+            <li class="wmax-12 item-menu m-a link t-a-center ">
+                <a class="d-block" href="https://www.sylviatrouve.com/ateliers-stages">
+                    STAGES/ATELIERS
+                </a>
+            </li>
+
+            <li class="wmax-12  m-a link t-a-center ">
+                <a class="d-block" href="https://www.sylviatrouve.com/contact/#article-anch">
+                    CONTACT
+                </a>
+            </li>
+            <li class="wmax-10 m-a link t-a-center ">
+                <a class="link-logo d-block" target="_blank" href="https://www.facebook.com/Sylvia-Trouv%C3%A9-360856991006240/">
+                    <img src="https://www.sylviatrouve.com/wp-content/themes/via-painter/assets/img/fb.png" alt="" class="img w-10">
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>        <div class="d-block d-md-none col-1  btn-group dropleft">
+    <button type="button" id="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <p>
+            <i class="t-a-center t5 black fas fa-bars"></i>
+        </p>
+    </button>
+    <div class="dropdown-menu dropdown-menu2 header-menu">
+        <!-- Dropdown menu links -->
+        <ul class=" d-block justify-content-center t1 wmax-100">
+
+            <li class="wmax-30 m-a item-menu link link2 t-a-center ">
+                <img class="img w-100" src="https://www.sylviatrouve.com/wp-content/themes/via-painter/assets/img/logo-ST.jpg" alt="logo de www.sylviatrouve.com">
+            </li>
+
+            <li class="wmax-100 item-menu link link2 t-a-center ">
+                <a class=" m-a link d-block" href="https://www.sylviatrouve.com/#article-anch">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li class="wmax-100 item-menu m-a link t-a-center ">
+                <a class="item-menu link link2 d-block" href="https://www.sylviatrouve.com/bio/#article-anch">
+                    BIO
+                </a>
+            </li>
+            <li class="wmax-100 item-menu m-a link link2 t-a-center ">
+                <a class="link d-block" href="https://www.sylviatrouve.com/les-oeuvres/">
+                    OEUVRES
+                </a>
+            </li>
+            <li class="wmax-100 item-menu m-a link link2 t-a-center ">
+                <a class="link d-block" href="https://www.sylviatrouve.com/lactu">
+                    L'ACTU
+                </a>
+            </li>
+            <li class="wmax-100 item-menu m-a link link2  t-a-center ">
+                <a class="link d-block" href="https://www.sylviatrouve.com/ateliers-stages">
+                    STAGES/ATELIERS
+                </a>
+            </li>
+
+            <li class="wmax-100  m-a link link2 t-a-center ">
+                <a class="link d-block" href="https://www.sylviatrouve.com/contact/#article-anch">
+                    CONTACT
+                </a>
+            </li>
+            <li class="wmax-100 m-a link link2 t-a-center ">
+                <a class="link link-logo d-block" target="_blank" href="https://www.facebook.com/Sylvia-Trouv%C3%A9-360856991006240/">
+                    <img src="https://www.sylviatrouve.com/wp-content/themes/via-painter/assets/img/fb.png" alt="" class="img w-20 m-a">
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+    </div>
+</header>        
+    <a id="article-anch" class="anch col-md-12 d-none d-md-block"></a>
+    <article id="post-id" class="container-fluid row m-a">
+
+        <h1 class="title-red t-a-center col-md-1 col-12  vertical-h1 m-a white">
+                <span class="white t4 ">
+                    accueil
+                </span>
+        </h1>
+        <div class="offset-md-1 d-none d-md-block"></div>
+        <section class="section col-12 col-md-4 row">
+            <div class="col-12 t3 col-md-12 toile mt-10">
+                <a href="https://www.sylviatrouve.com/wp-content/uploads/2019/11/logo-ST.jpg">
+                    <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/11/logo-ST.jpg" alt="photo de https://www.sylviatrouve.com" class="w-100 m-a img">
+                </a>
+            </div>
+        </section>
+        <div class="offset-md-1 d-none d-md-block"></div>
+        <aside class="row col-12 col-md-5">
+            <h2 class="title-red t-a-center col-12 hmax40vh  t4 m-a color8">
+                Artiste peintre
+
+                <a href="#article-anch2" class="col-12 anch">
+                    <div class="button button-h t-a-center mt30">
+                        <span class="white"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                </a>
+            </h2>
+            <p class="col-12 toile">
+                J'attendais un cri<br />
+et c'est une couleur<br />
+J'entendais du bruit<br />
+et c'est une symphonie<br />
+Voilà ce que c'est peindre, chez moi.
+                            </p>
+            <a id="article-anch2" class="anch col-md-12 d-none d-md-block"></a>
+        </aside>
+        <div class="offset-md-1 d-none d-md-block"></div>
+
+                    <section class="section col-12 col-md-9 row">
+                <h1 class="title-red t-a-center row col-12 hmax20vh t8 m-a color8">
+                    <span class="col-12 col-md-6">Toiles</span>
+
+                    <a href="#article-anch3" class="col-12 col-md-6 mb-20 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </a>
+                </h1>
+                                        <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/reverdie-1/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/R1-130x89.jpg" alt="photo de La Reverdie 1-N°1" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/reverdie-1/" >
+                                        <p class=" m-a h-20vh t-a-center white ">LA REVERDIE 1-N°1</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+
+
+                                        <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/reverdie-3/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/R3-100x100.jpg" alt="photo de La Reverdie 1-N°3" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/reverdie-3/" >
+                                        <p class=" m-a h-20vh t-a-center white ">LA REVERDIE 1-N°3</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+
+
+                                        <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/reverdie-4/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/R4-65x81.jpg" alt="photo de La Reverdie 1-N°4" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/reverdie-4/" >
+                                        <p class=" m-a h-20vh t-a-center white ">LA REVERDIE 1-N°4</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+
+
+                                        <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/la-reverdie-2-n2/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2020/01/2-reverdie-73x54-1.jpg" alt="photo de La Reverdie 2-N°2" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/la-reverdie-2-n2/" >
+                                        <p class=" m-a h-20vh t-a-center white ">LA REVERDIE 2-N°2</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+
+
+                                        <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/la-reverdie-2-n5/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2020/01/5-reverdie-130x97-1.jpg" alt="photo de La Reverdie 2-N°5" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/la-reverdie-2-n5/" >
+                                        <p class=" m-a h-20vh t-a-center white ">LA REVERDIE 2-N°5</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+
+
+                                <div class="row col-12 col-md-6">
+                      <a class="col-12 row " href="https://www.sylviatrouve.com/les-oeuvres/">
+    <p class="color1 col-md-12  mt20 t-a-center">
+        toutes les oeuvres
+    </p>
+</a>                    <a href="#article-anch3" class="col-12 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                        </div>
+                    </a>
+                </div>
+                <a id="article-anch3" class="anch col-md-12 d-none d-md-block"></a>
+            </section>
+                <h2 class="d-none d-md-block title-red col-md-1 col-12 vertical-h1 white">
+    <a href="https://www.sylviatrouve.com" class="white t4 ">
+        Sylviatrouve.com
+    </a>
+</h2>
+
+
+
+        <h2 class="d-none d-md-block title-red col-md-1 col-12 vertical-h1 white">
+    <a href="https://www.sylviatrouve.com" class="white t4 ">
+        Sylviatrouve.com
+    </a>
+</h2>
+
+        <div class="offset-md-1 d-none d-md-block"></div>
+                    <section class="section col-12 col-md-9 row">
+                <h1 class="title-red t-a-center row col-12 hmax20vh t8 m-a color8">
+                    <span class="col-12 col-md-6">ENCRES</span>
+
+                    <a href="#article-anch4" class="col-12 col-md-6 mb-20 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </a>
+                </h1>
+                                            <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/principe-real-lisbonne-1/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/12/lisbonne-1-kraft.jpg" alt="photo de Principe Real-Lisbonne-1" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/principe-real-lisbonne-1/" >
+                                        <p class=" m-a h-20vh t-a-center white ">PRINCIPE REAL-LISBONNE-1</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/frenaisie-jaune/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/Frenaisie-jaune-2017.jpg" alt="photo de The Magic Forest &#8211; Jaune" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/frenaisie-jaune/" >
+                                        <p class=" m-a h-20vh t-a-center white ">THE MAGIC FOREST &#8211; JAUNE</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/the-magic-forest-bleu/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/Frenaisie-bleue-2017.jpg" alt="photo de The Magic Forest &#8211;  Bleu" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/the-magic-forest-bleu/" >
+                                        <p class=" m-a h-20vh t-a-center white ">THE MAGIC FOREST &#8211;  BLEU</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/the-magic-forest-2/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/11/Frenaisie-2-2017.jpg" alt="photo de The Magic Forest 2" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/the-magic-forest-2/" >
+                                        <p class=" m-a h-20vh t-a-center white ">THE MAGIC FOREST 2</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/the-magic-forest-3/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/Frenaisie-3-2017.jpg" alt="photo de The Magic Forest 3" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/the-magic-forest-3/" >
+                                        <p class=" m-a h-20vh t-a-center white ">THE MAGIC FOREST 3</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+                                <div class="row col-12 col-md-6">
+                      <a class="col-12 row " href="https://www.sylviatrouve.com/les-oeuvres/">
+    <p class="color1 col-md-12  mt20 t-a-center">
+        toutes les oeuvres
+    </p>
+</a>                    <a href="#article-anch4" class="col-12 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                        </div>
+                    </a>
+                </div>
+
+            </section>
+                <a id="article-anch4" class="anch col-md-12 d-none d-md-block"></a>
+        <div class="offset-md-1 d-none d-md-block"></div>
+                    <section class="section col-12 col-md-9 row">
+                <h1 class="title-red t-a-center row col-12 hmax20vh t8 m-a color8">
+                    <span class="col-12 col-md-6">TEMPERAS</span>
+
+                    <a href="#article-anch5" class="col-12 col-md-6 mb-20 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </a>
+                </h1>
+                                   <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/tempera-14/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/frenaisie-14-tempera.jpg" alt="photo de Tempera 14" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/tempera-14/" >
+                                        <p class=" m-a h-20vh t-a-center white ">TEMPERA 14</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+                                   <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/tempera/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/frenaisie-22-tempera.jpg" alt="photo de Tempera 22" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/tempera/" >
+                                        <p class=" m-a h-20vh t-a-center white ">TEMPERA 22</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+                                   <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/tempera-24/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/frenaisie-24-tempera.jpg" alt="photo de Tempera 24" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/tempera-24/" >
+                                        <p class=" m-a h-20vh t-a-center white ">TEMPERA 24</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+                                   <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/tempera-25/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/frenaisie-25-tempera.jpg" alt="photo de Tempera 25" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/tempera-25/" >
+                                        <p class=" m-a h-20vh t-a-center white ">TEMPERA 25</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+                                   <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/tempera-4/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/frenaisie-4-tempera.jpg" alt="photo de Tempera 4" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/tempera-4/" >
+                                        <p class=" m-a h-20vh t-a-center white ">TEMPERA 4</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+                                <div class="row col-12 col-md-6">
+                     <a class="col-12 row " href="https://www.sylviatrouve.com/les-oeuvres/">
+    <p class="color1 col-md-12  mt20 t-a-center">
+        toutes les oeuvres
+    </p>
+</a>                    <a href="#article-anch5" class="col-12 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                        </div>
+                    </a>
+                </div>
+
+            </section>
+            <h2 class="d-none d-md-block title-red col-md-1 col-12 vertical-h1 white">
+    <a href="https://www.sylviatrouve.com" class="white t4 ">
+        Sylviatrouve.com
+    </a>
+</h2>
+                <a id="article-anch5" class="anch col-md-12 d-none d-md-block"></a>
+        <h2 class="d-none d-md-block title-red col-md-1 col-12 vertical-h1 white">
+    <a href="https://www.sylviatrouve.com" class="white t4 ">
+        Sylviatrouve.com
+    </a>
+</h2>
+        <div class="offset-md-1 d-none d-md-block"></div>
+                    <section class="section col-12 col-md-9 row">
+                <h1 class="title-red t-a-center row col-12 hmax20vh t8 m-a color8">
+                    <span class="col-12 col-md-6">CARNETS</span>
+
+                    <a href="#article-anch6" class="col-12 col-md-6 mb-20 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </a>
+                </h1>
+                                        <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/la-pointe-de-pen-hir-2/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/11/B-4-1.jpg" alt="photo de Pen-Hir 2" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/la-pointe-de-pen-hir-2/" >
+                                        <p class=" m-a h-20vh t-a-center white ">PEN-HIR 2</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+
+                                        <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/la-plage/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/11/6-plage.jpg" alt="photo de La cabane de Robinsone" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/la-plage/" >
+                                        <p class=" m-a h-20vh t-a-center white ">LA CABANE DE ROBINSONE</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+
+                                        <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/saintes/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/11/5-saintes.jpg" alt="photo de A Saintes n°2" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/saintes/" >
+                                        <p class=" m-a h-20vh t-a-center white ">A SAINTES N°2</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+
+                                        <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/749/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/11/Principe-Real-scan.jpg" alt="photo de Principe Real-Lisbonne-3" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/749/" >
+                                        <p class=" m-a h-20vh t-a-center white ">PRINCIPE REAL-LISBONNE-3</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+
+                                        <div class="col-10 col-md-5 toile">
+                            <a href="https://www.sylviatrouve.com/toiles/santec/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2020/03/B-6-2.jpg" alt="photo de L&rsquo;envol" class="img toile d-block w-100 m-a thumb mt10">
+                                <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 t-1">
+                                    <a href="https://www.sylviatrouve.com/toiles/santec/" >
+                                        <p class=" m-a h-20vh t-a-center white ">L&RSQUO;ENVOL</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+
+                                <div class="row col-12 col-md-6">
+                    <a class="col-12 row " href="https://www.sylviatrouve.com/les-oeuvres/">
+    <p class="color1 col-md-12  mt20 t-a-center">
+        toutes les oeuvres
+    </p>
+</a>                    <a href="#article-anch6" class="col-12 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                        </div>
+                    </a>
+                </div>
+
+            </section>
+        
+        <a id="article-anch6" class="anch col-md-12 d-none d-md-block"></a>
+                                    <h2 class="d-md-block title-red col-md-1 col-12 vertical-h1 white">
+                <a href="https://www.sylviatrouve.com" class="white t4 ">
+                    EXPOSITIONS
+                </a>
+            </h2>
+        
+            <section class="col-md-9 row d-md-flex mt-10">
+                                
+                                    
+                 
+                   
+                                                <div class="col-12 col-md-4 mt30 toile">
+                                                        <a href="https://www.sylviatrouve.com/expo/fete-des-plantes/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2020/01/6-reverdie-73x60-1.jpg" alt="photo de Fête des plantes" class="hmax30vh wmax-80 img m-a">
+                                <div class="caption3 vertical-span white t3">
+                                    <h3 class="vertical-strong-red article-h3 white t-a-center">
+                                        Fête des plantes
+
+                                    </h3>
+                                    <p>
+                                                                                    du 
+                                                                                    13 juin 2020
+                                                                                    au 14 juin 2020
+                                                                            </p>
+                                </div>
+                                                                     <div class="vertical-span white t3 toile">
+                                        <h3 class="caption5 bk3 p20 bk3 vertical-strong-red article-h3 t3 white t-a-center">
+                                            Plaine-d'Argenson
+                                        </h3>
+                                    </div>
+                                                            </a>
+                        </div>
+                    
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                                <a href="#article-anch7" class="col-12 anch">
+                    <div class="button button-h t-a-center mt30">
+                        <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                    </div>
+                </a>
+            </section>
+
+                            <h2 class="d-none d-md-block title-red col-md-1 col-12 vertical-h1 white">
+    <a href="https://www.sylviatrouve.com" class="white t4 ">
+        Sylviatrouve.com
+    </a>
+</h2>
+                        <a id="article-anch7" class="anch col-md-12 d-none d-md-block"></a>
+                    <h2 class="title-red col-md-1 col-12 vertical-h1 white">
+                
+                L'actu
+
+            </h2>
+            <section class="row col-md-9 row mb90 d-md-flex mt-10">
+                                
+                                        <div class="col-12 
+                                                                    col-md-5
+                                 
+                                row mt30 toile">
+                                                <a href="https://www.sylviatrouve.com/actus/les-routes-a-croquer-en-juin/">
+                            <div class="vertical-span bk3 white t3">
+                                <h2 class="vertical-strong-red article-h3 white t-a-center">
+                                    Les Routes à Croquer en juin
+                                </h2>
+
+                                <h3 class=" p20 vertical-strong-red t3 white t-a-center">
+                                    
+
+                                </h3>
+                                <p class="t1 t-a-right mr10 mb10">26 mars 2020</p>
+                            </div>
+                            <img src="https://www.sylviatrouve.com/wp-content/uploads/2020/01/JL4_1166-1.jpg" alt="photo de Les Routes à Croquer en juin" class="mt30 hmax30vh wmax-80 img float-thumb">
+                            <p class="">
+                                <p>En raison de ce que vous savez, La Route à Croquer va devoir attendre et reprendra son activité en juin.</p>
+<p>&nbsp;</p>
+
+                            </p>
+                        </a>
+                                            </div>
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                
+                                        <div class="col-12 
+                                                                    col-md-5
+                                 
+                                row mt30 toile">
+                                                <a href="https://www.sylviatrouve.com/actus/exposition-virtuelle/">
+                            <div class="vertical-span bk3 white t3">
+                                <h2 class="vertical-strong-red article-h3 white t-a-center">
+                                    Expo virtuelle solidaire
+                                </h2>
+
+                                <h3 class=" p20 vertical-strong-red t3 white t-a-center">
+                                    
+
+                                </h3>
+                                <p class="t1 t-a-right mr10 mb10">26 mars 2020</p>
+                            </div>
+                            <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/11/B-3-1.jpg" alt="photo de Expo virtuelle solidaire" class="mt30 hmax30vh wmax-80 img float-thumb">
+                            <p class="">
+                                <p>Je mets en vente ces 7 originaux le temps du confinement. Ce sont mes aquarelles de Bretagne réalisées a l&rsquo;atelier et inspirées par mes multiples voyages&#8230;</p>
+<p>pour l&rsquo;achat de ces œuvres, il  faut se rendre sur la boutique Etsy
+                            </p>
+                        </a>
+                                            </div>
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                
+                                        <div class="col-12 
+                                                                    col-md-5
+                                 
+                                row mt30 toile">
+                                                <a href="https://www.sylviatrouve.com/actus/nouvelle-toile/">
+                            <div class="vertical-span bk3 white t3">
+                                <h2 class="vertical-strong-red article-h3 white t-a-center">
+                                    Nouvelles toiles!
+                                </h2>
+
+                                <h3 class=" p20 vertical-strong-red t3 white t-a-center">
+                                    
+
+                                </h3>
+                                <p class="t1 t-a-right mr10 mb10">21 mars 2020</p>
+                            </div>
+                            <img src="https://www.sylviatrouve.com/wp-content/uploads/2020/03/8-reverdie-100x100-1.jpg" alt="photo de Nouvelles toiles!" class="mt30 hmax30vh wmax-80 img float-thumb">
+                            <p class="">
+                                <p>Voici les dernières toiles de l&rsquo;atelier&#8230;je suis plutôt contente!</p>
+
+                            </p>
+                        </a>
+                                            </div>
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                
+                                        <div class="col-12 
+                                                                    col-md-5
+                                 
+                                row mt30 toile">
+                                                <a href="https://www.sylviatrouve.com/actus/expo-en-juin/">
+                            <div class="vertical-span bk3 white t3">
+                                <h2 class="vertical-strong-red article-h3 white t-a-center">
+                                    expo
+                                </h2>
+
+                                <h3 class=" p20 vertical-strong-red t3 white t-a-center">
+                                                                            <span class="article-h3 color8 ">
+                                                                                            Plaine-d'Argenson
+                                                                                    </span>
+                                    
+
+                                </h3>
+                                <p class="t1 t-a-right mr10 mb10">9 mars 2020</p>
+                            </div>
+                            <img src="https://www.sylviatrouve.com/wp-content/uploads/2020/01/6-reverdie-73x60-1.jpg" alt="photo de expo" class="mt30 hmax30vh wmax-80 img float-thumb">
+                            <p class="">
+                                <p>Retrouvez les nouveaux bouquets d&rsquo;iris de La Reverdie pour la Fête des plantes au domaine de péré.</p>
+
+                            </p>
+                        </a>
+                                            </div>
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                                <a href="#article-anch8" class="col-md-5 d-none d-md-block anch">
+                    <div class="button button-h mt90 t-a-center mt30">
+                        <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                    </div>
+                </a>
+            </section>
+                <h2 class="d-none d-md-block title-red col-md-1 col-12 vertical-h1 white">
+    <a href="https://www.sylviatrouve.com" class="white t4 ">
+        Sylviatrouve.com
+    </a>
+</h2>
+
+        
+
+
+        <a id="article-anch8" class="anch col-md-12 d-none d-md-block"></a>
+                            <h2 class="title-red col-md-1 col-12 vertical-h1 white">
+                <a href="https://www.sylviatrouve.com" class="white t4 ">
+                    Stages
+                </a>
+            </h2>
+            <section class="col-md-9 row d-md-flex mt-10">
+                                                                                                    <div class="col-12 col-md-4 mt30 toile">
+                                                        <a href="https://www.sylviatrouve.com/stages/stage-en-bords-de-loire/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/11/P1020418.jpg" alt="photo de Stage en bords de Loire" class="mt30 hmax30vh wmax-80 img m-a">
+                                <div class="caption3 vertical-span white t3">
+                                    <h3 class="vertical-strong-red article-h3 white t-a-center">
+                                        Stage en bords de Loire
+                                    </h3>
+                                    <p class="color8">dessin</p>
+                                    <p>
+                                        10 juillet 2020
+                                                                                    au 12 juillet 2020
+                                                                            </p>
+                                </div>
+                                
+                                <div class="white t3 toile">
+
+                                    <div class=" p20 vertical-strong-red  t3 white t-a-center">
+                                        
+                                            <h3 class="article-h3 caption5 bk3">
+                                                                                                    Indre et Loire
+                                                                                            </h3>
+
+                                        
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+                    
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                                                                                    <div class="col-12 col-md-4 mt30 toile">
+                                                        <a href="https://www.sylviatrouve.com/stages/la-route-a-croquer/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/12/orchidée.jpg" alt="photo de Au musée des Tumulus" class="mt30 hmax30vh wmax-80 img m-a">
+                                <div class="caption3 vertical-span white t3">
+                                    <h3 class="vertical-strong-red article-h3 white t-a-center">
+                                        Au musée des Tumulus
+                                    </h3>
+                                    <p class="color8">dessin</p>
+                                    <p>
+                                        7 juin 2020
+                                                                            </p>
+                                </div>
+                                
+                                <div class="white t3 toile">
+
+                                    <div class=" p20 vertical-strong-red  t3 white t-a-center">
+                                        
+                                            <h3 class="article-h3 caption5 bk3">
+                                                                                                    Bougon
+                                                                                            </h3>
+
+                                        
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+                    
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                                                                                    <div class="col-12 col-md-4 mt30 toile">
+                                                        <a href="https://www.sylviatrouve.com/stages/croquez-saintes/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/12/Saintes3.jpg" alt="photo de Croquez Saintes N°1" class="mt30 hmax30vh wmax-80 img m-a">
+                                <div class="caption3 vertical-span white t3">
+                                    <h3 class="vertical-strong-red article-h3 white t-a-center">
+                                        Croquez Saintes N°1
+                                    </h3>
+                                    <p class="color8">dessin</p>
+                                    <p>
+                                        27 juin 2020
+                                                                            </p>
+                                </div>
+                                
+                                <div class="white t3 toile">
+
+                                    <div class=" p20 vertical-strong-red  t3 white t-a-center">
+                                        
+                                            <h3 class="article-h3 caption5 bk3">
+                                                                                                    Saintes
+                                                                                            </h3>
+
+                                        
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+                    
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                                                                                    <div class="col-12 col-md-4 mt30 toile">
+                                                        <a href="https://www.sylviatrouve.com/stages/croquez-saintes-n2/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2020/01/amphit-saintes.jpg" alt="photo de Croquez Saintes N°2" class="mt30 hmax30vh wmax-80 img m-a">
+                                <div class="caption3 vertical-span white t3">
+                                    <h3 class="vertical-strong-red article-h3 white t-a-center">
+                                        Croquez Saintes N°2
+                                    </h3>
+                                    <p class="color8">dessin</p>
+                                    <p>
+                                        29 août 2020
+                                                                            </p>
+                                </div>
+                                
+                                <div class="white t3 toile">
+
+                                    <div class=" p20 vertical-strong-red  t3 white t-a-center">
+                                        
+                                            <h3 class="article-h3 caption5 bk3">
+                                                                                                    Saintes
+                                                                                            </h3>
+
+                                        
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+                    
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                                                                                    <div class="col-12 col-md-4 mt30 toile">
+                                                        <a href="https://www.sylviatrouve.com/stages/croquez-thouars/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2020/01/trompe-souris.jpg" alt="photo de Rando/dessin N°1" class="mt30 hmax30vh wmax-80 img m-a">
+                                <div class="caption3 vertical-span white t3">
+                                    <h3 class="vertical-strong-red article-h3 white t-a-center">
+                                        Rando/dessin N°1
+                                    </h3>
+                                    <p class="color8">dessin</p>
+                                    <p>
+                                        9 avril 2020
+                                                                            </p>
+                                </div>
+                                
+                                <div class="white t3 toile">
+
+                                    <div class=" p20 vertical-strong-red  t3 white t-a-center">
+                                        
+                                            <h3 class="article-h3 caption5 bk3">
+                                                                                                    Thouars
+                                                                                            </h3>
+
+                                        
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+                    
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                                    
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                                <a href="#article-anch9" class="col-md-5 d-none d-md-block anch">
+                    <div class="button button-h t-a-center mt30">
+                        <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                    </div>
+                </a>
+            </section>
+                <h2 class="d-none d-md-block title-red col-md-1 col-12 vertical-h1 white">
+    <a href="https://www.sylviatrouve.com" class="white t4 ">
+        Sylviatrouve.com
+    </a>
+</h2>
+
+        <a id="article-anch9" class="anch col-md-12 d-none d-md-block"></a>
+                            <h2 class="title-red t-a-center col-md-1 col-12 vertical-h1 white">
+                <div class="col-4 col-md-2">
+                    <img class="hmax20vh logo img" src="https://www.sylviatrouve.com/wp-content/themes/via-painter/assets/img/logo-ST.png" alt="mogo">
+                </div>
+                    Ateliers
+
+            </h2>
+            <section class="col-md-9 row d-md-flex mt-10">
+                                                                                                    <div class="col-12 col-md-4 mt30 toile">
+                                                        <a href="https://www.sylviatrouve.com/ateliers/atelier-du-trait-2/">
+                                <img src="https://www.sylviatrouve.com/wp-content/uploads/2019/10/P1000445-1.jpg" alt="photo de L&rsquo;Atelier du Trait" class="mt30 hmax30vh wmax-80 img m-a">
+                                <div class="caption3 vertical-span white t3">
+                                    <h3 class="vertical-strong-red article-h3 white t-a-center">
+                                        L&rsquo;Atelier du Trait
+                                    </h3>
+                                    <p class="color8">dessin</p>
+                                    <p>
+                                        du 16 septembre 2019
+                                        au 26 juin 2020
+                                    </p>
+                                </div>
+                                <div class="vertical-span white t3 toile">
+                                    <div class=" p20 vertical-strong-red  t3 white t-a-center">
+                                                                                    <h3 class="article-h3 caption5 bk3">Niort</h3>
+                                                                            </div>
+                                </div>
+                            </a>
+                        </div>
+                                        <div class="offset-md-1 d-none d-md-block"></div>
+                                <a href="#article-contact" class="col-md-5 d-none d-md-block anch">
+                    <div class="button button-h t-a-center mt30">
+                        <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                    </div>
+                </a>
+            </section>
+        
+        <h2 class="d-none d-md-block title-red col-md-1 col-12 vertical-h1 white">
+    <a href="https://www.sylviatrouve.com" class="white t4 ">
+        Sylviatrouve.com
+    </a>
+</h2>
+
+
+                            <a id="article-contact" class="anch col-md-12 d-none d-md-block"></a>
+            <h2 class="title-red col-md-1 col-12 vertical-h1 white">
+                CONTACT
+            </h2>
+            <section class="col-md-9 row d-md-flex ">
+                        <div class="offset-md-1 d-none d-md-block"></div>
+        <h2 class=" col-10 color7">
+        CONTACT
+    </h2>
+       
+                                                    <div class="col-12 col-md-4 w-100 mt-10">
+                <img class=" logo img" src="https://www.sylviatrouve.com/wp-content/themes/via-painter/assets/img/logo-ST.png" alt="logo">
+            </div>
+            <div class="offset-md-1 d-none d-md-block"></div>
+                        <div class="col-12 col-md-7 mt30">
+
+                <div class="vertical-span white t3">
+                    <div class=" bk3 vertical-strong-red mt-10 hmax70vh t4">
+
+                                                                                    <p class="white t3">
+                                    7 rue du Bas Paradis Prolongée
+                                </p>
+                            
+                                                                                        <p class="color8 t4">
+                                    79000 <span class="white">Niort</span>
+                                </p>
+                                                                                        <p class="white t4">
+                                    <i class="color8 fas fa-tty mr10 t5"></i> 06 86 57 23 86
+                                </p>
+                                                                            <a class="d-block  col-12 link link-logo white d-block w-50" target="_blank" href="https://www.facebook.com/Sylvia-Trouv%C3%A9-360856991006240/">
+                             <i class="t8 t-a-center white d-block fab fa-facebook-f"></i>
+                        </a>
+                                                <a href="#article-contact-form" class="t12">
+                            <div class="button button-h t-a-center">
+                                <p class="col-12 mt30 white"><i class="fas fa-chevron-down"></i></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-12 mt30">
+                                                            <p class="hmax40vh w-80 m-a"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2755.111230454543!2d-0.4562217844134249!3d46.32748587912069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48073035d223c6ff%3A0xf53a1f69ca5c4bc4!2s7%20Rue%20du%20Bas%20Paradis%20Prolong%C3%A9e%2C%2079000%20Niort!5e0!3m2!1sfr!2sfr!4v1571426434087!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>
+                                                </div>
+            <a id="article-contact-form" class="w-100 hmin20vh anch "></a>
+            
+            <div class="col-12 col-md-6 mt30">
+                <div class="caldera-grid" id="caldera_form_1" data-cf-ver="1.8.11" data-cf-form-id="CF5db5acb269cb1"><div id="caldera_notices_1" data-spinner="https://www.sylviatrouve.com/wp-admin/images/spinner.gif"></div><form data-instance="1" class="CF5db5acb269cb1 caldera_forms_form cfajax-trigger" method="POST" enctype="multipart/form-data" id="CF5db5acb269cb1_1" data-form-id="CF5db5acb269cb1" aria-label="via" data-target="#caldera_notices_1" data-template="#cfajax_CF5db5acb269cb1-tmpl" data-cfajax="CF5db5acb269cb1" data-load-element="_parent" data-load-class="cf_processing" data-post-disable="0" data-action="cf_process_ajax_submit" data-request="https://www.sylviatrouve.com/cf-api/CF5db5acb269cb1" data-hiderows="true">
+<input type="hidden" id="_cf_verify_CF5db5acb269cb1" name="_cf_verify" value="e3c7763ccc"  data-nonce-time="1586026732" /><input type="hidden" name="_wp_http_referer" value="/" /><div id="cf2-CF5db5acb269cb1_1"></div><input type="hidden" name="_cf_frm_id" value="CF5db5acb269cb1">
+<input type="hidden" name="_cf_frm_ct" value="1">
+<input type="hidden" name="cfajax" value="CF5db5acb269cb1">
+<input type="hidden" name="_cf_cr_pst" value="6">
+<div class="hide" style="display:none; overflow:hidden;height:0;width:0;">
+<label>Nom</label><input type="text" name="name" value="" autocomplete="off">
+</div><div id="CF5db5acb269cb1_1-row-1"  class="row  first_row"><div  class="col-sm-12  single"><div class=""><h2 class="color8">Me laisser un message.</h2>
+<hr class="color8">
+</div></div></div><div id="CF5db5acb269cb1_1-row-2"  class="row "><div  class="col-sm-12  single"><div data-field-wrapper="fld_8768091" class="form-group" id="fld_8768091_1-wrap">
+	<label id="fld_8768091Label" for="fld_8768091_1" class="control-label">prénom <span aria-hidden="true" role="presentation" class="field_required" style="color:#ee0000;">*</span></label>
+	<div class="">
+		<input   required type="text" data-field="fld_8768091" class=" form-control" id="fld_8768091_1" name="fld_8768091" value="" data-type="text" aria-required="true"   aria-labelledby="fld_8768091Label" >			</div>
+</div>
+<div data-field-wrapper="fld_9970286" class="form-group" id="fld_9970286_1-wrap">
+	<label id="fld_9970286Label" for="fld_9970286_1" class="control-label">nom <span aria-hidden="true" role="presentation" class="field_required" style="color:#ee0000;">*</span></label>
+	<div class="">
+		<input   required type="text" data-field="fld_9970286" class=" form-control" id="fld_9970286_1" name="fld_9970286" value="" data-type="text" aria-required="true"   aria-labelledby="fld_9970286Label" >			</div>
+</div>
+<div data-field-wrapper="fld_6009157" class="form-group" id="fld_6009157_1-wrap">
+	<label id="fld_6009157Label" for="fld_6009157_1" class="control-label">email <span aria-hidden="true" role="presentation" class="field_required" style="color:#ee0000;">*</span></label>
+	<div class="">
+		<input   required type="email" data-field="fld_6009157" class=" form-control" id="fld_6009157_1" name="fld_6009157" value="" data-type="email" aria-required="true"   aria-labelledby="fld_6009157Label" >			</div>
+</div>
+<div data-field-wrapper="fld_8337811" class="form-group" id="fld_8337811_1-wrap">
+	<label id="fld_8337811Label" for="fld_8337811_1" class="control-label">cp</label>
+	<div class="">
+		<input    type="text" data-field="fld_8337811" class=" form-control" id="fld_8337811_1" name="fld_8337811" value="" data-type="text"   aria-labelledby="fld_8337811Label" >			</div>
+</div>
+<div data-field-wrapper="fld_8794341" class="form-group" id="fld_8794341_1-wrap">
+	<label id="fld_8794341Label" for="fld_8794341_1" class="control-label">commune</label>
+	<div class="">
+		<input    type="text" data-field="fld_8794341" class=" form-control" id="fld_8794341_1" name="fld_8794341" value="" data-type="text"   aria-labelledby="fld_8794341Label" >			</div>
+</div>
+<div data-field-wrapper="fld_4052763" class="form-group" id="fld_4052763_1-wrap">
+	<label id="fld_4052763Label" for="fld_4052763_1" class="control-label">tel</label>
+	<div class="">
+		<input  data-inputmask="'mask': '99 - 99 -99 -99'"   type="phone" data-field="fld_4052763" class=" form-control" id="fld_4052763_1" name="fld_4052763" value="" data-type="phone"   aria-labelledby="fld_4052763Label" >			</div>
+</div>
+<div data-field-wrapper="fld_3299907" class="form-group" id="fld_3299907_1-wrap">
+	<label id="fld_3299907Label" for="fld_3299907_1" class="control-label">objet</label>
+	<div class="">
+		<input    type="text" data-field="fld_3299907" class=" form-control" id="fld_3299907_1" name="fld_3299907" value="" data-type="text"   aria-labelledby="fld_3299907Label" >			</div>
+</div>
+</div></div><div id="CF5db5acb269cb1_1-row-3"  class="row "><div  class="col-sm-12  single"><div data-field-wrapper="fld_7683514" class="form-group" id="fld_7683514_1-wrap">
+	<label id="fld_7683514Label" for="fld_7683514_1" class="control-label">message <span aria-hidden="true" role="presentation" class="field_required" style="color:#ee0000;">*</span></label>
+	<div class="">
+		<textarea name="fld_7683514" value="" data-field="fld_7683514" class="form-control" id="fld_7683514_1" rows="7"  required="required"  aria-labelledby="fld_7683514Label" ></textarea>
+			</div>
+</div>
+</div></div><div id="CF5db5acb269cb1_1-row-4"  class="row  last_row"><div  class="col-sm-12  single"><div data-field-wrapper="fld_5137652" class="form-group" id="fld_5137652_1-wrap">
+	<label id="fld_5137652Label" for="fld_5137652_1" class="control-label">pièce jointe</label>
+	<div class="file-prevent-overflow">
+		<div id="fld_5137652_1_file_list" class="cf-multi-uploader-list"></div>
+				<input type="file" name="fld_5137652" value="" data-field="fld_5137652" class="" id="fld_5137652_1" data-controlid="trupl5e88d8ec14652"      aria-labelledby="fld_5137652Label" aria-describedby="fld_5137652Caption">
+		<input type="hidden" name="fld_5137652" value="trupl5e88d8ec14652">
+		<span id="fld_5137652Caption" class="help-block">pièce jointe</span>
+	</div>
+</div>
+<div data-field-wrapper="fld_7908577" class="form-group" id="fld_7908577_1-wrap">
+<div class="">
+	<input  class="btn btn-default" type="submit" name="fld_7908577" id="fld_7908577_1" value="Envoyer le message" data-field="fld_7908577"  >
+</div>
+</div>
+	<input class="button_trigger_1" type="hidden" name="fld_7908577" id="fld_7908577_1_btn" value="" data-field="fld_7908577"  />
+</div></div></form>
+</div>
+
+            </div>
+            <div class="col-12 col-md-6 mt30 row">
+                <h2>S'inscrire au "trait"</h2>
+                  
+  
+  <div id="mailpoet_form_1" class="mailpoet_form mailpoet_form_shortcode">
+    <style type="text/css">.mailpoet_hp_email_label{display:none;}#mailpoet_form_1 .mailpoet_form {  }
+#mailpoet_form_1 .mailpoet_paragraph { line-height: 20px; }
+#mailpoet_form_1 .mailpoet_segment_label, #mailpoet_form_1 .mailpoet_text_label, #mailpoet_form_1 .mailpoet_textarea_label, #mailpoet_form_1 .mailpoet_select_label, #mailpoet_form_1 .mailpoet_radio_label, #mailpoet_form_1 .mailpoet_checkbox_label, #mailpoet_form_1 .mailpoet_list_label, #mailpoet_form_1 .mailpoet_date_label { display: block; font-weight: bold; }
+#mailpoet_form_1 .mailpoet_text, #mailpoet_form_1 .mailpoet_textarea, #mailpoet_form_1 .mailpoet_select, #mailpoet_form_1 .mailpoet_date_month, #mailpoet_form_1 .mailpoet_date_day, #mailpoet_form_1 .mailpoet_date_year, #mailpoet_form_1 .mailpoet_date { display: block; }
+#mailpoet_form_1 .mailpoet_text, #mailpoet_form_1 .mailpoet_textarea { width: 200px; }
+#mailpoet_form_1 .mailpoet_checkbox {  }
+#mailpoet_form_1 .mailpoet_submit input {  }
+#mailpoet_form_1 .mailpoet_divider {  }
+#mailpoet_form_1 .mailpoet_message {  }
+#mailpoet_form_1 .mailpoet_validate_success { font-weight: 600; color: #468847; }
+#mailpoet_form_1 .mailpoet_validate_error { color: #b94a48; }
+#mailpoet_form_1 .mailpoet_form_loading { width: 30px; text-align: center; line-height: normal; }
+#mailpoet_form_1 .mailpoet_form_loading > span { width: 5px; height: 5px; background-color: #5b5b5b; }</style>
+    <form
+      target="_self"
+      method="post"
+      action="https://www.sylviatrouve.com/wp-admin/admin-post.php?action=mailpoet_subscription_form"
+      class="mailpoet_form mailpoet_form_shortcode"
+      novalidate
+      style=""/* paragraphs (label + input)
+    >
+      <input type="hidden" name="data[form_id]" value="1" />
+      <input type="hidden" name="token" value="ee2d39bfbc" />
+      <input type="hidden" name="api_version" value="v1" />
+      <input type="hidden" name="endpoint" value="subscribers" />
+      <input type="hidden" name="mailpoet_method" value="subscribe" />
+
+      <label class="mailpoet_hp_email_label">Veuillez laisser ce champ vide<input type="email" name="data[email]"/></label><p class="mailpoet_paragraph" ><strong class="color3">Abonnez-vous au "trait" ma newsletter pour être informé de mon actualité.</strong></p>
+<p class="mailpoet_paragraph"><label class="mailpoet_select_label" >civilité</label><select class="mailpoet_select" name="data[cf_1]" ><option value="">-</option><option value="Mr" selected="selected">Mr</option><option value="Mme">Mme</option></select></p>
+<p class="mailpoet_paragraph"><label class="mailpoet_text_label" >prénom</label><input type="text" class="mailpoet_text" name="data[form_field_ODM0NTQ4NzkxZGU5X2ZpcnN0X25hbWU=]" title="prénom" value=""  /></p>
+<p class="mailpoet_paragraph"><label class="mailpoet_text_label" >nom</label><input type="text" class="mailpoet_text" name="data[form_field_NTMzNDU5MDQxNTY0X2xhc3RfbmFtZQ==]" title="nom" value=""  /></p>
+<p class="mailpoet_paragraph"><label class="mailpoet_text_label" >email <span class="mailpoet_required">*</span></label><input type="email" class="mailpoet_text" name="data[form_field_ZjA2NjkyMWNmNjFjX2VtYWls]" title="email" value="" data-automation-id="form_email" data-parsley-required="true" data-parsley-minlength="6" data-parsley-maxlength="150" data-parsley-error-message="Veuillez spécifier une adresse de messagerie valide." data-parsley-required-message="Ce champ est nécessaire."/></p>
+<p class="mailpoet_paragraph" >Nous gardons vos données privées et ne les partageons qu’avec les tierces parties qui rendent ce service possible. Lire notre <a href="https://www.sylviatrouve.com/politique-de-confidentialite/" target="_blank" class="blue">politique de confidentialité</a> pour plus d’informations.</p>
+<p class="mailpoet_paragraph"><input type="submit" class="mailpoet_submit" value="Je m’abonne !" data-automation-id="subscribe-submit-button" /><span class="mailpoet_form_loading"><span class="mailpoet_bounce1"></span><span class="mailpoet_bounce2"></span><span class="mailpoet_bounce3"></span></span></p>
+
+      <div class="mailpoet_message">
+        <p class="mailpoet_validate_success"
+                style="display:none;"
+                >Vérifiez votre boite de réception ou votre répertoire d’indésirables pour confirmer votre abonnement.
+        </p>
+        <p class="mailpoet_validate_error"
+                style="display:none;"
+                >        </p>
+      </div>
+    </form>
+  </div>
+
+  
+                <a href="#article-contact-form" class="d-none d-md-block anch mt-10 col-12">
+                    <div class="button button-h t-a-center mt30">
+                        <p class="color3"><i class="fas fa-chevron-up"></i></p>
+                    </div>
+                </a>
+            </div>
+            
+                 
+  
+    
+            </section>
+             <h2 class="d-none d-md-block title-red col-md-1 col-12 vertical-h1 white">
+    <a href="https://www.sylviatrouve.com" class="white t4 ">
+        Sylviatrouve.com
+    </a>
+</h2>
+  
+                
+
+    </article>
+        <a class="totop d-none d-md-block t-lg-12" id="totop" href="#article-anch">
+    <div>
+        <i class="far fa-chevron-double-up"></i>
+    </div>
+
+</a>        <footer class="footer container mt100">
+<hr class="col-6 m-a color8 mt50">
+    <div class="row t3">
+                        <div class="col-12 col-md-5 mt40 mb20 order-1">
+            <a class="d-block  link t-a-center mb20" href="https://www.sylviatrouve.com/mentions-legales">
+                mentions légales
+            </a>
+            <a class="d-block link t-a-center" href="https://www.sylviatrouve.com/contacter-le-webmaster">
+                contacter le webmaster
+            </a>
+        </div>
+        <div class="col-md-2 col-4 mt40 mb20 m-a order-3 order-md-2">
+            <a class="w-25 m-a col-md-2 d-block link t-a-center t3 mb20 t-md-4" target="_blank" href="https://www.facebook.com/Sylvia-Trouv%C3%A9-36085699100624">
+            </a>
+            <img class="img w-40 m-a" src="https://www.sylviatrouve.com/wp-content/themes/via-painter/assets/img/petitpas.png" alt=" logo">
+        </div>
+       
+        <div class="col-12 col-md-5 mt40 mb20 order-2 order-md-3">
+            <a class="d-block link t-a-center mb20" href="https://www.sylviatrouve.com/politique-de-confidentialite">
+                politique de confidentialité
+            </a>
+            <a class="d-block link t-a-center" href="https://www.sylviatrouve.com">
+                www.sylviatrouve.com
+            </a>
+        </div> 
+        <p class="col-12 t-md-2 d-block link t-a-center order-4" h>
+                tous droits réservés - 2019
+        </p>
+
+    </div>
+</footer>        
+
+
+<script src="https://www.sylviatrouve.com/wp-content/themes/via-painter/assets/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    </body>
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Object Caching 3/539 objects using disk
+Page Caching using disk: enhanced 
+Content Delivery Network via N/A
+Database Caching 5/224 queries in 0.241 seconds using disk
+
+Served from: www.sylviatrouve.com @ 2020-04-04 20:58:52 by W3 Total Cache
+-->

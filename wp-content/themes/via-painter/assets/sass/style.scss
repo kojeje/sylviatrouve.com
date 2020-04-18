@@ -1,0 +1,248 @@
+@import "partials/vars";
+@import "partials/fonts";
+@import "partials/colors";
+@import "partials/background";
+@import "partials/border.scss";
+@import "partials/blocks";
+
+
+html
+{
+  scroll-behavior: smooth;
+}
+.body{
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  background-color: #e6e5e3 !important;
+    
+}
+body::-webkit-scrollbar {
+    width: 0 !important; 
+}
+
+// .row{
+//   width: 100% !important;
+// }
+a
+{
+  color: black;
+  text-decoration: none;
+}
+input[type=submit]{
+  color: white !important;
+  padding: 30px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color :$color3;
+  border: solid 2px #e6e5e3;
+
+}
+.slide{
+  height: 80vh !important;
+  z-index: 10000;
+  background-color: $color2;
+}
+.header{
+  height: 20vh;
+  z-index:4000;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(230,229,227,1) 82%, rgba(230,229,227,0.5088410364145659) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(230,229,227,1) 82%, rgba(230,229,227,0.5088410364145659) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(230,229,227,1) 82%, rgba(230,229,227,0.5088410364145659) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6e5e3",GradientType=1);
+}
+.header img{
+    max-width: 100%;
+    height: auto;
+}
+.footer{
+  height: 20vh;
+  width: 100%;
+
+}
+
+
+iframe{
+  width: 100%;
+  //
+}
+.logo{
+  width: 100%;
+  
+}
+.article-content-full{
+  height: 80vh;
+}
+.paint-img{
+  max-height: 80vh;
+  max-width:100%;
+  display: block;
+  margin-left:5vw;
+  padding: 10px;
+}
+.place-img{
+  height: auto;
+  padding: 20px;
+  display: block;
+  margin: auto;
+}
+.img{
+  display: block;
+}
+.article-h1{
+  color: $color3;
+  margin-bottom: 20px;
+  line-height: 0.8;
+}
+a,
+.a{
+  text-decoration: none;
+}
+ul,
+.ul{
+  list-style-type: none;
+}
+.t0{
+  font-size:$t0 !important;
+}
+.t1{
+  font-size:$t1 !important;
+}
+.t2{
+  font-size:$t2 !important;
+}
+.t3{
+  font-size:$t3 !important;
+}
+.t4{
+  font-size:$t4 !important;
+}
+.t5{
+  font-size:$t5 !important;
+}
+.t6{
+  font-size:$t6 !important;
+}
+.t7{
+  font-size:$t7 !important;
+}
+.t8{
+  font-size:$t8 !important;
+}
+.t9{
+  font-size:$t9 !important;
+}
+.t10{
+  font-size:$t10 !important;
+}
+
+.caption,
+.caption2,
+.caption3,
+.caption5{
+
+  color:#ffffff;
+
+  z-index: 1001 !important;
+  -webkit-box-shadow: 10px 5px 5px $color5 !important;
+  -moz-box-shadow: 10px 5px 5px $color5 !important;
+  box-shadow: 10px 5px 5px $color5 !important;
+
+}
+.caption3{
+    background-color: $color3;
+}
+.toile img,
+.shadow{
+  -webkit-box-shadow: 10px 5px 5px $color5 !important;
+  -moz-box-shadow: 10px 5px 5px $color5 !important;
+  box-shadow: 10px 5px 5px $color5 !important;
+}
+.float-thumb{
+  height: auto;
+  float: none;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.map iframe{
+  opacity: 0;
+  transition: 1s;
+  width: 1%;
+
+
+}
+.a-hover-110{
+  transition: 0.8s
+}
+.title-red{
+  padding:30px;
+  background: $color3;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  -webkit-box-shadow: 10px 5px 5px $color5;
+  -moz-box-shadow: 10px 5px 5px $color5;
+  box-shadow: 10px 5px 5px $color5;
+}
+#button{
+  background-color: transparent;
+  height: 100%;
+  border: none !important;
+}
+#button i{
+  opacity: 0.6 !important;
+  transition: 0.6s;
+}
+.button-group{
+  box-shadow: none !important;
+  border: none;
+}
+.atelier-info{
+  list-style-type: circle;
+}
+.vertical-h1{
+  writing-mode: horizontal-tb;
+  text-orientation: upright;
+  word-break: keep-all;
+}
+.slider-adapt{
+  width: auto !important;
+
+}
+.caption-hover{
+  opacity: 0.1;
+  transition: 1s;
+  z-index: 1001;
+}
+#carouselExampleIndicators
+{
+  overflow: hidden;
+}
+.carousel-control-prev,
+.carousel-control-next{
+    color: $color3 !important;
+    z-index: 12000 !important;
+}
+.link2{
+  font-size: 20px !important;
+  line-height: 40px;
+  margin-top: 30px;
+}
+.pointer-none {
+  pointer-events: none;
+}
+.pointer-auto{
+  pointer-events: auto;
+}
+.z8000{
+   z-index: 8000; 
+}
+
+@import "responsive/responsive_tablet";
+@import "responsive/responsive_desktop";
+@import "partials/states";

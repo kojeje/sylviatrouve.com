@@ -1,0 +1,149 @@
+{% extends 'base.twig' %}
+{% block content %}
+    {% include 'views/partial/popups/toile-popup.twig' %}
+    <article class="url4 parallax container-fluid row m-a mt20">
+        {#ancre interne#}
+        <a id="article-anch" class="col-12"></a>
+        {# ------------------------       BLOC IMAGE ET DONNEES SUR L'OEUVRE          --------------------------#}
+        <section class="paint col-12 col-md-4 toile col-12">
+            {# lien vers l'image plein ecran#}
+            <div id="myBtn">
+                <img src="{{ post.thumbnail.src }}" alt="photo de {{ post.title }}" class="img pop-up-open paint-img">
+            </div>
+            
+                {#afficher les données de la toile au survol#}
+                <div class="caption2 white vertical-span white t2 w-100 ml-10 row  ">
+                    {#Si la toile est une oeuvre "vendable"#}
+                    <p class="white t4 t-md-5 t-lg-7">
+                        Détails
+                    </p>
+                </div>
+
+        </section>
+        <div class="offset-md-1 d-none d-md-block"></div>
+
+        {# ------------------------       BLOC TEXTE          --------------------------#}
+
+        <aside class="row col-12 col-md-5">
+            {# Titre de l'oeuvre #}
+            <a href="{{ post.get_field('collection').post_link }}">
+                <p class="col-12 article-h1 col-12 t-a-center d-block t-md-6 t-6">
+                    {{ post.title }}
+                </p>
+                <div class="offset-1"></div>
+                {# Si texte pour l'oeuvre#}
+                {% if post.get_field('content') %}
+                    <p class="paragraph col-10  t-md-4 t-2">
+                        {{ post.get_field('content') }}
+                    </p>
+                
+                    {# Sinon texte pour sa collection #}
+                {% else %}
+                    <p class="paragraph col-10  t-md-4 t-2">
+                        {% for serie in post.get_field('collections') %}
+                            {{ serie.get_field('content') }}
+                        {% endfor %}
+                    </p>
+                    
+                {% endif %}
+                <a href="#article-contact" class="d-none d-md-block anch mt-10 col-12">
+                    <div class="button button-h t-a-center mt30">
+                        <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                    </div>
+                </a>
+                <div class="offset-1"></div>
+            </a>
+        </aside>
+        {# titre vertical#}
+        <div class="col-md-2 d-none d-md-block mt-10">
+            <h1 class="vertical-h1 vertical-title t4 t-a-center">
+                <a href="
+                            {% for serie in collections %}
+                                {% for toile in serie.get_field('toiles') %}
+                                        {% if toile.title == post.title %}
+                                            {{ serie.link }}
+                                        {% endif %}
+                                {% endfor %}
+
+                            {% endfor %}
+                         ">
+                            {{ post.get_field('collection').title|upper }}
+                </a>
+
+
+            </h1>
+        </div>
+
+        
+        
+        {# Si expos #}
+        
+           
+            
+            {# ------------------------       BLOC EXPO         --------------------------#}
+            {# boucle expos #}
+        {% for expo in expos %}
+            {% if "now"|date('U') <= expo.get_field('fin')  %}
+        
+                {% if  expo.get_field('toiles') %}
+                    {# TITRE VERTICAL #}
+                    {# Boucles des EXPOS où la collection est présentée #}
+                    {% for toile in expo.get_field('toiles') %}
+                  
+                       
+                        <div class="offset-md-1 d-none d-md-block"></div>
+                        {# Mettre en adéquation la collection et les expos qui la concerne#}
+                        {% if toile.title == post.title %}
+                            <a class="anch" id="article-anch2"></a>
+                            <div class="paint col-12 col-md-1 toile2">
+                                <h2 class="title-red t-a-center  vertical-h1 m-a white"> {{ post.title|upper }}  Expos</h2>
+                            </div>
+                            <div class="offset-md-1 d-none d-md-block"></div>
+                            <section class="section col-md-9 col-12 row">
+                                {# bloc expo #}
+                                <div class="col-12 col-md-4 toile">
+                                    {# lien vers la page de l'expo #}
+                                    <a href="{{ expo.link }}">
+                                        {# thumbnail de la série pour représenter les blocs expo #}
+                                        <div>
+                                            <img src="{{ post.thumbnail.src }}" alt="photo de {{ post.title }}" class="img w-100">
+                                        </div>
+                                        <div class="caption3 vertical-span white t3">
+                                            <h3 class="vertical-strong-red article-h3 white t-a-center">
+                                                {{ expo.title }}
+                                            </h3>
+                                            <p>
+                                                du <span class="color8">{{ expo.get_field('debut')|date('j F Y') }}</span>
+                                                au <span class="color8">{{ expo.get_field('fin')|date('j F Y') }}</span>
+                                            </p>
+                                        </div>
+                                        {% for lieu in expo.get_field('lieu') %}
+                                                <div class="caption2 vertical-span white t3 toile">
+                                                    <h3 class="caption5 p20 bk3 vertical-strong-red article-h3 t3 color8 t-a-center">
+                                                        {{ lieu.get_field('commune') }}
+                                                    </h3>
+                                                </div>
+                                        {% endfor %}
+                                    </a>
+                                </div>
+                                <div class="offset-md-1 d-none d-md-block"></div>
+                            </section>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}       
+            {% endif %}
+        {% endfor %}
+    {# ------------------------       BLOC CONTACTS         --------------------------#}
+            {# Si contacts #}
+            {% if contacts %}
+                <a id="article-contact" class="anch col-md-12 d-none d-md-block"></a>
+                <h2 class="title-red col-md-1 col-12 vertical-h1 white">
+                    {{'contact'|upper }}
+                </h2>
+                <section class="col-md-9 row d-md-flex ">
+                    {% include 'views/partial/sections/contact-via.twig' %}
+                </section>
+                {% include 'views/partial/domain-column.twig' %} 
+            {% endif %}
+    </article>
+{% endblock %}

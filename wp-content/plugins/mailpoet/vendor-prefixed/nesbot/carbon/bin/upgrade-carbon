@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php 
+namespace MailPoetVendor;
+
+$dir = __DIR__ . '/..';
+if (!\file_exists($dir . '/autoload.php')) {
+    $dir = __DIR__ . '/../vendor';
+}
+if (!\file_exists($dir . '/autoload.php')) {
+    $dir = __DIR__ . '/../../..';
+}
+if (!\file_exists($dir . '/autoload.php')) {
+    echo 'Autoload not found.';
+    exit(1);
+}
+$composerInstalled = \false;
+if (!\file_exists($dir . '/composer/composer')) {
+    $composerInstalled = \true;
+    \shell_exec('composer require --dev composer/composer');
+}
+include $dir . '/autoload.php';
+\MailPoetVendor\Carbon\Upgrade::upgrade();
+if ($composerInstalled) {
+    \shell_exec('composer remove --dev composer/composer');
+}
+exit(0);

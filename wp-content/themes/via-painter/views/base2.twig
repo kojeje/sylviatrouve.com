@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns:og="http://ogp.me/ns#" lang="fr">
+    <head>
+        {% include "partial/head.twig" %}
+    </head>
+    <body class="body font1">
+        {% block tmp_slide %}{% endblock %}
+        {% include "partial/header2.twig" %}
+        {% block content %}{% endblock %}
+        {% include "partial/footer.twig" %}
+        {% include "partial/totop.twig" %}
+        {% include "partial/script.twig" %}
+    </body>
+</html>

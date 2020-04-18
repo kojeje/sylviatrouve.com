@@ -1,0 +1,183 @@
+{% extends 'base.twig' %}
+{% block tmp_slide %}
+
+    <!-- SLIDER -->
+    {# Si Slider existe#}
+  
+    {% if post.get_field('slider') == true %}
+        <div id="carouselExampleIndicators" class="url4 hmax80vh carousel slide d-none d-md-block" data-ride="carousel">
+            {# Accroche slider #}
+            <div class="l-2 caption5 mce-active carousel-caption hmax60vh wmax-20 mce-active d-none d-md-block t-md-4">
+                {# Nom #}
+                <h1 class=" m-a h-20vh t-a-center white ">
+                    <span class="color8">
+                        {{ 'sylvia trouvé '|upper }}
+                    </span>
+                    
+                </p>
+                
+                {#sub#}
+                <h2 class=" m-a h-20vh t-a-center white ">
+                    {{ post.get_field('text') }}
+                    {#BOUTONS SCROLL#}
+                    <a href="#article-anch" class="col-12">
+                        <div class="button button-h t-a-center ">
+                            <span class="white">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                    </a>
+                </h1>
+            </div>
+            {# Carousel #}
+            <div class="carousel-inner row">
+                <!-- IMAGES 1265 X 550 -->
+                {# img 1#}
+                {% if post.get_field('img') %}
+
+
+                    {# img d'amorce#}
+                    <div class="carousel-item slider-adapt-parent active m-a">
+                        <img class="d-block m-a  slider-adapt" src="{{ post.get_field('img') }}" alt="Fifth slide">
+                    </div>
+                {% endif %}
+                {# boucle OBJETS stage ou atelier#}
+                {% if post.get_field('stages') or post.get_field('ateliers')%}
+                    {% for stage in post.get_field('stages') %}
+                        {# item de défilement #}
+                        <div class="carousel-item slider-adapt-parent m-a">
+                            {# lien vers la page d'archive #}
+                            <a href="{{ stage.link }}" class="m-a toile">
+                                {#image#}
+                                <img class="d-block m-a hmax80vh slider-adapt" src="{{ stage.thumbnail.src }}" alt="{{ stage.title }} slide">
+                                {#titre de l'oeuvre (hover)#}
+                                <div class="m-a caption3 caption-hover mce-active carousel-caption wmax-20 mce-active d-none d-md-block t-4">
+                                    <p class=" m-a h-20vh t-a-center white ">
+                                        {{ stage.title|capitalize }}
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                    {% for atelier in post.get_field('ateliers') %}
+                        {# item de défilement #}
+                        <div class="carousel-item slider-adapt-parent m-a">
+                            {# lien vers la page d'archive #}
+                            <a href="{{ atelier.link }}" class="m-a toile">
+                                {#image#}
+                                <img class="d-block m-a hmax80vh slider-adapt" src="{{ atelier.thumbnail.src }}" alt="{{ atrlier.title }} slide">
+                                {#titre de l'oeuvre (hover)#}
+                                <div class="m-a caption3 caption-hover mce-active carousel-caption wmax-20 mce-active d-none d-md-block t-4">
+                                    <p class=" m-a h-20vh t-a-center white ">
+                                        {{ atelier.title|capitalize }}
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                
+                {% endif %}
+            </div>
+
+            <!-- BOUTONS DEFILEMENT-->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <article class="container url5 parallax2 row m-a mt20">
+        {#ancre interne#}
+        <a id="article-anch" class="col-12"></a>
+        <aside class="paint col-12 col-md-2 toile2 mr50">
+                <h1 class="title-red t-a-center  vertical-h1 m-a color8"> {{ post.title|capitalize }}</h1>
+        </aside>
+        {# Section principale #}
+        <section class="section col-9 row">
+            <p class="col-md-8 col-12 m-a mt-10">{{ post.get_field('content') }}</p>
+            {% if post.get_field('stages') %}
+            <h2 class="col-md-11 m-a article-h1 title-red white mt20 mb20 col-12 t-a-center">
+                {{ 'Les stages de'}} {{ '\"' }}
+                <span class="color8">
+                    {{ post.title|capitalize }}
+                </span>{{ '\"' }}
+            </h2>
+            {% endif %}
+        
+            
+            {% if post.get_field('stages') or post.get_field('ateliers')%}
+                {% for stage in post.get_field('stages')  %}
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                    <div class="col-10 col-md-5 toile">
+                        <a href="{{ stage.link }}">
+                            {% for lieu in stage.get_field('lieu') %}
+                                <div class="vertical-span white t3 toile">
+                                    <h3 class="caption6 p20 bk3 vertical-strong-red article-h3 t3 color8 t-a-center">
+                                        {% if lieu.get_field('commune') %}
+                                            {{ lieu.get_field('commune') }}
+                                        {% else %}
+                                            {{ lieu.title }} 
+                                        {% endif %}
+                                    </h3>
+                                </div>
+                            {% endfor %}
+                            <img src="{{ stage.thumbnail.src }}" alt="photo de {{ stage.title }}" class="img toile d-block w-100 m-a thumb mb20 mt20">
+                            <div class="caption3 vertical-span white t3">
+                                <h3 class="vertical-strong-red article-h3 white t-a-center">
+                                    {{ stage.title }}
+                                </h3>
+                                <p>
+                                    du <span class="color8">{{ stage.get_field('debut') }}</span>
+                                    au <span class="color8">{{ stage.get_field('fin') }}</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+                 {% if post.get_field('atelier') %}
+                <h2 class="col-md-11 m-a article-h1 title-red white mt20 mb20 col-12 t-a-center">
+                {{ 'Les ateliers de'}} {{ '\"' }}
+                <span class="color8">
+                    {{ post.title|capitalize }}
+                </span>{{ '\"' }}
+                </h2>
+                {% endif %}
+            {% for atelier in post.get_field('ateliers')  %}
+                    <div class="col-10 col-md-5 toile">
+                        <a href="{{ atelier.link }}">
+                            {% for lieu in atelier.get_field('lieu') %}
+                                <div class="vertical-span white t3 toile">
+                                    <h3 class="caption6 p20 bk3 vertical-strong-red article-h3 t3 color8 t-a-center">
+                                        {% if lieu.get_field('commune') %}
+                                            {{ lieu.get_field('commune') }}
+                                        {% else %}
+                                            {{ lieu.title }} 
+                                        {% endif %}
+                                    </h3>
+                                </div>
+                            {% endfor %}
+                            <img src="{{ atelier.thumbnail.src }}" alt="photo de {{ atelier.title }}" class="img toile d-block w-100 m-a thumb mb20 mt20">
+                            <div class="caption3 vertical-span white t3">
+                                <h3 class="vertical-strong-red article-h3 white t-a-center">
+                                    {{ atelier.title }}
+                                </h3>
+                                <p>
+                                    de <span class="color8">{{ atelier.get_field('debut') }}</span>
+                                    à <span class="color8">{{ atelier.get_field('fin') }}</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </section>
+    </article>
+{% endblock %}

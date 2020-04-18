@@ -1,0 +1,305 @@
+{% extends 'base2.twig' %}
+{% block tmp_slide %}
+    <!-- SLIDER -->
+    {# Si Slider existe#}
+    {% if post.get_field('slider')== true %}
+        <div id="carouselExampleIndicators" class="url4 hmax80vh carousel slide d-none d-md-block" data-ride="carousel">
+         {# Accroche slider #}
+        <div class="l-2 caption2 caption5 mce-active carousel-caption hmax60vh wmax-20 mce-active d-none d-md-block t4">
+            {# Nom #}
+            <h1 class=" m-a h-20vh t-a-center white t-md-8">
+                {{ 'sylvia trouvé '|capitalize }}
+            </h1>
+            {#sub#}
+            
+            <h2 class="color8 mt90 t-md-6 m-a h-20vh t-a-center">
+                Ateliers - Stages
+            </h2>
+            {# vers ancres suivantes #}
+            <a href="#article-anch" class="col-12">
+                <div class="button button-h t-a-center ">
+                    <p class="white"><i class="t12 fas fa-chevron-down"></i></p>
+                </div>
+            </a>
+        </div>
+            {# Carousel #}
+            <div class="carousel-inner">
+                <!-- IMAGES 1265 X 550 -->
+                {# img 1#}
+                {% if post.get_field('img') %}
+                    {# img d'amorce#}
+                    <div class="carousel-item slider-adapt-parent active m-a">
+                        <img class="d-block m-a  slider-adapt" src="{{ post.get_field('img') }}" alt="First slide">
+                    </div>
+                {% endif %}
+                {# boucle ateliers/stages#}
+                {% if ateliersstages %}
+                    {% for as in ateliersstages %}
+                        {% if 'now'|date('U') <= as.get_field('fin')|date('U') %} 
+                            {# item de défilement #}
+                            <div class="carousel-item slider-adapt-parent toile m-a">
+                                {# lien vers la page d'archive #}
+                                <a href="{{ as.link }}" class="m-a">
+                                    {#image#}
+                                    <img class="d-block m-a hmax80vh slider-adapt" src="{{ as.thumbnail.src }}" alt="{{ as.title }} slide">
+                                    {# 1er bloc titre (disparait au survol #}
+                                    <div class="m-a caption5 caption-hover mce-active carousel-caption wmax-20 mce-active d-none d-md-block t-md-4">
+                                        <p class=" m-a h-20vh t-a-center white ">
+                                            {# titre de l'atelier/stage #}
+                                            <span class="color8">{{ as.title|capitalize }}</span>
+                                            {# si atelier #}
+                                            {% if as.post_type == 'ateliers' %}
+                                                <br>
+                                                {# afficher la technique enseignée #}
+                                                {{ as.get_field('technique') }}
+                                            {% endif %}
+                                            {#Pour tous les lieux#}
+                                            {% for lieu in as.get_field('lieu') %}
+                                                <br>
+                                                <span class="
+                                                    {# si atelier #}
+                                                    {% if as.post_type == 'ateliers' %}
+                                                        {# attribuer la classe #}
+                                                        color8
+
+                                                    {% endif %}
+                                                    ">
+                                                    {#Afficher la commune #}
+                                                    {{ lieu.get_field('commune') }}
+                                                </span>
+                                            {% endfor %}
+                                        </p>
+                                    </div>
+                                    {# 2eme bloc titre (apparait au survol #}
+                                    <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-20 mce-active d-none d-md-block t-md-4">
+                                        <p class=" m-a h-20vh t-a-center white ">
+                                            
+                                            {# si atelier #}
+                                            
+                                            {% if as.get_field('debut')|date('U') != as.get_field('fin')|date('U') %}
+                                                {% if as.post_type == 'stages' %}
+                                                    du {{ as.get_field('debut')|date('j F Y') }} au {{ as.get_field('fin')|date('j F Y') }}
+                                                {% endif %}
+                                                {% if as.get_field('debut')|date('Y') == as.get_field('fin')|date('Y') and as.post_type == 'cycles' %}
+                                                    Année {{ as.get_field('debut')|date('Y') }} 
+                                                {% elseif as.get_field('debut')|date('Y') != as.get_field('fin')|date('Y') and as.post_type == 'cycles' %}
+                                                   
+                                                    Année {{ as.get_field('debut')|date('Y') }} - {{ as.get_field('fin')|date('Y') }}
+                                                {% elseif as.get_field('debut')|date('Y') != as.get_field('fin')|date('Y') and as.post_type == 'ateliers' %}
+                                                    Année {{ as.get_field('debut')|date('Y') }} - {{ as.get_field('fin')|date('Y') }}
+                                                {% elseif as.get_field('debut')|date('Y') == as.get_field('fin')|date('Y') and as.post_type == 'ateliers' %}
+                                                    Année {{ as.get_field('debut')|date('Y') }}
+                                                
+                                                {% endif %}
+                                            
+                                            {% elseif as.get_field('debut')|date('U') == as.get_field('fin')|date('U')  and as.post_type == 'stages' %}
+                                                    le {{ as.get_field('debut')|date('j F Y') }}
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        {%  endif %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <!-- BOUTONS -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    {% endif %}
+{% endblock %}
+{% block content %}
+    {# --------------------------   section 1 : welcome --------------------------------------------#}
+    <a id="article-anch" class="m-a anch col-md-12 d-none m-a d-md-block"></a>
+    <article id="post-id" class="w-100">
+        <div class="row m-a w-90">
+    {# titre de la page #}
+            <h1 class="title-red t-a-center col-md-1 col-12  vertical-h1 m-a white">
+                    <span class="white t4 ">
+                        {{post.title }}
+                    </span>
+            </h1>
+            <div class="offset-md-1 d-none d-md-block"></div>
+            {# image principale #}
+            <section class="section col-12 col-md-4 row">
+                <div class="col-12 t3 row toile mt-20">
+                    <a href="{{ post.thumbnail.src }}">
+                        <img src="{{ post.thumbnail.src }}" alt="photo de {{ site.url }}" class="wmax-80 img">
+                    </a>
+                </div>
+            </section>
+            <aside class="row col-12 col-md-5">
+                <h2 class="title-red t-a-center col-12 hmax40vh t4 m-a color8">
+                    {# sous titre #}
+                    {{ post.get_field('sub') }}
+                    {# vers ancre suivante #}
+                    <a href="{% if stages %} #article-1 {% else %} #article-anch2 {% endif %}" class="col-12 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </a>
+                </h2>
+                {# auteur s'affiche au survol si citation #}
+                <p class="col-12 toile t-md-5 t5">
+                    {{ post.get_field('texte') }}
+                    {% if post.get_field('auteur') %}
+                        <i class="title-red white hmax30vh t2 mt-10 caption2"> {{ post.get_field('auteur') }} </i>
+                    {% endif %}
+                </p>
+            </aside>
+            {# --------------------------   section 2 : cycles -------------------------------------------- #}
+                {% for cycle in cycles %}
+                    {% if 'now'|date('U') <= cycle.get_field('fin')|date('U') %} 
+                    <a id="article-{{ loop.index }}" class="hmax10vh anch col-md-12 d-none d-md-block"></a>
+                    {# Colonne "titre" #}
+                    <h2 class=" title-red t-a-center col-md-1 col-12 vertical-h1 white t-md-5">
+                        {# Titre du cycle #}
+                        <span class="white">{{cycle.title}}</span> - 
+                        {# nature du cycle #}
+                        <span class="color8">
+                            {% if cycle.get_field('type_de_cycle') == 'stages' %}
+                                {{ 'stages'|upper }}
+                            {% elseif cycle.get_field('type_de_cycle') == 'ateliers'%}
+                                {{ 'ateliers'|upper }} 
+                            {% else %}
+                                <br>
+                                {{ 'cycle de formation'|upper }}
+                            {% endif %}
+                        </span>
+                    </h2>
+                    <section class="section col-12 col-md-9 row mt-10">
+                    {# lien vers le cycle #}
+                    
+                        <h1 class="m-a bk3 color8 col-10 p-20 t-md-5 d-none d-md-block t-md-3 shadow">
+                            <p class=" m-a h-20vh t-a-center white blob">{{ cycle.title|capitalize }}</p>
+                        </h1>
+                        <div class="col-12 row t5 mt20">
+                            <div class="col-md-5 col-12">
+                                <img src="{{ cycle.thumbnail.src }}" alt="photo de {{ cycle.title }}" class="shadow img w-100">
+                                <p class="m-a t-md-5 t4 mt20 mb30 black">{{ cycle.get_field('content') }}</p>
+                                <div class="row col-12 d-none d-md-block">
+                                <a href="
+                                    {% if loop.index != loop.last %}
+                                    #article-{{loop.index + 1}}
+                                    
+                                    {% else %}
+                                    #article-contact
+                                    {% endif %}"
+                                    class="col-12 anch">
+                                        <div class="button button-h t-a-center mt30">
+                                            <p class="color3 t-md-12"><i class="fas fa-chevron-down"></i></p>
+                                        </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="offset-md-1 d-none d-block"></div>
+                        <div class="row vertical-span white t-md-5 col-12 col-md-6">
+                            {% if cycle.get_field('stages') %}
+                                {% for stage in cycle.get_field('stages')%}
+                                    {% if 'now'|date('U') <= stage.get_field('debut')|date('U') %}
+                                        <a href="{{ stage.link }}" class="row mb20">
+                                            <div class="m-a shadow m-a hmin40vh hmax80vh col-11 m-a toile p-40 bk3 article-h3 t4 white t-a-center">
+                                                <span class="d-block t4 white mb20 t-md-7">
+                                                    {{ stage.title }}
+                                                </span>
+                                                <span class="d-block t4 white mb20 t-md-5 color8">
+                                                    stage de
+                                                    <strong class="white">{{ stage.get_field('technique') }}</strong>
+                                                </span>
+                                                <div class="wmax-40 m-a mb20">
+                                                    <img src="{{ stage.thumbnail.src }}" alt="photo de {{ stage.title }}" class="shadow img w-100">
+                                                </div>
+                                                {% for lieu in stage.get_field('lieu') %}
+                                                    {% if lieu.get_field('commune') %}
+                                                        <span class="d-block color8">
+                                                            {# commune #}
+                                                            {{ lieu.get_field('commune') }}
+                                                        </span>
+                                                    {% else %}
+                                                        <span class="d-block color8">
+                                                            {# cp commune #}
+                                                            {{ lieu.title }}
+                                                        </span>
+                                                    {% endif %}
+                                                {% endfor %}
+                                                <span class="d-block white">
+                                                    {# dates #}
+                                                    {% if stage.get_field('debut')|date('U') != stage.get_field('fin')|date('U') %}
+                                                        du {{ stage.get_field('debut')|date('j F Y') }} au {{ stage.get_field('fin')|date('j F Y') }}
+                                                    {% else %}
+                                                        le {{ stage.get_field('debut')|date('j F Y') }}
+                                                    {% endif %}
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </a>
+                                    {% endif %}
+                                {% endfor %} 
+                            {% endif %}
+                            {% if cycle.get_field('ateliers') %} 
+                            {% for stage in cycle.get_field('ateliers')%}
+                                {% if 'now'|date('U') <= stage.get_field('fin')|date('U') %} 
+                                        <a href="{{ stage.link }}" class="row mb20">
+                                            <div class="m-a hmin40vh hmax80vh col-11 m-a toile p-40 bk3 article-h3 t4 white t-a-center shadow">
+                                                <span class="d-block t4 white mb20 t-md-7">
+                                                    {{ stage.title }}
+                                                </span>
+                                                <span class="d-block t4 white mb20 t-md-5 color8">
+                                                    stage de
+                                                    <strong class="white">{{ stage.get_field('technique') }}</strong>
+                                                </span>
+                                                <div class="wmax-40 m-a mb20">
+                                                    <img src="{{ stage.thumbnail.src }}" alt="photo de {{ stage.title }}" class="shadow img w-100">
+                                                </div>
+                                                {% for lieu in stage.get_field('lieu') %}
+                                                    {% if lieu.get_field('commune') %}
+                                                        <span class="d-block color8 mt20">
+                                                            {# commune #}
+                                                            {{ lieu.get_field('commune') }}
+                                                        </span>
+                                                    {% else %}
+                                                        <span class="d-block color8 mt20">
+                                                            {# cp commune #}
+                                                            {{ lieu.title }}
+                                                        </span>
+                                                    {% endif %}
+                                                {% endfor %}
+                                                <span class="d-block white mt20">
+                                                    {# dates #}
+                                                    de {{ stage.get_field('debut')|date('F Y') }} à {{ stage.get_field('fin')|date('F Y') }}
+                                                </span>
+                                            </div>
+                                        </a>
+                                    {% endif %}
+                                {% endfor %} 
+                            {% endif %}
+                    
+                        </div>
+                    </a>
+                    </section>
+                    {% include 'views/partial/domain-column.twig' %}
+                {% endif %}
+            {% endfor %}
+        {# ------------------------       BLOC CONTACTS         --------------------------#}
+            {# Si contacts #}
+            {% if contacts %}
+                <a id="article-contact" class="anch col-md-12 d-none d-md-block"></a>
+                <h2 class="title-red col-md-1 col-12 vertical-h1 white">
+                    {{'contact'|upper }}
+                </h2>
+                <section class="col-md-9 row d-md-flex ">
+                    {% include 'views/partial/sections/contact-via.twig' %}
+                </section>
+                {% include 'views/partial/domain-column.twig' %}  
+            {% endif %}
+        </div>
+    </article>
+{% endblock %}

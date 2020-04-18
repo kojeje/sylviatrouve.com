@@ -1,0 +1,48 @@
+<!-- The Modal -->
+    <div id="myModal" onclick = "function (event)" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content row">
+            <span class="close col-12">&times;</span>
+            <div class="col-12 col-md-7 col-lg-9 row">
+                {% if post.get_field('toiles') %}
+                    {% for toile in post.get_field('toiles')  %}
+                    {# <h4 class="white">{{ dump(toile)}}</h4> #}
+                        {% if toile.post_status == 'publish' %}
+                            {# <h3 class="white">{{dump(toile)}}</h3> #}
+                            <div class="col-10 col-md-4 toile">
+                                <a href="{{ toile.link }}" target="_blank">
+                                    <img src="{{ toile.thumbnail.src }}" alt="photo de {{ post.title }}" class="img toile d-block w-100 h-a m-a thumb mt10">
+                                    <p class="caption2 t-a-center">{{ toile.title }}</p>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <div class="col-12 col-md-4 t-a-center m-a color4 mt-10">
+                        <div class="w-20 m-a">
+                            <img src="{{ theme.link }}/assets/img/logo-ST.jpg" class="w-100 m-a img" alt="logo de {{ site.url }}">
+                        </div>
+                    <p class="t-a-center white t2 m-a p-10">tous droits réservés</p>
+                    <p class="color8 m-a t-a-center p-10">sylviatrouve.com </p>
+                </div>
+                {% endif %}
+                
+            </div>
+            <div class="side-popup col-12 col-md-4 col-lg-3 bk7 color8 p-30">
+                <p class="color8 t3 t-md-5 t-lg-7 p-20">
+                    {{ 'collection'|upper }}
+                </p>
+                <h1 class="white t3 t-md-5 t-lg-7 p-30 bk3">
+                    {{post.title}}
+                </h1>
+                {# {% if post.get_field('annee') %}
+                    <p class="p-20 m-a t-a-center t4 t-md-5 t-lg-6">
+                        {{post.get_field('annee')|date('Y')}}
+                    </p>
+                {% endif %} #}
+                <p class="color8 title-red p-20 m-a t-a-center t3 t-md-4 t-lg-6">
+                    {{ post.get_field('content') }}
+                </p>
+            </div>
+           <span class="close2 col-12">&times;</span>  
+        </div>
+    </div>

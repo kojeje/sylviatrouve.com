@@ -1,0 +1,139 @@
+// ref : ipad
+@media screen and (min-width:768px){
+
+  // ------- tailles de typos
+
+  .t-md-0{
+    font-size:$t0 !important;
+  }
+  .t-md-1{
+    font-size:$t1 !important;
+  }
+  .t-md-2{
+    font-size:$t2 !important;
+  }
+  .t-md-3{
+    font-size:$t3 !important;
+  }
+  .t-md-4{
+    font-size:$t4 !important;
+  }
+  .t-md-5{
+    font-size:$t5 !important;
+  }
+  .t-md-6{
+    font-size:$t6 !important;
+  }
+  .t-md-7{
+    font-size:$t7 !important;
+  }
+  .t-md-8{
+    font-size:$t8 !important;
+  }
+  .t-md-9{
+    font-size:$t9 !important;
+  }
+  .t-md-10{
+    font-size:$t10 !important;
+  }
+  .vertical-h1{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    word-break: keep-all;
+  }
+  .vertical-h2{
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    word-break: keep-all;
+  }
+  .vertical-title{
+    font-size: 72px;
+    color:rgba(0, 0, 0, 0.5);
+  }
+  .vertical-strong-red{
+    font-size: 25px;
+    color: $color3;
+    opacity: 0.7;
+    padding: 30px !important;
+  }
+  .vertical-span{
+    font-size: 10px;
+  }
+  .float-thumb {
+    float: left;
+    padding-right: 10px;
+    margin-right: 30px;
+    max-width: 40%;
+  }
+  .carousel-caption{
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .hmax40vh iframe{
+    display: block;
+    max-height: 40vh;
+  }
+  .anch2{
+    position:absolute;
+    top: 40vh;
+    left: 25%;
+  }
+
+  .caption,
+  .caption2,
+  .caption3,
+  .caption5{
+
+    color:#ffffff;
+
+    z-index: 1001 !important;
+    -webkit-box-shadow: 10px 5px 5px $color5 !important;
+    -moz-box-shadow: 10px 5px 5px $color5 !important;
+    box-shadow: 10px 5px 5px $color5 !important;
+
+  }
+    
+    
+// Largeurs %
+.w-md-a{
+  width: auto !important;
+}
+.w-md-10{
+  width: 10% !important;
+}
+.w-md-15{
+  width: 15% !important;
+}
+.w-md-20{
+  width: 20% !important;
+}
+.w-md-25{
+  width: 25% !important;
+}
+.w-md-30{
+  width: 30% !important;
+}
+.w-md-40{
+  width: 40% !important;
+}
+.w-md-50{
+  width: 50% !important;
+}
+.w-md-60{
+  width: 60% !important;
+}
+.w-md-70{
+  width: 70% !important;
+}
+.w-md-80{
+  width: 80% !important;
+}
+.w-md-90{
+  width: 90% !important;
+}
+.w-md-100{
+  width: 100% !important;
+}
+
+
+}

@@ -1,0 +1,55 @@
+{# dropdownn sm #}
+<div class="d-block d-md-none col-1  btn-group dropleft">
+    <button type="button" id="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <p>
+            <i class="t-a-center t5 black fas fa-bars"></i>
+        </p>
+    </button>
+    <div class="dropdown-menu dropdown-menu2 header-menu">
+        <!-- Dropdown menu links -->
+        <ul class=" d-block justify-content-center t1 wmax-100">
+
+            <li class="wmax-30 m-a item-menu link link2 t-a-center ">
+                <img class="img w-100" src="{{ theme.link }}/assets/img/logo-ST.jpg" alt="logo de www.sylviatrouve.com">
+            </li>
+
+            <li class="wmax-100 item-menu link link2 t-a-center ">
+                <a class=" m-a link d-block" href="{{ site.url }}/#article-anch">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li class="wmax-100 item-menu m-a link t-a-center ">
+                <a class="item-menu link link2 d-block" href="{{ site.url }}/bio/#article-anch">
+                    {{ 'bio'|upper }}
+                </a>
+            </li>
+            <li class="wmax-100 item-menu m-a link link2 t-a-center ">
+                <a class="link d-block" href="{{ site.url }}/les-oeuvres/">
+                    {{ 'oeuvres'|upper }}
+                </a>
+            </li>
+            <li class="wmax-100 item-menu m-a link link2 t-a-center ">
+                <a class="link d-block" href="{{ site.url }}/lactu">
+                    {{ 'l\'actu'|upper }}
+                </a>
+            </li>
+            <li class="wmax-100 item-menu m-a link link2  t-a-center ">
+                <a class="link d-block" href="{{ site.url }}/ateliers-stages">
+                    {{ 'stages/ateliers'|upper }}
+                </a>
+            </li>
+
+            <li class="wmax-100  m-a link link2 t-a-center ">
+                <a class="link d-block" href="{{ site.url }}/contact/#article-anch">
+                    {{ 'contact'|upper }}
+                </a>
+            </li>
+            <li class="wmax-100 m-a link link2 t-a-center ">
+                <a class="link link-logo d-block" target="_blank" href="https://www.facebook.com/Sylvia-Trouv%C3%A9-360856991006240/">
+                    <img src="{{ theme.link }}/assets/img/fb.png" alt="" class="img w-20 m-a">
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>

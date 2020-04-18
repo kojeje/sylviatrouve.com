@@ -1,0 +1,107 @@
+// background-color
+.bk1{
+  background-color: $color1;
+}
+.bk2{
+  background-color: $color2;
+}
+.bk3{
+  background-color: $color3;
+}
+.bk4{
+  background-color: $color4;
+}
+.bk5{
+  background-color: $color5;
+}
+.bk6{
+  background-color: $color6;
+}
+.bk7{
+  background-color: $color7;
+}
+.bk8{
+  background-color: $color8;
+}
+.bk9{
+  background-color: $color9;
+}
+
+// background-image
+
+.url1{
+  background-image: $url1;
+}
+.url2{
+  background-image: $url2;
+}
+.url3{
+  background-image: $url3;
+}
+.url4{
+  background-image: $url4;
+}
+.url5{
+  background-image: $url5;
+}
+.url6{
+  background-image: $url6;
+}
+.parallax {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 0;
+}
+.parallax-bis{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 70% 30%;
+
+}
+
+.parallax2{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.parallax3{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position-x: center ;
+
+
+}
+
+
+// opacity
+.op3{
+  opacity: 0.3;
+}
+.op5{
+  opacity: 0.5;
+}
+.op6{
+  opacity: 0.6;
+}
+.op7{
+  opacity: 0.7;
+}
+.op8{
+  opacity: 0.8;
+}
+
+.parallax{
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+.parallax2{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}

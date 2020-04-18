@@ -1,0 +1,61 @@
+<?php
+
+namespace MailPoetVendor;
+
+if (!defined('ABSPATH')) exit;
+
+
+/*
+ * This file is part of SwiftMailer.
+ * (c) 2004-2009 Chris Corbyn
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+/**
+ * Handles Quoted Printable (Q) Header Encoding in Swift Mailer.
+ *
+ * @author Chris Corbyn
+ */
+class Swift_Mime_HeaderEncoder_QpHeaderEncoder extends \MailPoetVendor\Swift_Encoder_QpEncoder implements \MailPoetVendor\Swift_Mime_HeaderEncoder
+{
+    /**
+     * Creates a new QpHeaderEncoder for the given CharacterStream.
+     *
+     * @param Swift_CharacterStream $charStream to use for reading characters
+     */
+    public function __construct(\MailPoetVendor\Swift_CharacterStream $charStream)
+    {
+        parent::__construct($charStream);
+    }
+    protected function initSafeMap()
+    {
+        foreach (\array_merge(\range(0x61, 0x7a), \range(0x41, 0x5a), \range(0x30, 0x39), [0x20, 0x21, 0x2a, 0x2b, 0x2d, 0x2f]) as $byte) {
+            $this->safeMap[$byte] = \chr($byte);
+        }
+    }
+    /**
+     * Get the name of this encoding scheme.
+     *
+     * Returns the string 'Q'.
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return 'Q';
+    }
+    /**
+     * Takes an unencoded string and produces a QP encoded string from it.
+     *
+     * @param string $string          string to encode
+     * @param int    $firstLineOffset optional
+     * @param int    $maxLineLength   optional, 0 indicates the default of 76 chars
+     *
+     * @return string
+     */
+    public function encodeString($string, $firstLineOffset = 0, $maxLineLength = 0)
+    {
+        return \str_replace([' ', '=20', "=\r\n"], ['_', '_', "\r\n"], parent::encodeString($string, $firstLineOffset, $maxLineLength));
+    }
+}

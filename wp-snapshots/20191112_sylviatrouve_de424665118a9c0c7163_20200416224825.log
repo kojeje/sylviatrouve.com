@@ -1,0 +1,109 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: 2020-04-16T22:48:52+00:00 22:48
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.3.28
+WORDPRESS:	5.3.2
+PHP INFO:	7.2.28 | SAPI: fpm-fcgi
+SERVER:		Apache 
+PHP TIME LIMIT: [300] not allowed 
+PHP MAX MEMORY: 4294967296 (512M default) 
+MEMORY STACK: 2MB
+[CTRL DUP ARCIVE] PACKAGE AS NEW ID 18 SAVED | STATUS:0
+[DUP ARCHIVE] BUILDING DATABASE
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   MYSQLDUMP
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Is Supported
+MYSQL DUMP ERROR -1
+
+==================================================================================
+DUPLICATOR ERROR
+Please try again! If the error persists see the Duplicator 'Help' menu.
+---------------------------------------------------------------------------------
+MESSAGE:
+	Shell mysql dump error
+DETAILS:
+	change Mysql dump engine in PHP mode
+TRACE:
+	 1. class.pack.database.php : Error (545)
+	 2. class.pack.database.php : mysqlDump (187)
+	 3. class.pack.php : build (1164)
+	 4. ctrl.package.php : runDupArchiveBuild (185)
+	 5. class-wp-hook.php : duplicator_duparchive_package_build (288)
+	 6. class-wp-hook.php : apply_filters (312)
+	 7. plugin.php : do_action (478)
+	 8. admin-ajax.php : do_action (175)
+==================================================================================
+
+
+==================================================================================
+DUPLICATOR ERROR
+Please try again! If the error persists see the Duplicator 'Help' menu.
+---------------------------------------------------------------------------------
+MESSAGE:
+	Runtime error in DUP_Database::Build
+DETAILS:
+	Exception: Exception: DUPLICATOR ERROR: Please see the 'Package Log' file link below. in /home/sylviatrcv/www/wp-content/plugins/duplicator/classes/class.logging.php:275
+Stack trace:
+#0 /home/sylviatrcv/www/wp-content/plugins/duplicator/classes/package/class.pack.database.php(545): DUP_Log::Error('Shell mysql dum...', 'change Mysql du...', 1)
+#1 /home/sylviatrcv/www/wp-content/plugins/duplicator/classes/package/class.pack.database.php(187): DUP_Database->mysqlDump('mysqldump')
+#2 /home/sylviatrcv/www/wp-content/plugins/duplicator/classes/package/class.pack.php(1164): DUP_Database->build(Object(DUP_Package), 1)
+#3 /home/sylviatrcv/www/wp-content/plugins/duplicator/ctrls/ctrl.package.php(185): DUP_Package->runDupArchiveBuild()
+#4 /home/sylviatrcv/www/wp-includes/class-wp-hook.php(288): duplicator_duparchive_package_build('')
+#5 /home/sylviatrcv/www/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#6 /home/sylviatrcv/www/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#7 /home/sylviatrcv/www/wp-admin/admin-ajax.php(175): do_action('wp_ajax_duplica...')
+#8 {main}
+TRACE:
+	 1. class.pack.database.php : Error (222)
+	 2. class.pack.php : build (1164)
+	 3. ctrl.package.php : runDupArchiveBuild (185)
+	 4. class-wp-hook.php : duplicator_duparchive_package_build (288)
+	 5. class-wp-hook.php : apply_filters (312)
+	 6. plugin.php : do_action (478)
+	 7. admin-ajax.php : do_action (175)
+==================================================================================
+
+[CTRL DUP ARCIVE] ERROR: caught exception
+
+==================================================================================
+DUPLICATOR ERROR
+Please try again! If the error persists see the Duplicator 'Help' menu.
+---------------------------------------------------------------------------------
+MESSAGE:
+	[CTRL DUP ARCIVE]  Caught exception
+DETAILS:
+	DUPLICATOR ERROR: Please see the 'Package Log' file link below.
+TRACE:
+	 1. ctrl.package.php : Error (189)
+	 2. class-wp-hook.php : duplicator_duparchive_package_build (288)
+	 3. class-wp-hook.php : apply_filters (312)
+	 4. plugin.php : do_action (478)
+	 5. admin-ajax.php : do_action (175)
+==================================================================================
+
+[CTRL DUP ARCIVE] ERROR: after log
+[CTRL DUP ARCIVE] COMPLETED PACKAGE STATUS: -1.0
+[CTRL DUP ARCIVE] ERROR
+
+==================================================================================
+DUPLICATOR ERROR
+Please try again! If the error persists see the Duplicator 'Help' menu.
+---------------------------------------------------------------------------------
+MESSAGE:
+	Build failed so sending back error
+DETAILS:
+	Error building DupArchive package&lt;br/&gt;
+TRACE:
+	 1. ctrl.package.php : Error (215)
+	 2. class-wp-hook.php : duplicator_duparchive_package_build (288)
+	 3. class-wp-hook.php : apply_filters (312)
+	 4. plugin.php : do_action (478)
+	 5. admin-ajax.php : do_action (175)
+==================================================================================
+
+[CTRL DUP ARCIVE] ERROR AFTER LOG 2

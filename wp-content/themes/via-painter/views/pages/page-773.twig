@@ -1,0 +1,11 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+<article id="post-id" class="container m-a row">
+    <a id="article-anch" class="anch col-md-12 d-none d-md-block"></a>
+    <h1 class="col-md-1 col-12 vertical-h1 title-red color8">{{post.title}}</h1>
+    <div class="col-12 row col-md-8 m-a row">
+        {{post.get_field('content')}}
+    </div>
+</article
+{% endblock %}

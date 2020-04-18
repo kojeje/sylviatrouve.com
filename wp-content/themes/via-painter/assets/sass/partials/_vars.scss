@@ -1,0 +1,94 @@
+// ----------------------- typos -----------------------------------
+
+// ------- Couleurs
+
+$color1: #000;
+$color2: #fff;
+$color3: #8D586D;
+$color4: rgba(0, 0, 0, 0.3);
+$color5: rgba(0, 0, 0, 0.5);
+$color6: rgba(0, 0, 0, 0.6);
+$color7: rgba(0, 0, 0, 0.7);
+$color8: #ffb630;
+$color9: rgba(0, 0, 0, 0.9);
+$color10: #ffb630;
+
+
+
+
+// ------- tailles de typos
+//ref : smartphone
+$t0: 7px;
+$t1: 9px;
+$t2: 10px;
+$t3: 12px;
+$t4: 16px;
+$t5: 20px;
+$t6: 24px;
+$t7: 28px;
+$t8: 32px;
+$t9: 36px;
+$t10: 40px;
+$t11: 50px;
+$t12: 60px;
+// ref : ipad2
+@media screen and (min-width:768px){
+  $t0: 9px;
+  $t1: 10px;
+  $t2: 12px;
+  $t3: 16px;
+  $t4: 20px;
+  $t5: 24px;
+  $t6: 30px;
+  $t7: 34px;
+  $t8: 40px;
+  $t9: 50px;
+  $t10: 60px;
+  $t11: 64px;
+  $t12: 72px;
+}
+
+// ref : desktop
+@media screen and (min-width:992px) {
+  $t0: 10px;
+  $t1: 12px;
+  $t2: 16px;
+  $t3: 20px;
+  $t4: 24px;
+  $t5: 32px;
+  $t6: 40px;
+  $t7: 48px;
+  $t8: 56px;
+  $t9: 64px;
+  $t10: 72px;
+  $t11: 86px;
+  $t12: 100px;
+}
+
+// ---------- url (background)
+
+$url1: url('/wp-content/themes/via-painter/assets/img/petitpas2.png');
+$url2: url('/wp-content/themes/via-painter/assets/img/petitpas.png');
+$url3: url('/wp-content/themes/via-painter/assets/img/imprevu.png');
+$url4: url('/wp-content/themes/via-painter/assets/img/snow1.png');
+$url5: url('/wp-content/themes/via-painter/assets/img/snow2.png');
+$url6: url('/wp-content/themes/via-painter/assets/img/sax.png');
+$url7: url('/wp-content/themes/via-painter/assets/img/snow3.png');
+
+// ------------ linear - gradient
+
+// ------------ opacity
+
+// ------------ border
+
+$b1: solid 1px;
+$b2: solid 2px;
+$b3: solid 3px;
+$b4: solid 4px;
+$b5: solid 5px;
+
+
+
+
+
+

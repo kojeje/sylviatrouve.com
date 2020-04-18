@@ -1,0 +1,460 @@
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-1 START @ 01:49:41
+* VERSION: 1.3.22
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ CURRENT SERVER                         |ORIGINAL SERVER
+PHP VERSION_________: 7.1.32                                |7.3.8
+OS__________________: Linux                                 |Darwin
+CREATED_____________: 2019-11-14 13:11:39
+WP VERSION__________: 5.2.4
+DUP VERSION_________: 1.3.22
+DB__________________: 10.2.27
+DB TABLES___________: 20
+DB ROWS_____________: 4,922
+DB FILE SIZE________: 2.14MB
+********************************************************************************
+SERVER INFO
+PHP_________________: 7.3.8 | SAPI: apache2handler
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+SERVER______________: Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.3.8 mod_ssl/2.2.34 OpenSSL/1.0.2o DAV/2 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.10 Perl/v5.24.0
+DOC ROOT____________: "/Volumes/macbook2/Sites/via3"
+DOC ROOT 755________: true
+LOG FILE 644________: true
+REQUEST URL_________: "http://localhost/dup-installer/main.installer.php"
+********************************************************************************
+USER INPUTS
+ARCHIVE ENGINE______: "duparchive"
+SET DIR PERMS_______: 1
+DIR PERMS VALUE_____: 1363
+SET FILE PERMS______: 1
+FILE PERMS VALUE____: 1204
+SAFE MODE___________: "0"
+LOGGING_____________: "1"
+CONFIG MODE_________: "NEW"
+FILE TIME___________: "current"
+********************************************************************************
+
+
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME________________: "20191112_sylviatrouve_c3b156035e0c3e359642_20191114131139_archive.daf"
+SIZE________________: 1.57MB
+
+PRE-EXTRACT-CHECKS
+- PASS: Apache '.htaccess' backed-up to .htaccess-191114134941-5dcd5b75bcfb4-duplicator.bak
+- PASS: Existing Apache '.htaccess' was removed
+- PASS: Microsoft IIS 'web.config' not found - no backup needed.
+- PASS: WordFence '.user.ini' not found - no backup needed.
+>>> DupArchive Extraction Complete
+
+--------------------------------------
+DUPARCHIVE EXTRACTION STATUS
+--------------------------------------
+Archive extracted with no errors.
+
+--------------------------------------
+POST-EXTACT-CHECKS
+--------------------------------------
+PERMISSION UPDATES:
+    -DIRS:  '755'
+    -FILES: '644'
+
+STEP-1 COMPLETE @ 01:49:45 - RUNTIME: 3.6118 sec.
+[PHP ERR][WARN] MSG:mysqli_connect(): (HY000/1045): Access denied for user 'kojeje'@'localhost' (using password: YES) [CODE:2|FILE:/Volumes/macbook2/Sites/via3/dup-installer/classes/class.db.php|LINE:43]
+DATABASE CONNECTION ERROR: Access denied for user 'kojeje'@'localhost' (using password: YES)[ERRNO:1045]
+
+
+
+********************************************************************************
+* DUPLICATOR-LITE INSTALL-LOG
+* STEP-2 START @ 01:50:26
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+VIEW MODE___________: "basic"
+DB ACTION___________: "empty"
+DB HOST_____________: "**OBSCURED**"
+DB NAME_____________: "**OBSCURED**"
+DB PASS_____________: "**OBSCURED**"
+DB PORT_____________: "**OBSCURED**"
+NON-BREAKING SPACES_: false
+MYSQL MODE__________: "DEFAULT"
+MYSQL MODE OPTS_____: ""
+CHARSET_____________: "utf8"
+COLLATE_____________: "utf8_general_ci"
+COLLATE FB__________: false
+VIEW CREATION_______: true
+STORED PROCEDURE____: true
+********************************************************************************
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.7.26 -- Build Server: 10.2.27
+FILE SIZE:	dup-database__c3b1560-14131139.sql (989.73KB)
+TIMEOUT:	5000
+MAXPACK:	4194304
+SQLMODE:	ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[/Volumes/macbook2/Sites/via3/dup-installer/dup-installer-data__c3b1560-14131139.sql]
+COLLATE FB:	Off
+
+NOTICE: This servers version [5.7.26] is less than the build version [10.2.27].  
+If you find issues after testing your site please referr to this FAQ item.
+https://snapcreek.com/duplicator/docs/faqs-tech/#faq-installer-260-q
+[PHP ERR][WARN] MSG:count(): Parameter must be an array or an object that implements Countable [CODE:2|FILE:/Volumes/macbook2/Sites/via3/dup-installer/ctrls/ctrl.s2.dbinstall.php|LINE:386]
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+DB VIEWS:	enabled
+DB PROCEDURES:	enabled
+ERRORS FOUND:	0
+DROPPED TABLES:	0
+RENAMED TABLES:	0
+QUERIES RAN:	5064
+
+wp_cf_form_entries: (0)
+wp_cf_form_entry_meta: (0)
+wp_cf_form_entry_values: (0)
+wp_cf_forms: (15)
+wp_cf_pro_messages: (0)
+wp_cf_queue_failures: (0)
+wp_cf_queue_jobs: (0)
+wp_commentmeta: (0)
+wp_comments: (1)
+wp_duplicator_packages: (0)
+wp_links: (0)
+wp_options: (132)
+wp_postmeta: (4333)
+wp_posts: (463)
+wp_term_relationships: (4)
+wp_term_taxonomy: (2)
+wp_termmeta: (0)
+wp_terms: (2)
+wp_usermeta: (71)
+wp_users: (2)
+Removed '16' cache/transient rows
+
+INSERT DATA RUNTIME: 1.4338 sec.
+STEP-2 COMPLETE @ 01:50:28 - RUNTIME: 1.4448 sec.
+
+====================================
+SET SEARCH AND REPLACE LIST
+====================================
+
+
+********************************************************************************
+DUPLICATOR PRO INSTALL-LOG
+STEP-3 START @ 01:50:40
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	"utf8"
+CHARSET CLIENT:	"utf8"
+********************************************************************************
+OPTIONS:
+blogname______________: "Sylvia Trouvé"
+postguid______________: false
+fullsearch____________: false
+path_old______________: "/home/viayakhq/public_html/"
+path_new______________: "/Volumes/macbook2/Sites/via3/"
+siteurl_______________: "http://localhost:8000"
+url_old_______________: "https://via.yj.fr"
+url_new_______________: "http://localhost:8000"
+maxSerializeStrlen____: 4000000
+replaceMail___________: false
+dbhost________________: "localhost"
+dbuser________________: "root"
+dbname________________: "via2"
+dbcharset_____________: "utf8"
+dbcollate_____________: "utf8_general_ci"
+wp_username___________: ""
+wp_mail_______________: ""
+wp_nickname___________: ""
+wp_first_name_________: ""
+wp_last_name__________: ""
+ssl_admin_____________: false
+cache_wp______________: false
+cache_path____________: false
+exe_safe_mode_________: false
+config_mode___________: "NEW"
+********************************************************************************
+
+
+====================================
+RUN SEARCH AND REPLACE
+====================================
+
+EVALUATE TABLE: "wp_cf_form_entries"______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_cf_form_entry_meta"___________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_cf_form_entry_values"_________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_cf_forms"_____________________________________[ROWS:    15][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/Volumes/macbook2/Sites/via3/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/Volumes\/macbook2\/Sites\/via3\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/Volumes/macbook2/Sites/via3"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/Volumes\/macbook2\/Sites\/via3"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3"
+	SEARCH  7:"//via.yj.fr" =====================================> "//localhost:8000"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/localhost:8000"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Flocalhost%3A8000"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//localhost:8000"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/localhost:8000"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Flocalhost%3A8000"
+	SEARCH 13:"https://localhost:8000" ==========================> "http://localhost:8000"
+	SEARCH 14:"https:\/\/localhost:8000" ========================> "http:\/\/localhost:8000"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8000" ==================> "http%3A%2F%2Flocalhost%3A8000"
+
+EVALUATE TABLE: "wp_cf_pro_messages"______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_cf_queue_failures"____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_cf_queue_jobs"________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_commentmeta"__________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_comments"_____________________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/Volumes/macbook2/Sites/via3/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/Volumes\/macbook2\/Sites\/via3\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/Volumes/macbook2/Sites/via3"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/Volumes\/macbook2\/Sites\/via3"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3"
+	SEARCH  7:"//via.yj.fr" =====================================> "//localhost:8000"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/localhost:8000"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Flocalhost%3A8000"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//localhost:8000"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/localhost:8000"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Flocalhost%3A8000"
+	SEARCH 13:"https://localhost:8000" ==========================> "http://localhost:8000"
+	SEARCH 14:"https:\/\/localhost:8000" ========================> "http:\/\/localhost:8000"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8000" ==================> "http%3A%2F%2Flocalhost%3A8000"
+
+EVALUATE TABLE: "wp_duplicator_packages"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_links"________________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_options"______________________________________[ROWS:   132][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/Volumes/macbook2/Sites/via3/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/Volumes\/macbook2\/Sites\/via3\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/Volumes/macbook2/Sites/via3"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/Volumes\/macbook2\/Sites\/via3"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3"
+	SEARCH  7:"//via.yj.fr" =====================================> "//localhost:8000"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/localhost:8000"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Flocalhost%3A8000"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//localhost:8000"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/localhost:8000"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Flocalhost%3A8000"
+	SEARCH 13:"https://localhost:8000" ==========================> "http://localhost:8000"
+	SEARCH 14:"https:\/\/localhost:8000" ========================> "http:\/\/localhost:8000"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8000" ==================> "http%3A%2F%2Flocalhost%3A8000"
+
+EVALUATE TABLE: "wp_postmeta"_____________________________________[ROWS:  4333][PG:   2][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/Volumes/macbook2/Sites/via3/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/Volumes\/macbook2\/Sites\/via3\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/Volumes/macbook2/Sites/via3"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/Volumes\/macbook2\/Sites\/via3"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3"
+	SEARCH  7:"//via.yj.fr" =====================================> "//localhost:8000"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/localhost:8000"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Flocalhost%3A8000"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//localhost:8000"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/localhost:8000"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Flocalhost%3A8000"
+	SEARCH 13:"https://localhost:8000" ==========================> "http://localhost:8000"
+	SEARCH 14:"https:\/\/localhost:8000" ========================> "http:\/\/localhost:8000"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8000" ==================> "http%3A%2F%2Flocalhost%3A8000"
+
+EVALUATE TABLE: "wp_posts"________________________________________[ROWS:   463][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/Volumes/macbook2/Sites/via3/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/Volumes\/macbook2\/Sites\/via3\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/Volumes/macbook2/Sites/via3"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/Volumes\/macbook2\/Sites\/via3"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3"
+	SEARCH  7:"//via.yj.fr" =====================================> "//localhost:8000"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/localhost:8000"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Flocalhost%3A8000"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//localhost:8000"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/localhost:8000"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Flocalhost%3A8000"
+	SEARCH 13:"https://localhost:8000" ==========================> "http://localhost:8000"
+	SEARCH 14:"https:\/\/localhost:8000" ========================> "http:\/\/localhost:8000"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8000" ==================> "http%3A%2F%2Flocalhost%3A8000"
+
+EVALUATE TABLE: "wp_term_relationships"___________________________[ROWS:     4][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/Volumes/macbook2/Sites/via3/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/Volumes\/macbook2\/Sites\/via3\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/Volumes/macbook2/Sites/via3"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/Volumes\/macbook2\/Sites\/via3"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3"
+	SEARCH  7:"//via.yj.fr" =====================================> "//localhost:8000"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/localhost:8000"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Flocalhost%3A8000"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//localhost:8000"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/localhost:8000"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Flocalhost%3A8000"
+	SEARCH 13:"https://localhost:8000" ==========================> "http://localhost:8000"
+	SEARCH 14:"https:\/\/localhost:8000" ========================> "http:\/\/localhost:8000"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8000" ==================> "http%3A%2F%2Flocalhost%3A8000"
+
+EVALUATE TABLE: "wp_term_taxonomy"________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/Volumes/macbook2/Sites/via3/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/Volumes\/macbook2\/Sites\/via3\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/Volumes/macbook2/Sites/via3"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/Volumes\/macbook2\/Sites\/via3"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3"
+	SEARCH  7:"//via.yj.fr" =====================================> "//localhost:8000"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/localhost:8000"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Flocalhost%3A8000"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//localhost:8000"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/localhost:8000"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Flocalhost%3A8000"
+	SEARCH 13:"https://localhost:8000" ==========================> "http://localhost:8000"
+	SEARCH 14:"https:\/\/localhost:8000" ========================> "http:\/\/localhost:8000"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8000" ==================> "http%3A%2F%2Flocalhost%3A8000"
+
+EVALUATE TABLE: "wp_termmeta"_____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_terms"________________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/Volumes/macbook2/Sites/via3/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/Volumes\/macbook2\/Sites\/via3\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/Volumes/macbook2/Sites/via3"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/Volumes\/macbook2\/Sites\/via3"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3"
+	SEARCH  7:"//via.yj.fr" =====================================> "//localhost:8000"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/localhost:8000"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Flocalhost%3A8000"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//localhost:8000"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/localhost:8000"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Flocalhost%3A8000"
+	SEARCH 13:"https://localhost:8000" ==========================> "http://localhost:8000"
+	SEARCH 14:"https:\/\/localhost:8000" ========================> "http:\/\/localhost:8000"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8000" ==================> "http%3A%2F%2Flocalhost%3A8000"
+
+EVALUATE TABLE: "wp_usermeta"_____________________________________[ROWS:    71][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/Volumes/macbook2/Sites/via3/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/Volumes\/macbook2\/Sites\/via3\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/Volumes/macbook2/Sites/via3"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/Volumes\/macbook2\/Sites\/via3"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3"
+	SEARCH  7:"//via.yj.fr" =====================================> "//localhost:8000"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/localhost:8000"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Flocalhost%3A8000"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//localhost:8000"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/localhost:8000"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Flocalhost%3A8000"
+	SEARCH 13:"https://localhost:8000" ==========================> "http://localhost:8000"
+	SEARCH 14:"https:\/\/localhost:8000" ========================> "http:\/\/localhost:8000"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8000" ==================> "http%3A%2F%2Flocalhost%3A8000"
+
+EVALUATE TABLE: "wp_users"________________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/viayakhq/public_html/" =====================> "/Volumes/macbook2/Sites/via3/"
+	SEARCH  2:"\/home\/viayakhq\/public_html\/" =================> "\/Volumes\/macbook2\/Sites\/via3\/"
+	SEARCH  3:"%2Fhome%2Fviayakhq%2Fpublic_html%2F" =============> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3%2F"
+	SEARCH  4:"\home\viayakhq\public_html" ======================> "/Volumes/macbook2/Sites/via3"
+	SEARCH  5:"\\home\\viayakhq\\public_html" ===================> "\/Volumes\/macbook2\/Sites\/via3"
+	SEARCH  6:"%5Chome%5Cviayakhq%5Cpublic_html" ================> "%2FVolumes%2Fmacbook2%2FSites%2Fvia3"
+	SEARCH  7:"//via.yj.fr" =====================================> "//localhost:8000"
+	SEARCH  8:"\/\/via.yj.fr" ===================================> "\/\/localhost:8000"
+	SEARCH  9:"%2F%2Fvia.yj.fr" =================================> "%2F%2Flocalhost%3A8000"
+	SEARCH 10:"//www.via.yj.fr" =================================> "//localhost:8000"
+	SEARCH 11:"\/\/www.via.yj.fr" ===============================> "\/\/localhost:8000"
+	SEARCH 12:"%2F%2Fwww.via.yj.fr" =============================> "%2F%2Flocalhost%3A8000"
+	SEARCH 13:"https://localhost:8000" ==========================> "http://localhost:8000"
+	SEARCH 14:"https:\/\/localhost:8000" ========================> "http:\/\/localhost:8000"
+	SEARCH 15:"https%3A%2F%2Flocalhost%3A8000" ==================> "http%3A%2F%2Flocalhost%3A8000"
+--------------------------------------
+SCANNED:	Tables:20 	|	 Rows:5025 	|	 Cells:28920 
+UPDATED:	Tables:2 	|	 Rows:467 	|	 Cells:469 
+ERRORS:		0 
+RUNTIME:	1.588300 sec
+
+====================================
+REMOVE LICENSE KEY
+====================================
+
+====================================
+CREATE NEW ADMIN USER
+====================================
+
+====================================
+CONFIGURATION FILE UPDATES
+====================================
+	UPDATE DB_NAME ""via2""
+	UPDATE DB_USER ""root""
+	UPDATE DB_PASSWORD "** OBSCURED **"
+	UPDATE DB_HOST ""localhost""
+	REMOVE WPCACHEHOME
+	
+*** UPDATED WP CONFIG FILE ***
+
+====================================
+HTACCESS UPDATE MODE: "NEW"
+====================================
+- PASS: Successfully created a new .htaccess file.
+- PASS: Existing Apache 'htaccess.orig' was removed
+
+====================================
+GENERAL UPDATES & CLEANUP
+====================================
+
+====================================
+DEACTIVATE PLUGINS CHECK
+====================================
+Activated plugins (If they are activated) listed here will be deactivated: Array
+(
+    [0] => really-simple-ssl/rlrsssl-really-simple-ssl.php
+    [1] => simple-google-recaptcha/simple-google-recaptcha.php
+    [2] => js_composer/js_composer.php
+)
+
+
+====================================
+NOTICES TEST
+====================================
+No General Notices Found
+
+
+====================================
+CLEANUP TMP FILES
+====================================
+
+====================================
+FINAL REPORT NOTICES
+====================================
+
+STEP-3 COMPLETE @ 01:50:42 - RUNTIME: 1.7156 sec. 
+
+
+====================================
+FINAL REPORT NOTICES LIST
+====================================
+-----------------------
+[INFO] No general notices
+	SECTIONS: general
+
+-----------------------
+[INFO] No errors in database
+	SECTIONS: database
+
+-----------------------
+[INFO] No search and replace data errors
+	SECTIONS: search_replace
+
+-----------------------
+[INFO] No files extraction errors
+	SECTIONS: files
+
+====================================

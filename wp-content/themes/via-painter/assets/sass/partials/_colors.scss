@@ -1,0 +1,135 @@
+// --------------------- Propriété de couleurs
+//-----------------fonts
+
+//custom color 1
+.color1{
+  color: $color1 !important;
+}
+//custom color 2
+.color2{
+  color: $color2 !important;
+}
+//custom color 3
+.color3{
+  color: $color3 !important;
+}
+//custom color 4
+.color4{
+  color: $color4 !important;
+}
+//custom color 5
+.color5{
+  color: $color5 !important;
+}
+//custom color 6
+.color6{
+  color: $color6 !important;
+}
+//custom color 7
+.color7{
+  color: $color7 !important;
+}
+//custom color 8
+.color8{
+  color: $color8 !important;
+}
+//custom color 9
+.color9{
+  color: $color9 !important;
+}
+//custom color 10
+.color10{
+  color: $color10 !important;
+}
+// ROUGE primaire = Pour les icones et mentions importants (erreur, danger), et autres
+.red{
+  color:red;
+}
+// VERT-JAUNE = Success, etc.
+.green{
+  color: greenyellow;
+}
+//Bleu Primaire
+.blue{
+  color: blue;
+}
+//NOIR
+.black{
+  color:black
+}
+//BLANC
+.white
+{
+  color:white !important;
+}
+//-----------------Background
+
+//custom bk-color 1
+.bk-color1{
+  background-color: $color1;
+}
+//custom bk-color 2
+.bk-color2{
+  background-color: $color2;
+}
+//custom bk-color 3
+.bk-color3{
+  background-color: $color3;
+}
+// ROUGE primaire = Pour les icones et mentions importants (erreur, danger), et autres
+.bk-red{
+  background-color:red;
+}
+// VERT-JAUNE = Success, etc.
+.bk-green{
+  background-color: greenyellow;
+}
+//Bleu Primaire
+.bk-blue{
+  background-color: blue;
+}
+//NOIR
+.bk-black{
+  background-color:black
+}
+//BLANC
+.bk-white
+{
+  background-color:white;
+}
+//-----------------Border
+
+//custom brd-color 1
+.brd-color1{
+  border-color: $color1;
+}
+//custom brd-color 2
+.brd-color2{
+  border-color: $color1;
+}
+//custom brd-color 3
+.brd-color3{
+  border-color: $color1;
+}
+// ROUGE primaire = Pour les icones et mentions importants (erreur, danger), et autres
+.brd-red{
+  border-color: red;
+}
+// VERT-JAUNE = Success, etc.
+.brd-green{
+  border-color: greenyellow;
+}
+//Bleu Primaire
+.brd-blue{
+  border-color: blue;
+}
+//NOIR
+.brd-black{
+  border-color:black
+}
+//BLANC
+.brd-white
+{
+  border-color:white;
+
+}

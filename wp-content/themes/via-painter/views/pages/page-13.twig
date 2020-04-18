@@ -1,0 +1,307 @@
+{% extends 'base.twig' %}
+{% block tmp_slide %}
+
+    <!-- SLIDER -->
+    {# Si Slider existe#}
+    {% if post.get_field('slider')== true %}
+        <div id="carouselExampleIndicators" class="url4 hmax80vh carousel slide d-none d-md-block" data-ride="carousel">
+        {# Accroche slider #}
+        <div class="l-2 caption2 caption5 mce-active carousel-caption hmax60vh wmax-20 mce-active d-none d-md-block t4">
+            {# Nom #}
+            <p class=" m-a h-20vh t-a-center white ">
+                {{ 'sylvia trouvé '|upper }}
+            </p>
+            {#sub#}
+            <p class=" color8 m-a h-20vh t-a-center">
+                {{ post.get_field('sub') }}
+            </p>
+            {# vers ancres suivantes #}
+            <a href="#article-anch" class="col-12 anch">
+                <div class="button button-h t-a-center ">
+                    <p class="white"><i class="fas fa-chevron-down"></i></p>
+                </div>
+            </a>
+        </div>
+        {# Carousel #}
+        <div class="carousel-inner">
+            <!-- IMAGES 1265 X 550 -->
+            {# img 1#}
+            {% if post.get_field('img') %}
+                {# img d'amorce#}
+                <div class="carousel-item slider-adapt-parent active m-a">
+                    <img class="d-block m-a  slider-adapt" src="{{ post.get_field('img') }}" alt="Fifth slide">
+                </div>
+            {% endif %}
+            {# Si il y a des toiles#}
+            {% if toiles %}
+                {# boucle toiles#}
+                {% for toile in toiles %}
+                    {# item de défilement #}
+                    <div class="carousel-item slider-adapt-parent toile m-a">
+                        {# lien vers la page d'archive #}
+                        <a href="{{ toile.link }}" class="m-a">
+                            {#image#}
+                            <img class="d-block m-a hmax80vh slider-adapt" src="{{ toile.thumbnail.src }}" alt="{{ toile.title }} slide">
+                            {#titre de l'oeuvre (hover)#}
+                            <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-20 mce-active d-none d-md-block t4">
+                                <p class=" m-a h-20vh t-a-center white ">{{ toile.title|capitalize }}</p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        {% if toiles %}
+            <!-- BOUTONS -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+            </div>
+        {% endif %}
+
+    {% endif %}
+{% endblock %}
+{% block content %}
+    {# --------------------------   section 1 : welcome --------------------------------------------#}
+    <a id="article-anch" class="anch col-md-12 d-none d-md-block"></a>
+    <article id="post-id" class="container-fluid m-a row">
+        {# titre de la page#}
+        <h1 class="title-red t-a-center col-md-1 col-12  vertical-h1 m-a white">
+                <span class="white t4 ">
+                    {{post.title }}
+                </span>
+        </h1>
+        <div class="offset-md-1 d-none d-md-block"></div>
+        {# thumbnail #}
+        <section class="section col-12 col-md-4 row">
+            <div class="col-12 t3 col-md-12 toile mt-10">
+                <a href="{{ post.thumbnail.src }}">
+                    <img src="{{ post.thumbnail.src }}" alt="photo de {{ site.url }}" class="wmax-80 img">
+                </a>
+            </div>
+        </section>
+
+        <aside class="row col-12 col-md-5">
+            <h2 class="title-red t-a-center col-12 hmax40vh t4 m-a color8">
+                {{ post.get_field('sub') }}
+
+                <a href="#article-anch2" class="col-12 anch">
+                    <div class="button button-h t-a-center mt30">
+                        <span class="white"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                </a>
+            </h2>
+            <p class="col-12 toile">
+                {{ post.get_field('texte') }}
+                {% if post.get_field('auteur') %}
+                    <i class="title-red white hmax30vh t2 mt-10 caption2"> {{ post.get_field('auteur') }} </i>
+                {% endif %}
+            </p>
+        </aside>
+        <a id="article-anch2" class="anch col-md-12 d-none d-md-block"></a>
+        {% include 'views/partial/domain-column.twig' %}
+        {# --------------------------   section 3 : Collections --------------------------------------------#}
+        <div class="offset-md-1 d-none d-md-block"></div>
+        {% if collections %}
+            <section class="section col-12 col-md-9 row">
+                <h1 class="title-red t-a-center row col-12 hmax20vh t8 m-a color8">
+                    <span class="col-12 col-md-6">{{ 'Mes séries'|capitalize }}</span>
+
+                    <a href="#article-anch3" class="col-12 col-md-6 mb-20 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </a>
+                </h1>
+                {% for serie in collections   %}
+                    <div class="col-12 t3 col-md-5 toile mt20">
+
+                        <a href="{{ serie.link }}">
+                            <img src="{{ serie.thumbnail.src }}" alt="photo de {{ serie.title }}" class="img toile d-block w-100 m-a thumb mt10">
+                            <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 mce-active d-none d-md-block t-1">
+                                <a href="{{ serie.link }}" >
+                                    <p class=" m-a h-20vh t-a-center white ">
+                                        {{ serie.title|capitalize }}
+                                    </p>
+                                </a>
+
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+                <div class="row col-12 col-md-6">
+                    <a href="#article-anch3" class="col-12 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        {% endif %}
+        <a id="article-anch3" class="anch col-md-12 d-none d-md-block"></a>
+        {% include 'views/partial/domain-column.twig' %}
+        {# --------------------------   section 3 : Oeuvres --------------------------------------------#}
+
+
+
+        {% if toiles %}
+            <section class="section col-12 col-md-9 row">
+                <h1 class="title-red t-a-center row col-12 hmax20vh t8 m-a color8">
+                    <span class="col-12 col-md-6">{{ 'Mes Oeuvres'|upper }}</span>
+
+                    <a href="#article-anch4" class="col-12 col-md-6 mb-20 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </a>
+                </h1>
+                {% for toile in toiles   %}
+                    <div class="col-12 t3 col-md-5 toile mt20">
+
+                        <a href="{{ toile.link }}">
+                            <img src="{{ toile.thumbnail.src }}" alt="photo de {{ toile.title }}" class="img toile d-block w-100 m-a thumb mt10">
+                            <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 mce-active d-none d-md-block t-1">
+                                <a href="{{ toile.link }}" >
+                                    <p class=" m-a h-20vh t-a-center white ">{{ toile.title|capitalize }}
+                                        <br>
+                                        <span class="color8">{{ toile.get_field('date_1')|date('Y')}}</span>
+                                    </p>
+                                </a>
+
+                            </div>
+                        </a>
+                    </div>
+
+
+                {% endfor %}
+                <div class="row col-12">
+
+                    <a href="#article-anch4" class="col-12 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        {% endif %}
+        {% include 'views/partial/domain-column.twig' %}
+        <a id="article-anch4" class="anch col-md-12 d-none d-md-block"></a>
+
+
+
+        {# --------------------------   section 3 : carnets  --------------------------------------------#}
+
+
+        {% include 'views/partial/domain-column.twig' %}
+
+        {% if carnets %}
+            <section class="section col-12 col-md-9 row">
+                <h1 class="title-red t-a-center row col-12 hmax20vh t8 m-a color8">
+                    <span class="col-12 col-md-6">{{ 'Mes carnets'|upper }}</span>
+
+                    <a href="#article-anch5" class="col-12 col-md-6 mb-20 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <span class="white"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </a>
+                </h1>
+                {% for toile in carnets %}
+                    <div class="col-12 t3 toile col-md-5 mt20">
+                        <a href="{{ toile.link }}">
+                            <img src="{{ toile.thumbnail.src }}" alt="photo de {{ toile.title }}" class="img toile d-block w-100 m-a thumb mt10">
+                            <div class="m-a caption2 caption-hover mce-active carousel-caption wmax-70 mce-active d-none d-md-block t-1">
+                                {#BOUTONS SCROLL#}
+                                <a href="{{ toile.link }}" >
+                                    <p class=" m-a h-20vh t-a-center white ">{{ toile.title|capitalize }}</p>
+                                </a>
+
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+                <div class="row col-12 col-md-6">
+                    <a href="#article-anch5" class="col-12 anch">
+                        <div class="button button-h t-a-center mt30">
+                            <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                        </div>
+                    </a>
+                </div>
+
+            </section>
+        {% endif %}
+        {% include 'views/partial/domain-column.twig' %}
+        <a id="article-anch5" class="anch col-md-12 d-none d-md-block"></a>
+
+        {# ------------------------       BLOC EXPOS         --------------------------#}
+
+
+        <h2 class="title-red col-md-1 col-12 vertical-h1 white">
+            <a href="{{ site.link }}" class="white t4 ">
+                {{'expositions'|capitalize }}
+            </a>
+        </h2>
+        {# Si expos #}
+        {% if expos %}
+            <section class="col-md-9 col-12 row d-none d-md-flex mt-10 ">
+                {# BOUCLE EXPOS #}
+                {% for expo in expos %}
+                    {% if 'now'|date('U') <= expo.get_field('fin')|date('U') %}
+                        {# Boucle des oeuvres liées à l'expo #}
+                        <div class="col-12 col-md-4 mt30 toile">
+                            {# lien vers l'expo #}
+                            <a href="{{ expo.link }}">
+                                <img src="{{ expo.thumbnail.src }}" alt="photo de {{ expo.title }}" class="hmax30vh wmax-80 img m-a">
+                                <div class="caption3 vertical-span white t3">
+                                    <h3 class="vertical-strong-red article-h3 white t-a-center">
+                                        {{ expo.title }}
+                                    </h3>
+                                    <p>
+                                        du {{ expo.get_field('debut')|date('j F Y') }}
+                                        au {{ expo.get_field('fin')|date('j F Y') }}
+                                    </p>
+                                </div>
+                                {#{{ dump(expo.get_field('lieu')) }}#}
+
+                                <div class="vertical-span white t3 toile">
+                                    {% for lieu in expo.get_field('lieu') %}
+                                        <h3 class="caption5 p20 bk3 vertical-strong-red article-h3 t3 white t-a-center">
+                                            {{ lieu.get_field('commune') }}
+                                        </h3>
+                                    {% endfor %}
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                    <div class="offset-md-1 d-none d-md-block"></div>
+                {% endfor %}
+                <a href="#article-contact" class="col-12 anch">
+                    <div class="button button-h t-a-center mt30">
+                        <p class="color3"><i class="fas fa-chevron-down"></i></p>
+                    </div>
+                </a>
+            </section>
+
+        {% endif %}
+        {% include 'views/partial/domain-column.twig' %}
+
+       {# ------------------------       BLOC CONTACTS         --------------------------#}
+        {# Si contacts #}
+        {% if contacts %}
+            <a id="article-contact" class="anch col-md-12 d-none d-md-block"></a>
+            <h2 class="title-red col-md-1 col-12 vertical-h1 white">
+                {{'contact'|upper }}
+            </h2>
+            <section class="col-md-9 row d-md-flex ">
+                {% include 'views/partial/sections/contact-via.twig' %}
+            </section>
+             {% include 'views/partial/domain-column.twig' %}  
+        {% endif %}
+
+    </article>
+{% endblock %}

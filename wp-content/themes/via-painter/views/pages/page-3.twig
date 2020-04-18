@@ -1,0 +1,24 @@
+{% extends 'base.twig' %}
+{% block content %}
+    {# --------------------------   section 1 : welcome --------------------------------------------#}
+    
+    <article id="post-id" class="container-fluid row">
+        <a id="article-anch" class="anch col-md-12 d-none d-md-block"></a> 
+        <section class="section col-12 col-md-10 m-a row">
+            <h1 class="title-red col-md-1 col-12 vertical-h1 m-a white">
+                <span class="white t4 ">
+                    {{post.title }}
+                </span>
+            </h1>
+            <div class="col-12 t3 col-md-10 shadow toile mb40">
+                <a href="{{ post.thumbnail.src }}">
+                    <img src="{{ post.thumbnail.src }}" alt="photo de {{ site.url }}" class="mb20 w-30 img">
+                </a>
+                <p class="col-12 col-md-10 m-a">
+                    {{post.content}}
+                </p>
+            </div>
+        </section>
+
+    </article>
+{% endblock %}

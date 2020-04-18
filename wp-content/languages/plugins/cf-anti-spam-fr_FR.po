@@ -1,0 +1,68 @@
+# Translation of Plugins - Caldera Forms Anti Spam - Stable (latest release) in French (France)
+# This file is distributed under the same license as the Plugins - Caldera Forms Anti Spam - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-02-01 13:24:11+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: fr\n"
+"Project-Id-Version: Plugins - Caldera Forms Anti Spam - Stable (latest release)\n"
+
+#: fields/recaptcha/config.php:16
+msgid "Secret Key"
+msgstr "Clé secrète"
+
+#: fields/recaptcha/config.php:8
+msgid "Site Key"
+msgstr "Clé du site"
+
+#: fields/recaptcha/config.php:4
+msgid "reCaptcha required keys from Google."
+msgstr "reCaptcha nécessite des clés fournies par Google."
+
+#: fields/recaptcha/preview.php:24
+msgid "No Site Key Added"
+msgstr "Aucune clé de site ajoutée"
+
+#: fields/recaptcha/preview.php:21
+msgid "No Secret Key Added"
+msgstr "Aucune clé secrète ajoutée"
+
+#: classes/recapatcha.php:111
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: classes/recapatcha.php:111
+msgid "The captcha wasn't entered correctly."
+msgstr "Le captcha n’a pas été saisi correctement."
+
+#: classes/recapatcha.php:23
+msgid "Special"
+msgstr "Spécial"
+
+#: classes/recapatcha.php:21
+msgid "reCAPTCHA anti-spam field"
+msgstr "Champ anti-indésirable reCAPTCHA"
+
+#: classes/recapatcha.php:20
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+#. Author URI of the plugin
+msgid "https://yoohooplugins.com"
+msgstr "https://yoohooplugins.com"
+
+#. Author of the plugin
+msgid "Yoohoo Plugins"
+msgstr "Extensions Yoohoo"
+
+#. Description of the plugin
+msgid "Anti-spam for Caldera Forms. Recaptcha field!"
+msgstr "Anti-indésirable pour Caldera Forms. Champ reCaptcha !"
+
+#. Plugin Name of the plugin
+msgid "Caldera Forms Anti Spam"
+msgstr "Caldera Forms Anti Spam"
